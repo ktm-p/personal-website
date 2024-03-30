@@ -1,0 +1,346 @@
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+* {
+    font-family: "Cantarell", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+/* No outline around links when using keyboard navigation */
+/* TODO: Maybe try and replace this with just custom-coloured box...? */
+*:focus {
+    outline: 0;
+}
+
+body {
+    min-width:800px;
+    width: auto !important;
+    width:800px;
+}
+
+/* Header */
+.header {
+    height: 8rem;
+    width: 100%;
+    background: rgb(30, 28, 28);
+    position: relative;
+    z-index: 1;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Header logo (left side) */
+.logo {
+    margin-left: 1rem;
+    width: 10rem;
+}
+
+/* Header navigation links (right side) */
+.header-links {
+    padding: 2.8rem 0;
+    list-style: none;
+}
+
+.header-links li {
+    display: inline-block;
+    margin: 0 1.5rem;
+    position: relative;
+}
+
+.header-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 0.2rem 0;
+    font-size: 2rem;
+    position: relative;
+    transition: all 0.5s;
+}
+
+/* Dropdown menu */
+/* TODO: Figure out how to make the dropdown menus go below the header. */
+.header-links li .dropdown li {
+    display: block;
+}
+
+.header-links li .dropdown {
+    display: none;
+    width: inherit; /* TODO: Try to make the parent boxes bigger maybe (to fit the dropdown options better...?) */
+    position: absolute;
+    z-index: 2;
+    background: rgb(70, 69, 69);
+    margin-top: 0.2rem;
+    padding-top: 2.3rem;
+}
+
+.header-links li:hover .dropdown {
+    display: block;
+}
+
+/* Underline animation on hover based off of Squarespace Help website */
+.header-links li a::after {
+    content: "";
+    background: white;
+    width: 0;
+    height: 0.1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.7s;
+}
+
+.header-links li a:hover::after, .header-links li a:focus::after {
+    width: 100%
+}
+
+/* Home */
+.main-info {
+    padding-top: 3rem;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: black;
+    text-align: center;
+}
+
+.professional-image {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.professional-image img {
+    scale: 150%;
+}
+
+img.rounded {
+    object-fit: cover;
+    border-radius: 50%;
+    height: 15rem;
+    width: 15rem;
+}
+
+.myname {
+    font-family: "Rubik", sans-serif;
+    font-style: bold;
+    font-size: 5rem;
+    display: inline-block;
+}
+
+.mytitle, .subject, .mysubtitle {
+    font-family: "Rubik", sans-serif;
+    font-size: 2.5rem;
+    color: grey;
+    display: inline-block;
+    margin-bottom: 0.25rem;
+}
+
+.subject {
+    transition: all 0.7s
+}
+
+.subject:hover {
+    color: rgb(120, 120, 220);
+}
+
+.mysubtitle {
+    color: rgba(128, 128, 128, 0.75);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Icons for other sites */
+.header-icons a {
+    text-decoration: none;
+}
+
+.header-icons a i {
+    height: 5.25rem;
+    width: 5.25rem;
+    padding: 1rem;
+    border-radius: 50%;
+    border: 0.1rem solid #fff;
+    transition: all .7s;
+    font-size: 300%;
+    margin: 0.5rem;
+}
+
+.header-icons a i:hover, .header-icons a:focus i {
+    color: rgb(120, 120, 220);
+    background-color: white;
+}
+
+/* Scroll arrows */
+.arrowdownfiller {
+    padding: 2.5rem;
+    background: black;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+}
+
+.arrowfiller {
+    padding: 2.5rem;
+    background: black;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0,0,0,0.5)); */
+}
+
+.arrow {
+    font-size: 1.5rem;
+    bottom: 0;
+    right: 1%;
+    display: block;
+    height: 5.5rem;
+    position: absolute;
+    width: 50px;
+}
+
+.down {
+    animation: bouncing 2s infinite ease-in-out;
+}
+
+.up {
+    animation: bouncing-up 2s infinite ease-in-out;
+}
+
+.arrow i {
+    color: rgba(128, 128, 128, 0.499);
+    transition: all 0.7s;
+}
+
+.arrow:hover i, .arrow:focus i {
+    color: white;
+}
+
+@keyframes bouncing {
+    0% {bottom: 0;}
+    50% {bottom: 1.5rem;}
+    100% {bottom: 0;}
+}
+
+@keyframes bouncing-up {
+    0% {bottom: 1.5rem;}
+    50% {bottom: 0;}
+    100% {bottom: 1.5rem;}
+}
+
+/* About Me section */
+.anchor {
+    padding: 5rem;
+}
+
+section {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: black;
+    text-align: center;
+}
+
+section h1 {
+    font-family: "Rubik", sans-serif;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.about-desc {
+    font-family: "Cantarell", sans-serif;
+    font-size: 2rem;
+    color: grey;
+    text-align: left;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+/* Filler */
+.filler {
+    height: 50vh;
+    width: 100%;
+    background: black;
+}
+
+/* Programming Experience section */
+.language {
+    display: inline-block;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.language h2 {
+    font-family: "Rubik", sans-serif;
+    font-size: 2.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.language i {
+    height: 10rem;
+    width: 10rem;
+    font-size: 7rem;
+    margin-top: 2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    border: 0.1rem solid #fff;
+    background: white;
+    color: rgb(255, 171, 26);
+    box-shadow: 0 0 0.5rem 0.5rem rgba(71, 71, 71, 0.9);
+}
+
+.skills .language .language-desc {
+    display: inline-block; 
+    width: 35rem;
+    font-size: 1.5rem;
+    color: rgb(170, 170, 170);
+    font: "Rubik", sans-serif;
+}
+
+.highlighted-text {
+    color: rgb(120, 120, 220);
+}
+
+/* Courses */
+.semester-info {
+    margin-left: 10%;
+    text-align: left;
+}
+
+.semester-info h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.semester-info ul {
+    padding-bottom: 5rem;
+    list-style: none;
+}
+
+.semester-info ul li {
+    font-size: 2rem;
+    color: grey;
+}
+
+.class-name {
+    text-decoration: none;
+    color: rgb(120, 120, 220)
+}
