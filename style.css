@@ -311,12 +311,13 @@ section h1 {
     display: inline-block; 
     width: 35rem;
     font-size: 1.5rem;
-    color: rgb(170, 170, 170);
+    /* color: rgb(170, 170, 170); */
+    color:  grey;
     font: "Rubik", sans-serif;
 }
 
 .highlighted-text {
-    color: rgb(120, 120, 220);
+    color: rgb(212, 204, 204);
 }
 
 /* Courses */
@@ -326,6 +327,7 @@ section h1 {
 }
 
 .semester-info h2 {
+    color: rgb(120, 120, 220);
     font-size: 3rem;
     margin-bottom: 1rem;
 }
@@ -341,6 +343,5 @@ section h1 {
 }
 
 .class-name {
-    text-decoration: none;
-    color: rgb(120, 120, 220)
+    color: white;
 }
