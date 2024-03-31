@@ -380,7 +380,43 @@ section h1 {
     transition: all 0.7s;
 }
 
-.project h2 {
+.class-section {
+    display: flex;
+    margin: auto;
+    padding-left: 2.5rem;
+    padding-bottom: 1rem;
+    text-align: left;
+    width: 60%;
+}
+
+.class-section .class-name h2 {
+    font-family: "Rubik", sans-serif;
+    font-size: 3rem;
+    color: grey;
+}
+
+.class-section .visibility {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    display: flex;
+}
+
+.visibility .visibility-text {
+    padding-left: 0.5rem;
+    text-align: center;
+    color: rgba(161, 161, 161, 0.527);
+}
+
+.class-section .visibility i {
+    font-size: 1.5rem;
+    color: rgba(161, 161, 161, 0.527);
+}
+
+.class-section .visibility:hover i, .class-section .visibility:hover .visibility-text {
+    color: rgba(194, 194, 194, 0.626);
+}
+
+.project h3 {
     font-family: "Rubik", sans-serif;
     font-size: 2.5rem;
     margin-bottom: 1rem;

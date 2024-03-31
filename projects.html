@@ -33,6 +33,9 @@
     <script type="text/javascript"
     src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
+
+    <!-- Hide/Show -->
+    <script src="/scripts.js" type="application/javascript"></script>
 </head>
 <body>
     <div class="header" id="myHeader">
@@ -56,66 +59,93 @@
             </ul>
         </nav>
     </div>
-    
+
     <section class="coursework">
         <span class="anchor" id="coursework"></span>
         <h1>Coursework</h1>
+
         <!-- CS61B PROJECTS -->
-        <!-- GuitarHero -->
-        <a href="https://sp23.datastructur.es/materials/proj/proj1c/" target="_blank" class="project-link">
-            <div class="project"> 
-                <h2> Guitar Hero </h2>
-                <p class="project-desc">
-                    <span class="highlighted-text">Guitar Hero</span> is a project where I implemented a <span class="highlighted-text">deque</span> package and, using the data structures created in this package, simulated the sound of plucked stringed instruments using the <span class="highlighted-text">Karplus-Strong algorithm</span>. Simulated instruments include drums, guitar, harp, and harpsichord.
-                    
-                    <br><br>
-                    
-                    The <span class="highlighted-text">deque</span> package features two data structures which I implemented: <span class="highlighted-text">LinkedListDeque</span> and <span class="highlighted-text">ArrayDeque</span>. It includes functionalities such as <span class="highlighted-text">prepending</span> and <span class="highlighted-text">appending</span> elements, <span class="highlighted-text">retrieving a specified element</span>, and also <span class="highlighted-text">removed the first and last item</span>.
-
-                    <br><br>
-
-                    Since this is a class project, please contact me in order to view the source code.
-                </p>
-
-                <div class="grid">
-                    <div class="grid-item">
-                        Java
-                    </div>
+        <div class="class-section">
+            <div class="class-name">
+                <h2> COMPSCI 61B </h2>
+            </div>
+            <div class="visibility" onclick="myHide('class61b')">
+                <i class="fa-solid fa-eye" id="icon_class61b"></i>
+                <div class="visibility-text" id="visibility-text_class61b">
+                    [Hide]
                 </div>
             </div>
-        </a>
+        </div>
+        
+        <div id="class61b">
+            <!-- GuitarHero -->
+            <a href="https://sp23.datastructur.es/materials/proj/proj1c/" target="_blank" class="project-link">
+                <div class="project"> 
+                    <h3> Guitar Hero </h3>
+                    <p class="project-desc">
+                        <span class="highlighted-text">Guitar Hero</span> is a project where I implemented a <span class="highlighted-text">deque</span> package and, using the data structures created in this package, simulated the sound of plucked stringed instruments using the <span class="highlighted-text">Karplus-Strong algorithm</span>. Simulated instruments include drums, guitar, harp, and harpsichord.
+                        
+                        <br><br>
+                        
+                        The <span class="highlighted-text">deque</span> package features two data structures which I implemented: <span class="highlighted-text">LinkedListDeque</span> and <span class="highlighted-text">ArrayDeque</span>. It includes functionalities such as <span class="highlighted-text">prepending</span> and <span class="highlighted-text">appending</span> elements, <span class="highlighted-text">retrieving a specified element</span>, and also <span class="highlighted-text">removed the first and last item</span>.
 
-        <!-- BYOW -->
-        <a href="https://sp23.datastructur.es/materials/proj/proj3/" target="_blank" class="project-link">
-            <div class="project"> 
-                <h2> Build Your Own World </h2>
-                <p class="project-desc">
-                    <span class="highlighted-text">Build Your Own World</span> (BYOW) is a 2D game made in <span class="highlighted-text">Java</span> where the user tries to collect a key and escape from the maze.
-                    
-                    <br><br>
-                    
-                    The game features a <span class="highlighted-text">pseudo-random world generation system</span> made using <span class="highlighted-text">Prim's Algorithm</span>. It also has a <span class="highlighted-text">playable character</span> which <span class="highlighted-text">responds to user input</span>, a <span class="highlighted-text">lighting system</span> created with <span class="highlighted-text">Breadth-First Search</span>, <span class="highlighted-text">limited vision</span> that prevents the user from seeing past walls, and enemies with <span class="highlighted-text">pathfinding AI</span> implemented using <span class="highlighted-text">A*-search</span>.
+                        <br><br>
 
-                    Furthermore, there is a save feature where the user can return to the latest save state before they quit.
+                        Since this is a class project, please contact me in order to view the source code.
+                    </p>
 
-                    <br><br>
-
-                    Since this is a class project, please contact me in order to view the source code.
-                </p>
-
-                <div class="grid">
-                    <div class="grid-item">
-                        Java
+                    <div class="grid">
+                        <div class="grid-item">
+                            Java
+                        </div>
                     </div>
                 </div>
-            </div>
-        </a>
+            </a>
+
+            <!-- BYOW -->
+            <a href="https://sp23.datastructur.es/materials/proj/proj3/" target="_blank" class="project-link">
+                <div class="project"> 
+                    <h3> Build Your Own World </h3>
+                    <p class="project-desc">
+                        <span class="highlighted-text">Build Your Own World</span> (BYOW) is a 2D game made in <span class="highlighted-text">Java</span> where the user tries to collect a key and escape from the maze.
+                        
+                        <br><br>
+                        
+                        The game features a <span class="highlighted-text">pseudo-random world generation system</span> made using <span class="highlighted-text">Prim's Algorithm</span>. It also has a <span class="highlighted-text">playable character</span> which <span class="highlighted-text">responds to user input</span>, a <span class="highlighted-text">lighting system</span> created with <span class="highlighted-text">Breadth-First Search</span>, <span class="highlighted-text">limited vision</span> that prevents the user from seeing past walls, and enemies with <span class="highlighted-text">pathfinding AI</span> implemented using <span class="highlighted-text">A*-search</span>.
+
+                        Furthermore, there is a save feature where the user can return to the latest save state before they quit.
+
+                        <br><br>
+
+                        Since this is a class project, please contact me in order to view the source code.
+                    </p>
+
+                    <div class="grid">
+                        <div class="grid-item">
+                            Java
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
 
         <!-- CS61C PROJECTS -->
-        <!-- snek -->
+        <div class="class-section">
+            <div class="class-name">
+                <h2> COMPSCI 61C </h2>
+            </div>
+            <div class="visibility" onclick="myHide('class61c')">
+                <i class="fa-solid fa-eye" id="icon_class61c"></i>
+                <div class="visibility-text" id="visibility-text_class61c">
+                    [Hide]
+                </div>
+            </div>
+        </div>
+        <div id="class61c">
+            <!-- snek -->
         <a href="https://inst.eecs.berkeley.edu/~cs61c/fa23/projects/proj1/" target="_blank" class="project-link">
             <div class="project"> 
-                <h2> snek </h2>
+                <h3> snek </h3>
                 <p class="project-desc">
                     <span class="highlighted-text">snek</span> is a recreation of the famous Snake game in <span class="highlighted-text">C</span>. The project involves working with <span class="highlighted-text">(double) pointers</span> and <span class="highlighted-text">memory management</span>.
                     
@@ -139,7 +169,7 @@
         <!-- CS61Classify -->
         <a href="https://inst.eecs.berkeley.edu/~cs61c/fa23/projects/proj2/" target="_blank" class="project-link">
             <div class="project"> 
-                <h2> CS61Classify </h2>
+                <h3> CS61Classify </h3>
                 <p class="project-desc">
                     <span class="highlighted-text">CS61Classify</span> is a project written in <span class="highlighted-text">RISC-V</span> assembly code which classifies handwritten digits using a simple machine learning algorithm.
                     
@@ -167,7 +197,7 @@
         <!-- CS61CPU -->
         <a href="https://inst.eecs.berkeley.edu/~cs61c/fa23/projects/proj2/" target="_blank" class="project-link">
             <div class="project"> 
-                <h2> CS61CPU </h2>
+                <h3> CS61CPU </h3>
                 <p class="project-desc">
                     <span class="highlighted-text">CS61CPU</span> is a project where I <span class="highlighted-text">designed a CPU</span> using <span class="highlighted-text">Logism</span>.
 
@@ -195,7 +225,7 @@
         <!-- CS61kaChow -->
         <a href="https://inst.eecs.berkeley.edu/~cs61c/fa23/projects/proj2/" target="_blank" class="project-link">
             <div class="project"> 
-                <h2> CS61kaChow </h2>
+                <h3> CS61kaChow </h3>
                 <p class="project-desc">
                     <span class="highlighted-text">CS61kaChow</span> is a project, written in <span class="highlighted-text">C</span>, that is focused on implementing optimizations to better the runtime of an algorithm.
                     
@@ -228,6 +258,8 @@
                 </div>
             </div>
         </a>
+        </div>
+
         <!-- Scroll Arrow (Down)-->
         <div class="arrowdownfiller">
             <a class="arrow down" href="#personal-project"><i class="fas fa-chevron-down"></i></a>
