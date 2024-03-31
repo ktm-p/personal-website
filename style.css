@@ -20,9 +20,7 @@ html {
 }
 
 body {
-    min-width:800px;
-    width: auto !important;
-    width:800px;
+    width: 100%;
 }
 
 /* Header */
