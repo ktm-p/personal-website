@@ -383,7 +383,6 @@ section h1 {
 .class-section {
     display: flex;
     margin: auto;
-    padding-left: 2.5rem;
     padding-bottom: 1rem;
     text-align: left;
     width: 60%;
@@ -392,7 +391,7 @@ section h1 {
 .class-section .class-name h2 {
     font-family: "Rubik", sans-serif;
     font-size: 3rem;
-    color: grey;
+    color: rgb(120, 120, 220);
 }
 
 .class-section .visibility {
@@ -414,6 +413,7 @@ section h1 {
 
 .class-section .visibility:hover i, .class-section .visibility:hover .visibility-text {
     color: rgba(194, 194, 194, 0.626);
+    cursor: pointer;
 }
 
 .project h3 {
