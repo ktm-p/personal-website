@@ -278,6 +278,13 @@ section h1 {
     background: black;
 }
 
+.small-filler {
+    height: 5vh;
+    width: 100%;
+    background: black;
+}
+
+
 /* Programming Experience section */
 .language {
     display: inline-block;
@@ -344,4 +351,69 @@ section h1 {
 
 .class-name {
     color: white;
+}
+
+/* Coursework Project */
+/* .personal-projects {
+    padding-top: 3rem;
+}
+
+.personal-projects h1 {
+    margin-bottom: 2rem;
+} */
+
+.project-link {
+    text-decoration: none;
+    display: inline-block;
+    width: 60%;
+}
+
+.project {
+    padding: 2.5rem;
+    margin: auto;
+    margin-bottom: 3rem;
+    border-radius: 1.5rem;
+    text-align: left;
+    /* WIP Colours */
+    background-color: rgba(100, 89, 89, 0.499);
+    border: 2px solid rgba(128, 128, 128, 0.499);
+    transition: all 0.7s;
+}
+
+.project h2 {
+    font-family: "Rubik", sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color:white;
+}
+
+.project p {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.5rem;
+    color: grey;
+    margin-bottom: 3.5rem;
+}
+
+.project .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 7.5rem);
+    grid-gap: 1rem;
+    position: relative;
+    bottom: 1rem;
+}
+  
+.grid-item {
+    width: 7rem;
+    height: 3rem;
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 0.1rem;
+    border-radius: 0.75rem;
+    background-color: rgba(175, 175, 175, 0.499);
+    border: 2px solid rgba(86, 86, 86, 0.499);
+}
+
+.project:hover {
+    background: rgba(65,56,57,255);
+    border-color: rgba(109,105,104,255);
 }

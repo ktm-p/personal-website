@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home | ktm-p</title>
+    <meta name="description" content="Welcome to my personal website!">
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- Custom Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Rubik -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <!-- Cantarell -->
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css">
+    <link rel="stylesheet" href="/font-mfizz-2.4.1/font-mfizz.css">
+
+    <!-- Website Icon -->
+    <link rel="icon" type="image/x-icon" href="/img/ktmp-logo-white.ico">
+
+    <!-- LaTeX -->
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript"
+    src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+</head>
+<body>
+    <div class="header" id="myHeader">
+        <nav>
+            <!-- Header logo (left) -->
+            <img src="img/ktmp-logo-white-centred-text-spaced.png" class="logo">
+
+            <!-- Navigation links (right) -->
+            <ul class="header-links">
+                <li>
+                    <a href="index.html" class="current"> Home </a>
+                    <!-- <ul class="dropdown">
+                        <li><a href="#"> About Me </a></li>
+                        <li><a href="#"> Coursework </a></li>
+                        <li><a href="#"> Credentials </a></li>
+                    </ul> -->
+                </li>
+                <li><a href="#"> Projects </a></li>
+                <li><a href="#"> Miscellaneous </a></li>
+                <li><a href="#"> Contact Me </a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <section class="coursework">
+        <span class="anchor" id="coursework"></span>
+        <h1>Coursework</h1>
+        <!-- CS61B PROJECTS -->
+        <!-- GuitarHero -->
+        <a href="https://sp23.datastructur.es/materials/proj/proj1c/" target="_blank" class="project-link">
+            <div class="project"> 
+                <h2> Guitar Hero </h2>
+                <p class="project-desc">
+                    <span class="highlighted-text">Guitar Hero</span> is a project where I implemented a <span class="highlighted-text">deque</span> package and, using the data structures created in this package, simulated the sound of plucked stringed instruments using the <span class="highlighted-text">Karplus-Strong algorithm</span>. Simulated instruments include drums, guitar, harp, and harpsichord.
+                    
+                    <br><br>
+                    
+                    The <span class="highlighted-text">deque</span> package features two data structures which I implemented: <span class="highlighted-text">LinkedListDeque</span> and <span class="highlighted-text">ArrayDeque</span>. It includes functionalities such as <span class="highlighted-text">prepending</span> and <span class="highlighted-text">appending</span> elements, <span class="highlighted-text">retrieving a specified element</span>, and also <span class="highlighted-text">removed the first and last item</span>.
+
+                    <br><br>
+
+                    Since this is a class project, please contact me in order to view the source code.
+                </p>
+
+                <div class="grid">
+                    <div class="grid-item">
+                        Java
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- BYOW -->
+        <a href="https://sp23.datastructur.es/materials/proj/proj3/" target="_blank" class="project-link">
+            <div class="project"> 
+                <h2> Build Your Own World </h2>
+                <p class="project-desc">
+                    <span class="highlighted-text">Build Your Own World</span> (BYOW) is a 2D game made in <span class="highlighted-text">Java</span> where the user tries to collect a key and escape from the maze.
+                    
+                    <br><br>
+                    
+                    The game features a <span class="highlighted-text">pseudo-random world generation system</span> made using <span class="highlighted-text">Prim's Algorithm</span>. It also has a <span class="highlighted-text">playable character</span> which <span class="highlighted-text">responds to user input</span>, a <span class="highlighted-text">lighting system</span> created with <span class="highlighted-text">Breadth-First Search</span>, <span class="highlighted-text">limited vision</span> that prevents the user from seeing past walls, and enemies with <span class="highlighted-text">pathfinding AI</span> implemented using <span class="highlighted-text">A*-search</span>.
+
+                    Furthermore, there is a save feature where the user can return to the latest save state before they quit.
+
+                    <br><br>
+
+                    Since this is a class project, please contact me in order to view the source code.
+                </p>
+
+                <div class="grid">
+                    <div class="grid-item">
+                        Java
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- CS61C PROJECTS -->
+        <!-- snek -->
+        <a href="https://inst.eecs.berkeley.edu/~cs61c/fa23/projects/proj1/" target="_blank" class="project-link">
+            <div class="project"> 
+                <h2> snek </h2>
+                <p class="project-desc">
+                    <span class="highlighted-text">snek</span> is a recreation of the famous Snake game in <span class="highlighted-text">C</span>. The project involves working with <span class="highlighted-text">(double) pointers</span> and <span class="highlighted-text">memory management</span>.
+                    
+                    <br><br>
+
+                    In the course of using this project, I also gained familiarity with using <span class="highlighted-text">cgdb</span> to debug my code, along with <span class="highlighted-text">Valgrind</span>.
+
+                    <br><br>
+
+                    Since this is a class project, please contact me in order to view the source code.
+                </p>
+
+                <div class="grid">
+                    <div class="grid-item">
+                        C
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- CS61Classify -->
+        <a href="https://inst.eecs.berkeley.edu/~cs61c/fa23/projects/proj2/" target="_blank" class="project-link">
+            <div class="project"> 
+                <h2> CS61Classify </h2>
+                <p class="project-desc">
+                    <span class="highlighted-text">CS61Classify</span> is a project written in <span class="highlighted-text">RISC-V</span> assembly code which classifies handwritten digits using a simple machine learning algorithm.
+                    
+                    <br><br>
+
+                    Within this project, I worked with <span class="highlighted-text">RISC-V calling convention</span>, using the heap, and interacting with files. Some functions implemented in RISC-V includes <span class="highlighted-text">argmax</span>, <span class="highlighted-text">ReLU</span>, and the <span class="highlighted-text">dot product</span>. 
+                    
+                    <br><br>
+                    
+                    I also implemented <span class="highlighted-text">matrix multiplication</span>, along with <span class="highlighted-text">reading and writing</span> matrices. 
+
+                    <br><br>
+
+                    Since this is a class project, please contact me in order to view the source code.
+                </p>
+
+                <div class="grid">
+                    <div class="grid-item">
+                        RISC-V
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- CS61CPU -->
+        <a href="https://inst.eecs.berkeley.edu/~cs61c/fa23/projects/proj2/" target="_blank" class="project-link">
+            <div class="project"> 
+                <h2> CS61CPU </h2>
+                <p class="project-desc">
+                    <span class="highlighted-text">CS61CPU</span> is a project where I <span class="highlighted-text">designed a CPU</span> using <span class="highlighted-text">Logism</span>.
+
+                    <br><br>
+
+                    For the CPU, I implemented the <span class="highlighted-text">Arithmetic Logic Unit</span> (ALU), <span class="highlighted-text">Register File</span> (RegFile), <span class="highlighted-text">Immediate Generator</span> (ImmGen), and implemented the datapaths.
+                    
+                    <br><br>
+
+                    The CPU is capable of performing an assortment of instructions, such as <span class="highlighted-text">I-type instructions</span> (such as addi, ori, etc.), <span class="highlighted-text">R-type instructions</span> (add, or, slt, etc.). It is also capable of <span class="highlighted-text">branch comparisons</span>, <span class="highlighted-text">loading and storing</span>, and also <span class="highlighted-text">jumps</span>. The project also features <span class="highlighted-text">pipelining</span> as well for instruction-level parallelism.
+
+                    <br><br>
+
+                    Since this is a class project, please contact me in order to view the source code.
+                </p>
+
+                <div class="grid">
+                    <div class="grid-item">
+                        Logisim
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- CS61kaChow -->
+        <a href="https://inst.eecs.berkeley.edu/~cs61c/fa23/projects/proj2/" target="_blank" class="project-link">
+            <div class="project"> 
+                <h2> CS61kaChow </h2>
+                <p class="project-desc">
+                    <span class="highlighted-text">CS61kaChow</span> is a project, written in <span class="highlighted-text">C</span>, that is focused on implementing optimizations to better the runtime of an algorithm.
+                    
+                    <br><br>
+                    
+                    The base algorithm I implemented is a <span class="highlighted-text">naive 2D convolution algorithm</span> which is used to apply different effects (such as blurring, sharpening, etc.) onto videos.
+
+                    <br><br>
+
+                    From there, in order to reduce the runtime needed, I applied different techniques such as changing the algorithm so that it dealt with pointers directly via <span class="highlighted-text">pointer arithmetics</span> and reorganizing the order in which the steps were executed to <span class="highlighted-text">optimize cache</span>. Furthermore, I used <span class="highlighted-text">registers</span> to store commonly-used variables, which helped decrease the runtime of the algorithm.
+
+                    <br><br>
+
+                    The project also used <span class="highlighted-text">OpenMP</span> to introduce parallel programming, significantly reducing the runtime even further. Also, by using <span class="highlighted-text">SIMD instructions</span> to vectorize operations and <span class="highlighted-text">loop unrolling</span>, the runtime was further reduced.
+
+                    For the CPU, I implemented the <span class="highlighted-text">Arithmetic Logic Unit</span> (ALU), <span class="highlighted-text">Register File</span> (RegFile), <span class="highlighted-text">Immediate Generator</span> (ImmGen), and implemented the datapaths. Overall, the optimizations led to approximately a <span class="highlighted-text">x50 speedup</span>.
+
+                    <br><br>
+
+                    Since this is a class project, please contact me in order to view the source code.
+                </p>
+
+                <div class="grid">
+                    <div class="grid-item">
+                        C
+                    </div>
+                    <div class="grid-item">
+                        OpenMP
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!-- Scroll Arrow (Down)-->
+        <div class="arrowdownfiller">
+            <a class="arrow down" href="#personal-project"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <div class="filler">
+
+    </div>
+
+    <section class="personal-projects">
+        <span class="anchor" id="personal-project"></span>
+        <h1>Personal Projects</h1>
+
+        <!-- Scroll Arrow (Down)-->
+        <div class="arrowdownfiller">
+            <a class="arrow up" href="#coursework"><i class="fas fa-chevron-up"></i></a>
+        </div>
+    </section>
+</body>
+</html>
