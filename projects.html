@@ -431,9 +431,47 @@
         <span class="anchor" id="/personal-project"></span>
         <h1>Personal Projects</h1>
 
-        <!-- Scroll Arrow (Down)-->
+        <!-- Scroll Arrow (Up)-->
         <div class="arrowdownfiller">
             <a class="arrow up" href="#/coursework"><i class="fas fa-chevron-up"></i></a>
+        </div>
+
+        <div class="class-section">
+            <div class="class-name">
+                <h2> Game Design </h2>
+            </div>
+            <div class="visibility" onclick="myHide('class-gamedesign')">
+                <i class="fa-solid fa-eye" id="icon_class-gamedesign"></i>
+                <div class="visibility-text" id="visibility-text_class-gamedesign">
+                    [Hide]
+                </div>
+            </div>
+        </div>
+        
+        <div id="class-gamedesign">
+            <!-- A JStris Clone -->
+            <a href="https://github.com/ktm-p/jstris_clone" target="_blank" class="project-link">
+                <div class="project"> 
+                    <h3> A JStris Clone </h3>
+                    <p class="project-desc">
+                        Given how I enjoy playing Tetris, I decided to code up a clone of JStris in <span class="highlighted-text">Python</span> using the <span class="highlighted-text">pygame</span> library.
+
+                        The game has functionalities such as being able to <span class="highlighted-text">move</span> and <span class="highlighted-text">rotate</span> blocks (following the standard Tetris Super Rotation System rules), along with being able to <span class="highlighted-text">hold</span> blocks.
+
+                        The game also has preview of the next blocks, and the blocks have a <span class="highlighted-text">silhouette</span> indicating to users where the block will be dropped onto.
+
+                        The project features a focus on <span class="highlighted-text">object-oriented programming</span> concepts such as <span class="highlighted-text">inheritance</span> and <span class="highlighted-text">polymorphism</span>, used in creating each the tetrominoes, board, and game classes. 
+                        <!-- A demo of gameplay is available here. -->
+                        <!-- Furthermore, using <span class="highlighted-text">linear algebra</span>, I derived a formula for rotating the tetrominoes using <span class="highlighted-text">rotation matrices</span>. -->
+                    </p>
+
+                    <div class="grid">
+                        <div class="grid-item">
+                            Python
+                        </div>
+                    </div>
+                </div>
+            </a>
         </div>
     </section>
 </body>
