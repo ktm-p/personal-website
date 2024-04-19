@@ -152,7 +152,7 @@
                         
                         The game features a <span class="highlighted-text">pseudo-random world generation system</span> made using <span class="highlighted-text">Prim's Algorithm</span>. It also has a <span class="highlighted-text">playable character</span> which <span class="highlighted-text">responds to user input</span>, a <span class="highlighted-text">lighting system</span> created with <span class="highlighted-text">Breadth-First Search</span>, <span class="highlighted-text">limited vision</span> that prevents the user from seeing past walls, and enemies with <span class="highlighted-text">pathfinding AI</span> implemented using <span class="highlighted-text">A*-search</span>.
 
-                        Furthermore, there is a save feature where the user can return to the latest save state before they quit.
+                        Furthermore, there is a <span class="highlighted-text">save feature</span> where the user can return to the latest save state before they quit.
 
                         <br><br>
 
@@ -186,11 +186,11 @@
                 <div class="project"> 
                     <h3> snek </h3>
                     <p class="project-desc">
-                        <span class="highlighted-text">snek</span> is a recreation of the famous Snake game in <span class="highlighted-text">C</span>. The project involves working with <span class="highlighted-text">(double) pointers</span> and <span class="highlighted-text">memory management</span>.
+                        <span class="highlighted-text">snek</span> is a recreation of the famous Snake game in <span class="highlighted-text">C</span>. The project involves working with <span class="highlighted-text">(double) pointers</span> and <span class="highlighted-text">memory management</span> in order to implement the game's functionalities, including things such as snake movement, growth, and death, along with randomly generating the food pellets.
                         
                         <br><br>
 
-                        In the course of using this project, I also gained familiarity with using <span class="highlighted-text">cgdb</span> to debug my code, along with <span class="highlighted-text">Valgrind</span>.
+                        In the course of using this project, I also gained familiarity with using <span class="highlighted-text">cgdb</span> to debug my code, along with tools such as <span class="highlighted-text">Valgrind</span> in order to ensure that there are no memory leaks happening.
 
                         <br><br>
 
@@ -208,13 +208,13 @@
             <!-- CS61Classify -->
             <a href="https://inst.eecs.berkeley.edu/~cs61c/fa23/projects/proj2/" target="_blank" class="project-link">
                 <div class="project"> 
-                    <h3> CS61Classify </h3>
+                    <h3> Digits Classifier </h3>
                     <p class="project-desc">
-                        <span class="highlighted-text">CS61Classify</span> is a project written in <span class="highlighted-text">RISC-V</span> assembly code which classifies handwritten digits using a simple machine learning algorithm.
+                        Digits Classifier is a project written in <span class="highlighted-text">RISC-V</span> assembly code which <span class="highlighted-text">classifies handwritten digits</span> using a simple <span class="highlighted-text">machine learning algorithm</span>.
                         
                         <br><br>
 
-                        Within this project, I worked with <span class="highlighted-text">RISC-V calling convention</span>, using the heap, and interacting with files. Some functions implemented in RISC-V includes <span class="highlighted-text">argmax</span>, <span class="highlighted-text">ReLU</span>, and the <span class="highlighted-text">dot product</span>. 
+                        Within this project, I worked with <span class="highlighted-text">RISC-V calling convention</span>, using the heap, and file interaction. Some functions implemented in RISC-V includes <span class="highlighted-text">argmax</span>, <span class="highlighted-text">ReLU</span>, and the <span class="highlighted-text">dot product</span>. 
                         
                         <br><br>
                         
@@ -236,7 +236,7 @@
             <!-- CS61CPU -->
             <a href="https://inst.eecs.berkeley.edu/~cs61c/fa23/projects/proj2/" target="_blank" class="project-link">
                 <div class="project"> 
-                    <h3> CS61CPU </h3>
+                    <h3> RISC-V CPU </h3>
                     <p class="project-desc">
                         <span class="highlighted-text">CS61CPU</span> is a project where I <span class="highlighted-text">designed a CPU</span> using <span class="highlighted-text">Logism</span>.
 
@@ -255,7 +255,10 @@
 
                     <div class="grid">
                         <div class="grid-item">
-                            Logisim
+                            Logism
+                        </div>
+                        <div class="grid-item">
+                            RISC-V
                         </div>
                     </div>
                 </div>
@@ -264,9 +267,9 @@
             <!-- CS61kaChow -->
             <a href="https://inst.eecs.berkeley.edu/~cs61c/fa23/projects/proj2/" target="_blank" class="project-link">
                 <div class="project"> 
-                    <h3> CS61kaChow </h3>
+                    <h3> Convolution and Optimizations </h3>
                     <p class="project-desc">
-                        <span class="highlighted-text">CS61kaChow</span> is a project, written in <span class="highlighted-text">C</span>, that is focused on implementing optimizations to better the runtime of an algorithm.
+                        This project, written in <span class="highlighted-text">C</span>, is focused on implementing optimizations to better the runtime of an algorithm.
                         
                         <br><br>
                         
@@ -348,13 +351,21 @@
                         
                         <br><br>
                         
-                        The system has functionalities such as <span class="highlighted-text">initializing</span> (unique) users and <span class="highlighted-text">loading</span> their info on multiple devices. The users can also <span class="highlighted-text">create files</span> within their namespace, <span class="highlighted-text">retrieve</span> the specified file they own, and also <span class="highlighted-text">share</span> files with other users so that they can edit it. The users also have the option to <span class="highlighted-text">revoke a invitee's access rights</span>.
+                        <!-- The system has functionalities such as <span class="highlighted-text">initializing</span> (unique) users and <span class="highlighted-text">loading</span> their info on multiple devices. The users can also <span class="highlighted-text">create files</span> within their namespace, <span class="highlighted-text">retrieve</span> the specified file they own, and also <span class="highlighted-text">share</span> files with other users so that they can edit it. The users also have the option to <span class="highlighted-text">revoke a invitee's access rights</span>. Furthermore, users can <span class="highlighted-text">append</span> content to files within their namespace. The <span class="highlighted-text">bandwidth</span> of an append scales only with the size of the append.
+
+                        <br><br> -->
+
+                        In the project, I had to <span class="highlighted-text">design the system</span>, and <span class="highlighted-text">determine possible vulnerabilities</span> that adversaries can exploit to gain access or tamper with both user and file data. Furthermore, I had to extensively <span class="highlighted-text">check for edge cases</span> the attackers may be able to exploit to ensure that the system was indeed secure, along with ensuring that the system functions as specified. This was done by writing <span class="highlighted-text">over three thousand</span> lines of tests.
+
+                        <br><br>                        
+
+                        In order to ensure <span class="highlighted-text">integrity and confidentiality</span> of user data, I used <span class="highlighted-text">symmetric encryption</span>, <span class="highlighted-text">HMACs</span>, and <span class="highlighted-text">digital signatures</span>.
 
                         <br><br>
 
-                        The project is <span class="highlighted-text">heavily design-oriented</span>, as I had to <span class="highlighted-text">design the system</span>, and <span class="highlighted-text">determine possible vulnerabilities</span> that adversaries can exploit to gain access or tamper with both user and file data.
+                        For files operations such as sharing and revocation of access, I utilized both <span class="highlighted-text">symmetric encryption</span> and <span class="highlighted-text">asymmetric encryption</span> (in this case, <span class="highlighted-text">RSA encryption</span>).
 
-                        <br><br>                        
+                        <br><br>
 
                         Since this is a class project, please contact me in order to view the source code.
                     </p>
@@ -401,7 +412,7 @@
 
         <div id="tetris">
             <!-- A Tetris Clone -->
-            <a href="https://github.com/ktm-p/jstris_clone" target="_blank" class="project-link">
+            <a href="https://github.com/ktm-p/tetris_clone" target="_blank" class="project-link">
                 <div class="project"> 
                     <h3> A Tetris Clone </h3>
                     <p class="project-desc">
@@ -417,9 +428,7 @@
 
                         <br><br>
                         
-                        The project features a focus on <span class="highlighted-text">object-oriented programming</span> concepts such as <span class="highlighted-text">inheritance</span> and <span class="highlighted-text">polymorphism</span>, used in creating the tetrominoes, board, and game classes.
-                        <!-- A demo of gameplay is available here. -->
-                        <!-- Furthermore, using <span class="highlighted-text">linear algebra</span>, I derived a formula for rotating the tetrominoes using <span class="highlighted-text">rotation matrices</span>. -->
+                        The project features a focus on <span class="highlighted-text">object-oriented programming</span> concepts, such as <span class="highlighted-text">inheritance</span> and <span class="highlighted-text">polymorphism</span>, which are used in creating the tetrominoes, board, and game classes.
                     </p>
 
                     <div class="grid">
@@ -431,7 +440,7 @@
             </a>
         </div>
     </section>
-
+    
     <div class="filler">
 
     </div>

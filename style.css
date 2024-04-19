@@ -453,3 +453,8 @@ section h1 {
     background: rgba(65,56,57,255);
     border-color: rgba(109,105,104,255);
 }
+
+p .demo-link {
+    text-decoration: none;
+    display: inline;
+}
