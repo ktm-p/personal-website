@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- Setup -->
         <title>Home | ktm-p</title>
+        <link rel="icon" type="image/x-icon" href="/img/ktmp-logo-white.ico">
         <meta name="description" content="Welcome to my personal website!">
         <meta charset="utf-8">
         <meta name="robots" content="index, follow">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
+        <!-- Linking CSS -->
         <link rel="stylesheet" href="style.css">
 
         <!-- Custom Fonts -->
@@ -27,7 +30,7 @@
 
     <body>
         <!-- Navigation Bar -->
-        <nav>
+        <nav id="navi">
             <!-- Logo -->
             <div id="logo">
                 <a href="#">
@@ -39,7 +42,7 @@
             <div id="navigation">
                 <ul>
                     <li><a href="#"> Home </a></li>
-                    <li><a href="#"> Projects </a></li>
+                    <li><a href="projects.html"> Projects </a></li>
                     <!-- <li><a href="#"> Contact Me </a></li> -->
                     <li style="margin-left: 0;"><input type="checkbox" id="darkmode_toggle" onclick="darkMode(), invert()"/><label for="darkmode_toggle"></label></li>
                 </ul>
@@ -151,9 +154,9 @@
             </div>
         </div>
 
-        <!-- Coursework -->
-        <div id="coursework">
-            <h1>Coursework</h1>
+        <!-- Courses -->
+        <div id="courses">
+            <h1>Courses</h1>
             <div class="course-container" id="su24">
                 <h2>Summer 2024</h2>
                 <ul>
@@ -200,5 +203,29 @@
                 </ul>
             </div>
         </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="professional-links">
+                <a href="https://github.com/ktm-p?tab=repositories" target="_blank">
+                    <i class="fa fa-brands fa-github"></i>                
+                </a>
+
+                <a href="https://github.com/ktm-p?tab=repositories" target="_blank">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://github.com/ktm-p?tab=repositories" target="_blank">
+                    <i class="fa-regular fa-file"></i>
+                </a>
+
+                <a href="https://github.com/ktm-p?tab=repositories" target="_blank">
+                    <i class="fa-regular fa-envelope"></i>
+                </a>
+            </div>
+            <div id="copyright">
+                &copy 2024 Michael Pham
+            </div>
+        </footer>
     </body>
 </html>

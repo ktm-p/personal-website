@@ -166,6 +166,27 @@ body.darkMode .course-container > ul > li {
     color: rgb(160, 160, 160);
     /* color: rgba(128, 128, 128, 0.75); */
 }
+
+body.darkMode footer {
+    background-color: #232428;
+}
+
+body.darkMode footer > .professional-links > a > i {
+    color: white;
+}
+
+body.darkMode footer > .professional-links > a > i:hover {
+    color: #f2c138;
+    background: none;
+}
+
+#copyright {
+    margin-top: 5rem;
+    font-size: 2rem;
+    font-weight: lighter;
+    color: #71757e;
+    text-align: center;
+}
 /* #endregion */
 
 /* #region: Navigation Bar */
@@ -397,7 +418,7 @@ nav #navigation ul li a:hover::after {
 }
 /* #endregion */
 
-/* region: Coursework */
+/* #region: Courses */
 .course-container {
     padding: 3rem;
     margin-bottom: 5rem;
@@ -425,5 +446,50 @@ nav #navigation ul li a:hover::after {
     font-size: 2rem;
     color: rgb(100, 100, 100);
     /* color: rgba(128, 128, 128, 0.75); */
+}
+/* #endregion */
+
+/* #region: Footer */
+footer {
+    height: 18rem;
+    background: #d7d9dc;
+
+    align-content: center;
+}
+
+footer > .professional-links {
+    justify-content: space-evenly;
+}
+
+footer > .professional-links > a > i {
+    color: #71757e;
+    font-size: 5rem;
+    border-style: none;
+    background: none;
+}
+
+footer > .professional-links > a > i:hover {
+    color: #3873f2;
+    background: none;
+}
+
+#copyright {
+    margin-top: 5rem;
+    font-size: 2rem;
+    font-weight: lighter;
+    color: #71757e;
+    text-align: center;
+}
+/* #endregion */
+
+/* #region: Projects */
+.projects {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.projects > .project-container {
+    width: 40rem;
+    background: red;
 }
 /* #endregion */

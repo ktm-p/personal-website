@@ -8,6 +8,24 @@ navbar.before(watcher);
 const navObserver = new IntersectionObserver((entries) => {navbar.classList.toggle("sticking", !entries[0].isIntersecting)});
 navObserver.observe(watcher);
 
+var darkmode_toggle = document.getElementById("darkmode_toggle");
+var body = document.body;
+var navi = document.getElementsByTagName("nav");
+
+if (localStorage.getItem('darkMode') == "true") {
+    body.style.transition = "none";
+    navi[0].style.transition = "none";
+
+    darkmode_toggle.click();
+
+    setTimeout(() => {resetTransitions();}, 100);
+}
+
+function resetTransitions() {
+    body.style.transition = "0.7s ease";
+    navi[0].style.transition = "0.7s ease";
+}
+
 function myHide(class_name) {
     var projects = document.getElementById(class_name);
     var text = document.getElementById("visibility-text_" + class_name);
@@ -34,8 +52,12 @@ function myColor() {
 }
 
 function darkMode() {
-    var x = document.body;
-    x.classList.toggle("darkMode");
+    localStorage.setItem('darkMode', darkmode_toggle.checked);
+    if (darkmode_toggle.checked) {
+        body.classList.add('darkMode');
+    } else {
+        body.classList.remove('darkMode');  
+    }
 }
 
 function invert() {

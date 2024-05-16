@@ -1,448 +1,184 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Projects | ktm-p</title>
-    <meta name="description" content="Welcome to my personal website!">
-    <meta charset="utf-8">
-    <meta name="robots" content="index, follow">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <!-- Setup -->
+        <title>Projects | ktm-p</title>
+        <link rel="icon" type="image/x-icon" href="/img/ktmp-logo-white.ico">
+        <meta name="description" content="Welcome to my personal website!">
+        <meta charset="utf-8">
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Linking CSS -->
+        <link rel="stylesheet" href="style.css">
 
-    <!-- Style -->
-    <link rel="stylesheet" href="/style.css">
+        <!-- Custom Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Rubik -->
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <!-- Cantarell -->
+        <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Rubik -->
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <!-- Cantarell -->
-    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css">
-    <link rel="stylesheet" href="/font-mfizz-2.4.1/font-mfizz.css">
+        <!-- Ico Files -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
 
-    <!-- Website Icon -->
-    <link rel="icon" type="image/x-icon" href="/img/ktmp-logo-white.ico">
+        <!-- JS Scripts -->
+        <script src="/scripts.js" type="application/javascript" defer></script>
+    </head>
 
-    <!-- LaTeX -->
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-    </script>
-    <script type="text/javascript"
-    src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>
-
-    <!-- Hide/Show -->
-    <script src="/scripts.js" type="application/javascript"></script>
-</head>
-<body>
-    <div class="header" id="myHeader">
+    <body>
+        <!-- Navigation Bar -->
         <nav>
-            <!-- Header logo (left) -->
-            <a href="https://ktm-p.github.io" style="text-decoration: none;"><img src="img/ktmp-logo-white-centred-text-spaced.png" class="logo"></a>
+            <!-- Logo -->
+            <div id="logo">
+                <a href="#">
+                    <img src="img/ktmp-logo-white-centred-text-spaced.png" class="logo" id="logo-image" style="filter: invert(75%);">
+                </a>
+            </div>
 
-            <!-- Navigation links (right) -->
-            <ul class="header-links">
-                <li>
-                    <a href="https://ktm-p.github.io"> Home </a>
-                </li>
-                <li>
-                    <a href="#"> Projects </a>
-                </li>
-                <li>
-                    <a href="#"> Contact Me </a>
-                </li>
-            </ul>
+            <!-- Navigation Links -->
+            <div id="navigation">
+                <ul>
+                    <li><a href="index.html"> Home </a></li>
+                    <li><a href="#"> Projects </a></li>
+                    <!-- <li><a href="#"> Contact Me </a></li> -->
+                    <li style="margin-left: 0;"><input type="checkbox" id="darkmode_toggle" onclick="darkMode(), invert()"/><label for="darkmode_toggle"></label></li>
+                </ul>
+            </div>
         </nav>
-    </div>
 
-    <section class="coursework">
-        <span class="anchor" id="/coursework"></span>
-        <h1>Coursework</h1>
-        <!-- CS61A PROJECTS -->
-        <div class="class-section">
-            <div class="class-name">
-                <h2> COMPSCI 61A </h2>
-            </div>
-            <div class="visibility" onclick="myHide('class61a')">
-                <i class="fa-solid fa-eye" id="icon_class61a"></i>
-                <div class="visibility-text" id="visibility-text_class61a">
-                    [Hide]
-                </div>
-            </div>
-        </div>
-        
-        <div id="class61a">
-             <!-- Scheme -->
-            <a href="https://inst.eecs.berkeley.edu/~cs61a/fa22/proj/scheme/" target="_blank" class="project-link">
-                <div class="project"> 
-                    <h3> Scheme Interpreter </h3>
-                    <p class="project-desc">
-                        The <span class="highlighted-text">Scheme Interpreter</span> is, as its name suggests, an <span class="highlighted-text">interpreter</span> for Scheme which is written in Python. The user is able to input lines of Scheme commands which the program will then output the results for.
-                        
-                        <br><br>
-                        
-                        Not only does the project requires <span class="highlighted-text">understanding of Scheme</span>, both in its <span class="highlighted-text">syntax</span> and the <span class="highlighted-text">different functions</span> (such as <span class="highlighted-text">define</span>, <span class="highlighted-text">if</span>, <span class="highlighted-text">cond</span>, etc.), but also a firm grasp on <span class="highlighted-text">recursion</span>. This project also features <span class="highlighted-text">tail-recursion</span> in the implementation of some of its methods.
-
-                        <br><br>
-
-                        Since this is a class project, please contact me in order to view the source code.
-                    </p>
-
-                    <div class="grid">
-                        <div class="grid-item">
-                            Python
-                        </div>
-                        <div class="grid-item">
-                            Scheme
+        <!-- Personal Projects -->
+        <div id="personal-projects">
+            <h1> Personal Projects </h1>
+            <div class="projects">
+                <div class="project-container">
+                    <div class="project-img">
+                        Hello
+                    </div>
+                    <div class="project-desc">
+                        <a href="https://github.com/ktm-p/tetris_clone" target="_blank">Pytris</a>
+                        <p>Pytris is a Tetris clone implemented in Python, made using the pygame library. The user is able to move and rotate the tetrominoes following the standard Tetris Super Rotation System. Users are also able to hold blocks. A block silhouette feature is implemented as well, along with a preview of the next couple of blocks.</p>
+                        <div class="skills-container">
+                            <div class="skills">Python</div>
                         </div>
                     </div>
-                </div>
-            </a>
-        </div>
-
-        <!-- CS61B PROJECTS -->
-        <div class="class-section">
-            <div class="class-name">
-                <h2> COMPSCI 61B </h2>
-            </div>
-            <div class="visibility" onclick="myHide('class61b')">
-                <i class="fa-solid fa-eye" id="icon_class61b"></i>
-                <div class="visibility-text" id="visibility-text_class61b">
-                    [Hide]
-                </div>
-            </div>
-        </div>
-        
-        <div id="class61b">
-            <!-- GuitarHero -->
-            <a href="https://sp23.datastructur.es/materials/proj/proj1c/" target="_blank" class="project-link">
-                <div class="project"> 
-                    <h3> Guitar Hero </h3>
-                    <p class="project-desc">
-                        <span class="highlighted-text">Guitar Hero</span> is a project where I implemented a <span class="highlighted-text">deque</span> package and, using the data structures created in this package, simulated the sound of plucked stringed instruments using the <span class="highlighted-text">Karplus-Strong algorithm</span>. Simulated instruments include drums, guitar, harp, and harpsichord.
-                        
-                        <br><br>
-                        
-                        The <span class="highlighted-text">deque</span> package features two data structures which I implemented: <span class="highlighted-text">LinkedListDeque</span> and <span class="highlighted-text">ArrayDeque</span>. It includes functionalities such as <span class="highlighted-text">prepending</span> and <span class="highlighted-text">appending</span> elements, <span class="highlighted-text">retrieving a specified element</span>, and also <span class="highlighted-text">removed the first and last item</span>.
-
-                        <br><br>
-
-                        Since this is a class project, please contact me in order to view the source code.
-                    </p>
-
-                    <div class="grid">
-                        <div class="grid-item">
-                            Java
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <!-- BYOW -->
-            <a href="https://sp23.datastructur.es/materials/proj/proj3/" target="_blank" class="project-link">
-                <div class="project"> 
-                    <h3> Build Your Own World </h3>
-                    <p class="project-desc">
-                        <span class="highlighted-text">Build Your Own World</span> (BYOW) is a 2D game made in <span class="highlighted-text">Java</span> where the user tries to collect a key and escape from the maze.
-                        
-                        <br><br>
-                        
-                        The game features a <span class="highlighted-text">pseudo-random world generation system</span> made using <span class="highlighted-text">Prim's Algorithm</span>. It also has a <span class="highlighted-text">playable character</span> which <span class="highlighted-text">responds to user input</span>, a <span class="highlighted-text">lighting system</span> created with <span class="highlighted-text">Breadth-First Search</span>, <span class="highlighted-text">limited vision</span> that prevents the user from seeing past walls, and enemies with <span class="highlighted-text">pathfinding AI</span> implemented using <span class="highlighted-text">A*-search</span>.
-
-                        Furthermore, there is a <span class="highlighted-text">save feature</span> where the user can return to the latest save state before they quit.
-
-                        <br><br>
-
-                        Since this is a class project, please contact me in order to view the source code.
-                    </p>
-
-                    <div class="grid">
-                        <div class="grid-item">
-                            Java
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <!-- CS61C PROJECTS -->
-        <div class="class-section">
-            <div class="class-name">
-                <h2> COMPSCI 61C </h2>
-            </div>
-            <div class="visibility" onclick="myHide('class61c')">
-                <i class="fa-solid fa-eye" id="icon_class61c"></i>
-                <div class="visibility-text" id="visibility-text_class61c">
-                    [Hide]
-                </div>
-            </div>
-        </div>
-        <div id="class61c">
-            <!-- snek -->
-            <a href="https://inst.eecs.berkeley.edu/~cs61c/fa23/projects/proj1/" target="_blank" class="project-link">
-                <div class="project"> 
-                    <h3> snek </h3>
-                    <p class="project-desc">
-                        <span class="highlighted-text">snek</span> is a recreation of the famous Snake game in <span class="highlighted-text">C</span>. The project involves working with <span class="highlighted-text">(double) pointers</span> and <span class="highlighted-text">memory management</span> in order to implement the game's functionalities, including things such as snake movement, growth, and death, along with randomly generating the food pellets.
-                        
-                        <br><br>
-
-                        In the course of using this project, I also gained familiarity with using <span class="highlighted-text">cgdb</span> to debug my code, along with tools such as <span class="highlighted-text">Valgrind</span> in order to ensure that there are no memory leaks happening.
-
-                        <br><br>
-
-                        Since this is a class project, please contact me in order to view the source code.
-                    </p>
-
-                    <div class="grid">
-                        <div class="grid-item">
-                            C
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <!-- CS61Classify -->
-            <a href="https://inst.eecs.berkeley.edu/~cs61c/fa23/projects/proj2/" target="_blank" class="project-link">
-                <div class="project"> 
-                    <h3> Digits Classifier </h3>
-                    <p class="project-desc">
-                        Digits Classifier is a project written in <span class="highlighted-text">RISC-V</span> assembly code which <span class="highlighted-text">classifies handwritten digits</span> using a simple <span class="highlighted-text">machine learning algorithm</span>.
-                        
-                        <br><br>
-
-                        Within this project, I worked with <span class="highlighted-text">RISC-V calling convention</span>, using the heap, and file interaction. Some functions implemented in RISC-V includes <span class="highlighted-text">argmax</span>, <span class="highlighted-text">ReLU</span>, and the <span class="highlighted-text">dot product</span>. 
-                        
-                        <br><br>
-                        
-                        I also implemented <span class="highlighted-text">matrix multiplication</span>, along with <span class="highlighted-text">reading and writing</span> matrices. 
-
-                        <br><br>
-
-                        Since this is a class project, please contact me in order to view the source code.
-                    </p>
-
-                    <div class="grid">
-                        <div class="grid-item">
-                            RISC-V
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <!-- CS61CPU -->
-            <a href="https://inst.eecs.berkeley.edu/~cs61c/fa23/projects/proj2/" target="_blank" class="project-link">
-                <div class="project"> 
-                    <h3> RISC-V CPU </h3>
-                    <p class="project-desc">
-                        <span class="highlighted-text">CS61CPU</span> is a project where I <span class="highlighted-text">designed a CPU</span> using <span class="highlighted-text">Logism</span>.
-
-                        <br><br>
-
-                        For the CPU, I implemented the <span class="highlighted-text">Arithmetic Logic Unit</span> (ALU), <span class="highlighted-text">Register File</span> (RegFile), <span class="highlighted-text">Immediate Generator</span> (ImmGen), and implemented the datapaths.
-                        
-                        <br><br>
-
-                        The CPU is capable of performing an assortment of instructions, such as <span class="highlighted-text">I-type instructions</span> (such as addi, ori, etc.), <span class="highlighted-text">R-type instructions</span> (add, or, slt, etc.). It is also capable of <span class="highlighted-text">branch comparisons</span>, <span class="highlighted-text">loading and storing</span>, and also <span class="highlighted-text">jumps</span>. The project also features <span class="highlighted-text">pipelining</span> as well for instruction-level parallelism.
-
-                        <br><br>
-
-                        Since this is a class project, please contact me in order to view the source code.
-                    </p>
-
-                    <div class="grid">
-                        <div class="grid-item">
-                            Logism
-                        </div>
-                        <div class="grid-item">
-                            RISC-V
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <!-- CS61kaChow -->
-            <a href="https://inst.eecs.berkeley.edu/~cs61c/fa23/projects/proj2/" target="_blank" class="project-link">
-                <div class="project"> 
-                    <h3> Convolution and Optimizations </h3>
-                    <p class="project-desc">
-                        This project, written in <span class="highlighted-text">C</span>, is focused on implementing optimizations to better the runtime of an algorithm.
-                        
-                        <br><br>
-                        
-                        The base algorithm I implemented is a <span class="highlighted-text">naive 2D convolution algorithm</span> which is used to apply different effects (such as blurring, sharpening, etc.) onto videos.
-
-                        <br><br>
-
-                        From there, in order to reduce the runtime needed, I applied different techniques such as changing the algorithm so that it dealt with pointers directly via <span class="highlighted-text">pointer arithmetics</span> and reorganizing the order in which the steps were executed to <span class="highlighted-text">optimize cache</span>. Furthermore, I used <span class="highlighted-text">registers</span> to store commonly-used variables, which helped decrease the runtime of the algorithm.
-
-                        <br><br>
-
-                        The project also used <span class="highlighted-text">OpenMP</span> to introduce parallel programming, significantly reducing the runtime even further. Also, by using <span class="highlighted-text">SIMD instructions</span> to vectorize operations and <span class="highlighted-text">loop unrolling</span>, the runtime was further reduced. Overall, the optimizations led to approximately a <span class="highlighted-text">x50 speedup</span>.
-
-                        <br><br>
-
-                        Since this is a class project, please contact me in order to view the source code.
-                    </p>
-
-                    <div class="grid">
-                        <div class="grid-item">
-                            C
-                        </div>
-                        <div class="grid-item">
-                            OpenMP
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <!-- CS161 PROJECTS -->
-        <div class="class-section">
-            <div class="class-name">
-                <h2> COMPSCI 161 </h2>
-            </div>
-            <div class="visibility" onclick="myHide('class161')" style="position: relative; left: 0.75rem;">
-                <i class="fa-solid fa-eye" id="icon_class161"></i>
-                <div class="visibility-text" id="visibility-text_class161">
-                    [Hide]
-                </div>
-            </div>
-        </div>
-        
-        <div id="class161">
-            <!-- Exploiting Memory Safety Vulnerabilities -->
-            <a href="https://sp24.cs161.org/proj1/" target="_blank" class="project-link">
-                <div class="project"> 
-                    <h3> Exploiting Memory Safety Vulnerabilities </h3>
-                    <p class="project-desc">
-                        Within this project, I looked at a variety of functions written in <span class="highlighted-text">C</span> and tried to find security exploits in them. Over the course of the project, I had to circumvent memory safety mitigation tactics such as <span class="highlighted-text">stack canaries</span>, <span class="highlighted-text">Address Space Layout Randomization (ASLR)</span>, and a <span class="highlighted-text">combination of the two</span>.
-
-                        <br><br>
-
-                        Vulnerabilities involved in this project include <span class="highlighted-text">buffer overflow attacks</span>, <span class="highlighted-text">integer conversion vulnerabilities</span>, <span class="highlighted-text">off-by-one vulnerabilities</span>, <span class="highlighted-text">Time-of-Check to Time-of-Use (TOCTOU)</span>, and <span class="highlighted-text">format string vulnerabilities</span>. I also had to implement a <span class="highlighted-text">Ret2Ret</span> attack to bypass the ASLR and stack canaries of some functions.
-
-                        <br><br>
-
-                        The project involved heavy use of tools such as <span class="highlighted-text">gdb</span> and being able to <span class="highlighted-text">analyze memory</span> in order to figure out the potential exploit and also to debug.
-
-                        <br><br>
-
-                        Since this is a class project, please contact me in order to view the source code.
-                    </p>
-
-                    <div class="grid">
-                        <div class="grid-item">
-                            C
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <!-- A Secure File Sharing System -->
-            <a href="https://sp24.cs161.org/proj2/" target="_blank" class="project-link">
-                <div class="project"> 
-                    <h3> A Secure File Sharing System </h3>
-                    <p class="project-desc">
-                        This is a project which is implemented in <span class="highlighted-text">Golang</span> whose goal is to, using <span class="highlighted-text">cryptographic library functions</span>, implement a <span class="highlighted-text">secure file sharing system</span>.
-                        
-                        <br><br>
-                        
-                        <!-- The system has functionalities such as <span class="highlighted-text">initializing</span> (unique) users and <span class="highlighted-text">loading</span> their info on multiple devices. The users can also <span class="highlighted-text">create files</span> within their namespace, <span class="highlighted-text">retrieve</span> the specified file they own, and also <span class="highlighted-text">share</span> files with other users so that they can edit it. The users also have the option to <span class="highlighted-text">revoke a invitee's access rights</span>. Furthermore, users can <span class="highlighted-text">append</span> content to files within their namespace. The <span class="highlighted-text">bandwidth</span> of an append scales only with the size of the append.
-
-                        <br><br> -->
-
-                        In the project, I had to <span class="highlighted-text">design the system</span>, and <span class="highlighted-text">determine possible vulnerabilities</span> that adversaries can exploit to gain access or tamper with both user and file data. Furthermore, I had to extensively <span class="highlighted-text">check for edge cases</span> the attackers may be able to exploit to ensure that the system was indeed secure, along with ensuring that the system functions as specified. This was done by writing <span class="highlighted-text">over three thousand</span> lines of tests.
-
-                        <br><br>                        
-
-                        In order to ensure <span class="highlighted-text">integrity and confidentiality</span> of user data, I used <span class="highlighted-text">symmetric encryption</span>, <span class="highlighted-text">HMACs</span>, and <span class="highlighted-text">digital signatures</span>.
-
-                        <br><br>
-
-                        For files operations such as sharing and revocation of access, I utilized both <span class="highlighted-text">symmetric encryption</span> and <span class="highlighted-text">asymmetric encryption</span> (in this case, <span class="highlighted-text">RSA encryption</span>).
-
-                        <br><br>
-
-                        Since this is a class project, please contact me in order to view the source code.
-                    </p>
-
-                    <div class="grid">
-                        <div class="grid-item">
-                            Golang
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <!-- Scroll Arrow (Down)-->
-        <div class="arrowdownfiller">
-            <a class="arrow down" href="#/personal-project"><i class="fas fa-chevron-down"></i></a>
-        </div>
-    </section>
-
-    <div class="filler">
-
-    </div>
-
-    <section class="personal-projects">
-        <span class="anchor" id="/personal-project"></span>
-        <h1>Personal Projects</h1>
-
-        <!-- Scroll Arrow (Up)-->
-        <div class="arrowdownfiller">
-            <a class="arrow up" href="#/coursework"><i class="fas fa-chevron-up"></i></a>
-        </div>
-        
-        <!-- TETRIS PROJECTS -->
-        <div class="class-section">
-            <div class="class-name">
-                <h2> Tetris </h2>
-            </div>
-            <div class="visibility" onclick="myHide('tetris')" style="position: relative; left: 0.75rem;">
-                <i class="fa-solid fa-eye" id="icon_tetris"></i>
-                <div class="visibility-text" id="visibility-text_tetris">
-                    [Hide]
                 </div>
             </div>
         </div>
 
-        <div id="tetris">
-            <!-- A Tetris Clone -->
-            <a href="https://github.com/ktm-p/tetris_clone" target="_blank" class="project-link">
-                <div class="project"> 
-                    <h3> A Tetris Clone </h3>
-                    <p class="project-desc">
-                        Given how I enjoy playing Tetris, I decided to code up a clone of it in <span class="highlighted-text">Python</span> using the <span class="highlighted-text">pygame</span> library.
-
-                        <br><br>
-
-                        The game has functionalities such as being able to <span class="highlighted-text">move</span> and <span class="highlighted-text">rotate</span> blocks (following the standard Tetris Super Rotation System rules), along with being able to <span class="highlighted-text">hold</span> blocks.
-
-                        <br><br>
-
-                        The game also has preview of the next blocks, and the blocks have a <span class="highlighted-text">silhouette</span> indicating to users where the block will be dropped onto.
-
-                        <br><br>
-                        
-                        The project features a focus on <span class="highlighted-text">object-oriented programming</span> concepts, such as <span class="highlighted-text">inheritance</span> and <span class="highlighted-text">polymorphism</span>, which are used in creating the tetrominoes, board, and game classes.
-                    </p>
-
-                    <div class="grid">
-                        <div class="grid-item">
-                            Python
-                        </div>
+        <!-- Skill Set -->
+        <div id="experience">
+            <h1> Skill Set </h1>
+            <div id="computer-science">
+                <h2>Computer Science</h2>
+                <div id="programming-languages">
+                    <h3 style="margin-top: 0.5rem;"> Programming Languages </h3>
+                    <div class="skills-container">
+                        <div class="skills">C/C++</div>
+                        <div class="skills">CSS</div>
+                        <div class="skills">Golang</div>
+                        <div class="skills">HTML</div>
+                        <div class="skills">Java</div>
+                        <div class="skills">Javascript</div>
+                        <div class="skills">MATLAB</div>
+                        <div class="skills">Python</div>
+                        <div class="skills">R</div>
+                        <div class="skills">RISC-V</div>
+                        <div class="skills">Scheme</div>
+                        <div class="skills">SQL</div>
                     </div>
                 </div>
-            </a>
+
+                <div id="frameworks">
+                    <h3> Frameworks/Libraries </h3>
+                    <div class="skills-container">
+                        <div class="skills">Matplotlib</div>
+                        <div class="skills">NumPy</div>
+                        <div class="skills">Pandas</div>
+                        <div class="skills">PyTorch</div>
+                        <div class="skills">scikit-learn</div>
+                        <div class="skills">Seaborn</div>
+                        <div class="skills">TensorFlow</div>
+                    </div>
+                </div>
+
+                <div id="other-skills">
+                    <h3> Other Skills </h3>
+                    <div class="skills-container">
+                        <div class="skills">duckDB</div>
+                        <div class="skills">git</div>
+                        <div class="skills">LaTeX</div>
+                        <div class="skills">MySQL</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="mathematics" style="margin-top: 2.345rem;">
+                <h2>Mathematics</h2>
+                <h3 style="margin-top: 0.5rem;">Fields</h3>
+                <div class="skills-container">
+                    <div class="skills">Abstract Algebra</div>
+                    <div class="skills">Discrete Mathematics</div>
+                    <div class="skills">Linear Algebra</div>
+                    <div class="skills">Logic</div>
+                    <div class="skills">Numerical Analysis</div>
+                    <div class="skills">Probability Theory</div>
+                    <div class="skills">Real Analysis</div>
+                    <div class="skills">Set Theory</div>
+                </div>
+            </div>
         </div>
-    </section>
+
+        <!-- Coursework -->
+        <div id="coursework">
+            <h1>Coursework</h1>
+            <div class="course-container" id="su24">
+                <h2>Summer 2024</h2>
+                <ul>
+                    <li><a class="class-name" href="http://persson.berkeley.edu/math128a/" target="_blank"> MATH 128A</a>: Numerical Analysis </li>
+                    <li><a class="class-name" href="https://philosophy.berkeley.edu/courses/detail/1680" target="_blank"> PHILOS 12A</a>: Introduction to Logic</li>
+                </ul>
+            </div>
+
+            <div class="course-container" id="sp24">
+                <h2>Spring 2024</h2>
+                <ul>
+                    <li><a class="class-name" href="https://sp24.cs161.org/" target="_blank"> COMPSCI 161</a>: Computer Security</li>
+                    <li><a class="class-name" href="https://inst.eecs.berkeley.edu/~cs188/sp24/" target="_blank"> COMPSCI 188</a>: Introduction to Artificial Intelligence</li>
+                    <li><a class="class-name" href="https://ds100.org/sp24/" target="_blank"> DATA C100</a>: Principles and Techniques of Data Science</li>
+                    <li><a class="class-name" href="https://classes.berkeley.edu/content/math-135" target="_blank"> MATH 135</a>: Introduction to Set Theory</li>
+                </ul>
+            </div>
+
+            <div class="course-container" id="fa23">
+                <h2>Fall 2023</h2>
+                <ul>
+                    <li><a class="class-name" href="https://inst.eecs.berkeley.edu/~cs61c/fa23/" target="_blank"> COMPSCI 61C</a>: Great Ideas of Computer Architecture (Machine Structures)</li>
+                    <li><a class="class-name" href="https://classes.berkeley.edu/content/linguis-100" target="_blank"> LINGUIS 100</a>: Introduction to Linguistic Science </li>
+                    <li><a class="class-name" href="https://classes.berkeley.edu/content/math-110" target="_blank"> MATH 110</a>: Abstract Linear Algebra</li>
+                </ul>
+            </div>
+
+            <div class="course-container" id="sp23">
+                <h2>Spring 2023</h2>
+                <ul>
+                    <li><a class="class-name" href="https://sp23.datastructur.es/" target="_blank"> COMPSCI 61B</a>: Data Structures</li>
+                    <li><a class="class-name" href="https://sp23.eecs70.org/" target="_blank"> COMPSCI 70</a>: Discrete Mathematics and Probability Theory</li>
+                    <li><a class="class-name" href="https://www2.eecs.berkeley.edu/Courses/CS370/" target="_blank"> COMPSCI 370</a>: Adaptive Instruction Methods in Computer Science</li>
     
-    <div class="filler">
+                </ul>
+            </div>
 
-    </div>
-</body>
+            <div class="course-container" id="fa22">
+                <h2>Fall 2022</h2>
+                <ul>
+                    <li><a class="class-name" href="https://inst.eecs.berkeley.edu/~cs61a/fa22/" target="_blank"> COMPSCI 61A</a>: Structure and Interpretation of Computer Programs</li>
+                    <li><a class="class-name" href="http://www.data8.org/fa22/" target="_blank"> DATA C8</a>: Foundations of Data Science</li>
+                    <li><a class="class-name" href="https://classes.berkeley.edu/content/math-54" target="_blank"> MATH 54</a>: Linear Algebra and Differential Equations</li>
+                </ul>
+            </div>
+        </div>
+    </body>
 </html>
