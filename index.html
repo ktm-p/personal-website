@@ -1,233 +1,198 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Home | ktm-p</title>
-    <meta name="description" content="Welcome to my personal website!">
-    <meta charset="utf-8">
-    <meta name="robots" content="index, follow">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <link rel="stylesheet" href="style.css">
 
-    <!-- Style -->
-    <link rel="stylesheet" href="/style.css">
+        <!-- Custom Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Rubik -->
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <!-- Cantarell -->
+        <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Rubik -->
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <!-- Cantarell -->
-    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css">
-    <link rel="stylesheet" href="/font-mfizz-2.4.1/font-mfizz.css">
+        <!-- Ico Files -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
 
-    <!-- Website Icon -->
-    <link rel="icon" type="image/x-icon" href="/img/ktmp-logo-white.ico">
+        <!-- JS Scripts -->
+        <script src="/scripts.js" type="application/javascript" defer></script>
+    </head>
 
-    <!-- LaTeX -->
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-    </script>
-    <script type="text/javascript"
-    src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>
-
-    <!-- Sticky -->
-    <script type="text/javascript" scr="C:\Users\Michael\Desktop\personal website\mysticky.js"></script>
-</head>
-<body>
-    <div class="header" id="myHeader">
+    <body>
+        <!-- Navigation Bar -->
         <nav>
-            <!-- Header logo (left) -->
-            <a href="https://ktm-p.github.io" style="text-decoration: none;"><img src="img/ktmp-logo-white-centred-text-spaced.png" class="logo"></a>
+            <!-- Logo -->
+            <div id="logo">
+                <a href="#">
+                    <img src="img/ktmp-logo-white-centred-text-spaced.png" class="logo" id="logo-image" style="filter: invert(75%);">
+                </a>
+            </div>
 
-            <!-- Navigation links (right) -->
-            <ul class="header-links">
-                <li>
-                    <a href="https://ktm-p.github.io"> Home </a>
-                </li>
-                <li>
-                    <a href="projects"> Projects </a>
-                </li>
-                <li>
-                    <a href="#"> Contact Me </a>
-                </li>
-            </ul>
+            <!-- Navigation Links -->
+            <div id="navigation">
+                <ul>
+                    <li><a href="#"> Home </a></li>
+                    <li><a href="#"> Projects </a></li>
+                    <!-- <li><a href="#"> Contact Me </a></li> -->
+                    <li style="margin-left: 0;"><input type="checkbox" id="darkmode_toggle" onclick="darkMode(), invert()"/><label for="darkmode_toggle"></label></li>
+                </ul>
+            </div>
         </nav>
-    </div>
+        
+        <!-- Description -->
+        <div id="desc">
+            <img src="img/side_bw.jpg" style="object-fit: cover; border-radius: 50%; height: 30rem; width: 30rem;">
+            <h1> Michael Pham </h1>
+            <h2> Mathematics • Computer Science • Data Science </h2>
+            <h3> UC Berkeley </h3>
 
-    <div class="main-info">
-        <!-- Basic information -->
-        <div class="professional-image">
-            <img src="img/side_bw.jpg" class="rounded"> 
+            <div class="professional-links">
+                <a href="https://github.com/ktm-p?tab=repositories" target="_blank">
+                    <i class="fa fa-brands fa-github"></i>                
+                </a>
+
+                <a href="https://github.com/ktm-p?tab=repositories" target="_blank">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://github.com/ktm-p?tab=repositories" target="_blank">
+                    <i class="fa-regular fa-file"></i>
+                </a>
+
+                <a href="https://github.com/ktm-p?tab=repositories" target="_blank">
+                    <i class="fa-regular fa-envelope"></i>
+                </a>
+            </div>
         </div>
-        <span class="myname">Michael Pham</span>
-        <br>
-        <span class="mytitle">
-            <span class = "subject">Mathematics</span> • 
-            <span class = "subject">Computer Science</span> • 
-            <span class = "subject">Data Science</span>
-        </span>
-        <br>
-        <span class="mysubtitle">
-            UC Berkeley
-        </span>
-        <br>
 
-        <!-- Links to Github/LinkedIn/etc. -->
-        <div class="header-icons">
-            <a target="_blank" href="https://github.com/ktm-p">
-                <i class="fab fa-github"></i>
-            </a>
+        <!-- About Me -->
+        <div id="about-me">
+            <h1> About Me </h1>
+            <p>
+                I'm Michael, a Sophomore at UC Berkeley. I am pursuing a double major in Pure Mathematics and Computer Science, along with a minor in Data Science. I am also part of Berkeley's Upsilon Pi Epsilon (UPE) chapter.
+
+                <br><br>
+
+                With respect to academic interests, I am mostly interested in Artificial Intelligence, Machine Learning, and Data Analysis for Computer Science. In mathematics, I am interested in studying Algebra, Logic, and Numerical Analysis.
+                
+                <br><br>
+
+                Outside of academics, I enjoy playing the piano in my free time. I am also passionate about teaching: I greatly enjoy helping my peers out, mostly in mathematics on topics such as calculus and linear algebra. I also heavily enjoy using LaTeX — I am constantly adding to my personal LaTeX setup, which includes a .sty file that is used for my course notes, and also macros that helps make TeXing faster.
+            </p>
+        </div>
+
+        <!-- Skill Set -->
+        <div id="experience">
+            <h1> Skill Set </h1>
+            <div id="computer-science">
+                <h2>Computer Science</h2>
+                <div id="programming-languages">
+                    <h3 style="margin-top: 0.5rem;"> Programming Languages </h3>
+                    <div class="skills-container">
+                        <div class="skills">C/C++</div>
+                        <div class="skills">CSS</div>
+                        <div class="skills">Golang</div>
+                        <div class="skills">HTML</div>
+                        <div class="skills">Java</div>
+                        <div class="skills">Javascript</div>
+                        <div class="skills">MATLAB</div>
+                        <div class="skills">Python</div>
+                        <div class="skills">R</div>
+                        <div class="skills">RISC-V</div>
+                        <div class="skills">Scheme</div>
+                        <div class="skills">SQL</div>
+                    </div>
+                </div>
+
+                <div id="frameworks">
+                    <h3> Frameworks/Libraries </h3>
+                    <div class="skills-container">
+                        <div class="skills">Matplotlib</div>
+                        <div class="skills">NumPy</div>
+                        <div class="skills">Pandas</div>
+                        <div class="skills">PyTorch</div>
+                        <div class="skills">scikit-learn</div>
+                        <div class="skills">Seaborn</div>
+                        <div class="skills">TensorFlow</div>
+                    </div>
+                </div>
+
+                <div id="other-skills">
+                    <h3> Other Skills </h3>
+                    <div class="skills-container">
+                        <div class="skills">duckDB</div>
+                        <div class="skills">git</div>
+                        <div class="skills">LaTeX</div>
+                        <div class="skills">MySQL</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="mathematics" style="margin-top: 2.345rem;">
+                <h2>Mathematics</h2>
+                <h3 style="margin-top: 0.5rem;">Fields</h3>
+                <div class="skills-container">
+                    <div class="skills">Abstract Algebra</div>
+                    <div class="skills">Discrete Mathematics</div>
+                    <div class="skills">Linear Algebra</div>
+                    <div class="skills">Logic</div>
+                    <div class="skills">Numerical Analysis</div>
+                    <div class="skills">Probability Theory</div>
+                    <div class="skills">Real Analysis</div>
+                    <div class="skills">Set Theory</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coursework -->
+        <div id="coursework">
+            <h1>Coursework</h1>
+            <div class="course-container" id="su24">
+                <h2>Summer 2024</h2>
+                <ul>
+                    <li><a class="class-name" href="http://persson.berkeley.edu/math128a/" target="_blank"> MATH 128A</a>: Numerical Analysis </li>
+                    <li><a class="class-name" href="https://philosophy.berkeley.edu/courses/detail/1680" target="_blank"> PHILOS 12A</a>: Introduction to Logic</li>
+                </ul>
+            </div>
+
+            <div class="course-container" id="sp24">
+                <h2>Spring 2024</h2>
+                <ul>
+                    <li><a class="class-name" href="https://sp24.cs161.org/" target="_blank"> COMPSCI 161</a>: Computer Security</li>
+                    <li><a class="class-name" href="https://inst.eecs.berkeley.edu/~cs188/sp24/" target="_blank"> COMPSCI 188</a>: Introduction to Artificial Intelligence</li>
+                    <li><a class="class-name" href="https://ds100.org/sp24/" target="_blank"> DATA C100</a>: Principles and Techniques of Data Science</li>
+                    <li><a class="class-name" href="https://classes.berkeley.edu/content/math-135" target="_blank"> MATH 135</a>: Introduction to Set Theory</li>
+                </ul>
+            </div>
+
+            <div class="course-container" id="fa23">
+                <h2>Fall 2023</h2>
+                <ul>
+                    <li><a class="class-name" href="https://inst.eecs.berkeley.edu/~cs61c/fa23/" target="_blank"> COMPSCI 61C</a>: Great Ideas of Computer Architecture (Machine Structures)</li>
+                    <li><a class="class-name" href="https://classes.berkeley.edu/content/linguis-100" target="_blank"> LINGUIS 100</a>: Introduction to Linguistic Science </li>
+                    <li><a class="class-name" href="https://classes.berkeley.edu/content/math-110" target="_blank"> MATH 110</a>: Abstract Linear Algebra</li>
+                </ul>
+            </div>
+
+            <div class="course-container" id="sp23">
+                <h2>Spring 2023</h2>
+                <ul>
+                    <li><a class="class-name" href="https://sp23.datastructur.es/" target="_blank"> COMPSCI 61B</a>: Data Structures</li>
+                    <li><a class="class-name" href="https://sp23.eecs70.org/" target="_blank"> COMPSCI 70</a>: Discrete Mathematics and Probability Theory</li>
+                    <li><a class="class-name" href="https://www2.eecs.berkeley.edu/Courses/CS370/" target="_blank"> COMPSCI 370</a>: Adaptive Instruction Methods in Computer Science</li>
     
-            <a target="_blank" href="#">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-
-            <a target="_blank" href="#">
-                <i class="far fa-file-pdf"></i>
-            </a>
-    
-            <a target="_blank" href="mailto:ktmpham@berkeley.edu">
-                <i class="far fa-envelope"></i>
-            </a>
-        </div>
-
-        <!-- Scroll Arrow (Down)-->
-        <div class="arrowdownfiller">
-            <a class="arrow down" href="#/about"><i class="fas fa-chevron-down"></i></a>
-        </div>
-    </div>
-
-    <section class="aboutme">
-        <!-- Scroll Arrow (Up) -->
-        <span class="anchor" id="/about"></span>
-        <div class="arrowfiller">
-            <a class="arrow up" href="#"><i class="fas fa-chevron-up"></i></a>
-        </div>
-        <h1 name=>About Me</h1>
-        <p class="about-desc">
-            Hi! My name is Michael. I am currently a Sophomore at UC Berkeley who's pursuing a double major in <span class="highlighted-text">Pure Mathematics</span> and <span class="highlighted-text">Computer Science</span>, and a minor in <span class="highlighted-text">Data Science</span>. I am also part of the UC Berkeley's <span class="highlighted-text">Upsilon Pi Epsilon</span> (UPE) chapter.
-            
-            <br>
-            <br>
-            
-            With respect to academic interests, I am mostly interested in <span class="highlighted-text">Artificial Intelligence</span> and <span class="highlighted-text">Machine Learning</span> (Neural Networks, LLMs, etc.). In mathematics, I am interested in studying <span class="highlighted-text">Algebra</span>. Occassionally, I dabble in <span class="highlighted-text">Logic</span> and <span class="highlighted-text">Set Theory</span>.
-
-            As for non-academic activities, in my free time you can find me gaming, playing piano, and maybe (if the weather is perfect) go on jogs. 
-
-            <br>
-            <br>
-
-            One of the things I am passionate about is <span class="highlighted-text">teaching</span>: I greatly enjoy helping my peers out, mostly in mathematics (algebra, calculus, linear algebra, etc.).
-            
-            I am also invested in LaTeX — I am constantly adding to my <a target="_blank" href="https://github.com/ktm-p/LaTeX-Setup" class="inline-link">personal LaTeX setup files</a>, which includes a .sty file that is used for my course notes, and also a set of macros that helps make TeXing up notes, homework, etc. faster and more efficient.
-        </p>
-
-        <!-- Scroll Arrow (Down)-->
-        <div class="arrowdownfiller">
-            <a class="arrow down" href="#/experience"><i class="fas fa-chevron-down"></i></a>
-        </div>
-    </section>
-
-    <div class="filler">
-
-    </div>
-
-    <section class="experience">
-        <span class="anchor" id="/experience"></span>
-        <!-- Scroll Arrow (Up) -->
-        <div class="arrowfiller">
-            <a class="arrow up" href="#/about"><i class="fas fa-chevron-up"></i></a>
-        </div>
-
-        <h1>Programming Experience</h1>
-        <div class="skills">
-            <div class="language">
-                <i class="fab fa-python" style="padding-top: 1.5rem;"></i>
-                <h2> Python </h2>
-                <span class="language-desc"> I have been programming in Python for over three years. Within this time, I worked heavily with analyzing data (with <span class="highlighted-text">numpy</span> and <span class="highlighted-text">pandas</span>), creating plots (via <span class="highlighted-text">seaborn</span> or <span class="highlighted-text">matplotlib</span>), and also creating models with <span class="highlighted-text">scikit-learn</span>. Furthermore, I have experience in using <span class="highlighted-text">PyTorch</span> and <span class="highlighted-text">TensorFlow</span>. <br><br></span>
+                </ul>
             </div>
 
-            <div class="language">
-                <i class="fa-brands fa-java" style="padding-top: 1rem;"></i>
-                <h2>Java</h2>
-                <span class="language-desc"> I have been programming in Java for over three years. In Java, I have <span class="highlighted-text">implemented my own data structures</span> (such as <span class="highlighted-text">LinkedListDeque's</span> and <span class="highlighted-text">ArrayListDeque's</span>), along with creating my own game which has a <span class="highlighted-text">pseudo-random world generation system</span>, <span class="highlighted-text">pathfinding AI</span>, etc. <br><br></span>
-            </div>
-
-            <div class="language">
-                <i class="fa-solid fa-c" style="padding-top: 1.4rem; padding-right: 0.5rem;"></i>
-                <h2>C</h2>
-                <span class="language-desc"> I have been programming in C for around two years. I've <span class="highlighted-text">recreated the famous Snake game</span> in C. I also implemented a <span class="highlighted-text">naive 2D convolution</span> and then optimized it using methods such as <span class="highlighted-text">parallel programming</span> (through the use of <span class="highlighted-text">OpenMP</span>), switching to using <span class="highlighted-text">pointer arihtmetics</span>, using <span class="highlighted-text">registers</span>, and implementing <span class="highlighted-text">cache optimizations</span>.</span>
-            </div>
-
-            <div class="language">
-                <i class="fa-solid fa-leaf" style="padding-top: 1.5rem;"></i>
-                <h2> LaTeX </h2>
-                <span class="language-desc"> I have over two years of experience with using LaTeX, with proficiency in <span class="highlighted-text">TikZ</span> and <span class="highlighted-text">asymptote</span> for generating graphs, diagrams, and so on. I have created notes both for the courses I take and for tutoring purposes.<br><br><br></span>
+            <div class="course-container" id="fa22">
+                <h2>Fall 2022</h2>
+                <ul>
+                    <li><a class="class-name" href="https://inst.eecs.berkeley.edu/~cs61a/fa22/" target="_blank"> COMPSCI 61A</a>: Structure and Interpretation of Computer Programs</li>
+                    <li><a class="class-name" href="http://www.data8.org/fa22/" target="_blank"> DATA C8</a>: Foundations of Data Science</li>
+                    <li><a class="class-name" href="https://classes.berkeley.edu/content/math-54" target="_blank"> MATH 54</a>: Linear Algebra and Differential Equations</li>
+                </ul>
             </div>
         </div>
-        <div class="arrowfiller">
-            <a class="arrow down" href="#/courses"><i class="fas fa-chevron-down"></i></a>
-        </div>
-    </section>
-
-    <div class="filler">
-
-    </div>
-
-    <section class="courses">
-        <span class="anchor" id="/courses"></span>
-        <!-- Scroll Arrow (Up) -->
-        <div class="arrowfiller">
-            <a class="arrow up" href="#/experience"><i class="fas fa-chevron-up"></i></a>
-        </div>
-
-        <h1>Courses</h1>
-        <div class="semester-info">
-            <h2> Spring 2024 </h2>
-            <ul>
-                <li><a class="class-name" href="https://sp24.cs161.org/" target="_blank"> COMPSCI 161</a>: Computer Security</li>
-                <li><a class="class-name" href="https://inst.eecs.berkeley.edu/~cs188/sp24/" target="_blank"> COMPSCI 188</a>: Introduction to Artificial Intelligence</li>
-                <li><a class="class-name" href="https://ds100.org/sp24/" target="_blank"> DATA C100</a>: Principles and Techniques of Data Science</li>
-                <li><a class="class-name" href="https://classes.berkeley.edu/content/math-135" target="_blank"> MATH 135</a>: Introduction to Set Theory</li>
-            </ul>
-        </div>
-
-        <div class="semester-info">
-            <h2> Fall 2023 </h2>
-            <ul>
-                <li><a class="class-name" href="https://inst.eecs.berkeley.edu/~cs61c/fa23/" target="_blank"> COMPSCI 61C</a>: Great Ideas of Computer Architecture (Machine Structures)</li>
-                <li><a class="class-name" href="https://classes.berkeley.edu/content/linguis-100" target="_blank"> LINGUIS 100</a>: Introduction to Linguistic Science </li>
-                <li><a class="class-name" href="https://classes.berkeley.edu/content/math-110" target="_blank"> MATH 110</a>: Abstract Linear Algebra</li>
-            </ul>
-        </div>
-
-        <div class="semester-info">
-            <h2> Spring 2023 </h2>
-            <ul>
-                <li><a class="class-name" href="https://sp23.datastructur.es/" target="_blank"> COMPSCI 61B</a>: Data Structures</li>
-                <li><a class="class-name" href="https://sp23.eecs70.org/" target="_blank"> COMPSCI 70</a>: Discrete Mathematics and Probability Theory</li>
-                <li><a class="class-name" href="https://www2.eecs.berkeley.edu/Courses/CS370/" target="_blank"> COMPSCI 370</a>: Adaptive Instruction Methods in Computer Science</li>
-
-            </ul>
-        </div>
-
-        <div class="semester-info">
-            <h2> Fall 2022 </h2>
-            <ul>
-                <li><a class="class-name" href="https://inst.eecs.berkeley.edu/~cs61a/fa22/" target="_blank"> COMPSCI 61A</a>: Structure and Interpretation of Computer Programs</li>
-                <li><a class="class-name" href="http://www.data8.org/fa22/" target="_blank"> DATA C8</a>: Foundations of Data Science</li>
-                <li><a class="class-name" href="https://classes.berkeley.edu/content/math-54" target="_blank"> MATH 54</a>: Linear Algebra and Differential Equations</li>
-            </ul>
-        </div>
-
-        <!-- Scroll Arrow (Up) -->
-        <div class="arrowfiller">
-            <a class="arrow up" href="#"><i class="fas fa-chevron-up"></i></a>
-        </div>
-    </section>
-</body>
+    </body>
 </html>

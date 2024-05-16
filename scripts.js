@@ -1,3 +1,13 @@
+const navbar = document.querySelector("nav")
+const watcher = document.createElement("div");
+
+watcher.setAttribute("data-watcher", "");
+watcher.setAttribute("style", "margin: 0;")
+navbar.before(watcher);
+
+const navObserver = new IntersectionObserver((entries) => {navbar.classList.toggle("sticking", !entries[0].isIntersecting)});
+navObserver.observe(watcher);
+
 function myHide(class_name) {
     var projects = document.getElementById(class_name);
     var text = document.getElementById("visibility-text_" + class_name);
@@ -21,4 +31,21 @@ function myColor() {
     } else {
         x.style.color = "red";
     }
+}
+
+function darkMode() {
+    var x = document.body;
+    x.classList.toggle("darkMode");
+}
+
+function invert() {
+    var x = document.getElementById("logo-image");
+    x.classList.toggle("invert");
+    
+    if (x.classList.contains("invert")) {
+        x.style.filter="invert(0%)";
+    } else {
+        x.style.filter="invert(75%)";
+    }
+    
 }
