@@ -187,6 +187,10 @@ body.darkMode footer > .professional-links > a > i:hover {
     color: #71757e;
     text-align: center;
 }
+
+body.darkMode .project-img > img {
+    border-color: #f2c138;
+}
 /* #endregion */
 
 /* #region: Navigation Bar */
@@ -483,13 +487,66 @@ footer > .professional-links > a > i:hover {
 /* #endregion */
 
 /* #region: Projects */
-.projects {
+/* .projects {
     display: flex;
     justify-content: flex-start;
+} */
+
+.project-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5rem 0rem 5rem 0rem;
+    /* background: red; */
 }
 
-.projects > .project-container {
-    width: 40rem;
-    background: red;
+.project-container > .project-img {
+    display: inline-flex;
+    margin: 1rem;
+    /* padding: 1.5rem; */
+}
+
+.project-container > .project-desc {
+    margin: 1rem;
+}
+
+.project-img {
+    margin-right: auto;
+}
+
+.project-img > img {
+    /* display: inline-flex; */
+    object-fit: cover;
+    border-radius: 2.5rem;
+    border: 0.2rem solid #3873f2;
+    /* box-shadow: -1rem -1rem 0rem #3873f2; */
+    height: 25rem;
+    width: 25rem;
+}
+
+/* .project-img > img:hover {
+    filter: blur(0.15rem);
+} */
+
+.project-desc * {
+    font-size: 1.75rem;
+}
+
+.project-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: grey;
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.project-title:hover {
+    padding-left: 0.5rem;
+}
+
+.project-desc > p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: rgba(128, 128, 128, 0.75);
 }
 /* #endregion */
