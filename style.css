@@ -257,7 +257,7 @@ nav #navigation ul {
 }
 
 nav #navigation ul li {
-    margin: 1rem;
+    margin: 1vw;
     display: inline-flex;
 }
 
@@ -347,14 +347,14 @@ nav #navigation ul li a:hover::after {
     margin: 0rem;
     margin-bottom: 0.5rem;
 
-    font-size: 1.5vw;
+    font-size: 2rem;
 }
 
 #desc > h3 {
     margin: 0rem;
     margin-bottom: 0.25rem;
 
-    font-size: 1.25vw;
+    font-size: 1.5rem;
     color: rgba(128, 128, 128, 0.75)
 }
 
@@ -519,8 +519,8 @@ footer > .professional-links > a > i:hover {
     border-radius: 2.5rem;
     border: 0.2rem solid #3873f2;
     /* box-shadow: -1rem -1rem 0rem #3873f2; */
-    height: 25rem;
-    width: 25rem;
+    height: 30rem;
+    width: 30rem;
 }
 
 /* .project-img > img:hover {
