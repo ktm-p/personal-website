@@ -21,6 +21,11 @@ if (localStorage.getItem('darkMode') == "true") {
     setTimeout(() => {resetTransitions();}, 100);
 }
 
+document.querySelector('.current').addEventListener('click', (event) => {
+    event.preventDefault();
+    window.scroll({top: 0, behavior: 'smooth'});
+});
+
 function resetTransitions() {
     body.style.transition = "0.7s ease";
     navi[0].style.transition = "0.7s ease";
