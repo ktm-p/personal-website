@@ -590,7 +590,8 @@ footer > .professional-links > a > i:hover {
 }
 
 .arrow {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    padding-left: 0.25rem;
 }
 .project-title:hover {
     color: #3873f2;
