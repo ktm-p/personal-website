@@ -129,13 +129,14 @@
 	\resumeSubHeadingListStart
 	\resumeSubheading
 	{River City High School}{West Sacramento, CA}
-	{Salutatorian}{Mar 2019 -- Jun 2022}
+	{High School Diploma}{Mar 2019 -- Jun 2022}
 	\resumeItemListStart
 	\resumeItemThree{\small GPA}{\small 4.00}
+	\resumeItemTwo{\small Graduated Salutatorian}
 	\resumeItemListEnd
 	\resumeSubheading
 	{University of California, Berkeley}{Berkeley, CA}
-	{B.A. in Computer Science and Mathematics; Minor in Data Science}{Aug 2022 -- Present}
+	{B.A. in Computer Science, Data Science, and Mathematics}{Aug 2022 -- Present}
 	\resumeItemListStart
 	\resumeItemThree{\small GPA}{\small 3.86}
 	\resumeItemTwo{\small Member of Upsilon Pi Epsilon Honor Society}
@@ -148,22 +149,23 @@
 	\resumeSubHeadingListStart
 	
 	\resumeSubheadingTwo
-	{Audio Analyzer}{Java, Processing}
+	{Audio Analyzer and Visualizer}{Java, Processing}
 	\resumeItemListStart
-	\resumeItemTwo{Displays different representations of the audio, giving user information on chosen mp3 file.}
-	\resumeItemTwo{Includes audio waveform and polar graph representation of audio.}
-	\resumeItemTwo{Implemented a Discrete Fourier Transform algorithm. Smoothed the RDFT representation of the audio as well.}
+	\resumeItemTwo{Displays different representations of audio, including waveform and polar graphs, alongside a responsive visualizer.}
+%	\resumeItemTwo{Includes audio waveform and polar graph representation of audio.}
+	\resumeItemTwo{Implemented a Discrete Fourier Transform algorithm, along with smoothing the RDFT.}
 	\resumeItemTwo{Includes a beat detection feature by observing the audio's level and seeing if there's a marginal difference.}
+	\resumeItemTwo{Created 3D objects that moved, rotated, and changed size and color based on audio frequency levels.}
+	\resumeItemTwo{Created moving 3D terrain using Perlin Noise mapped to audio frequencies, moving based on frequency values.}
 	\resumeItemListEnd
 	
 	\resumeSubheadingTwo
 	{Berkeley Admissions Visualization}{Python, Matplotlib, NumPy, Pandas, Plotly, RegEx, Seaborn}
 	\resumeItemListStart
 	\resumeItemTwo{Compiled data on Berkeley's Californian public school admissions, and created visualizations for it.}
-	\resumeItemTwo{Worked with datasets from multiple different sources with different formatting.}
-	\resumeItemTwo{Utilized Pandas and RegEx in order to filter down datasets, regularize them, and merge them.}
-	\resumeItemTwo{Used Seaborn and Matplotlib to visualize certain statistics (race, gender, etc.) with boxplots, bar charts, etc.}
-	\resumeItemTwo{Created scattermaps and choropleth maps using Plotly to aid in seeing areas with higher admissions.}
+%	\resumeItemTwo{Worked with datasets from multiple different sources with different formatting.}
+	\resumeItemTwo{Filtered, regularized, and merged data from various sources with Pandas and RegEx.}
+	\resumeItemTwo{Visualized data using scattermaps, choropleth maps, and other charts using Matplotlib, Seaborn, and Plotly.}
 	\resumeItemListEnd
 	
 	\resumeSubheadingTwo
@@ -171,9 +173,8 @@
 	\resumeItemListStart
 	\resumeItemTwo{An interactive maze exploration survival game featuring enemies.}
 	\resumeItemTwo{Implemented a pseudo-random world generation system via Prim's Algorithm.}
-	\resumeItemTwo{Utilized BFS to implement a smooth lighting system, and obstructing player vision around obstacles.}
-	\resumeItemTwo{Enemies equipped with pathfinding AI implemented with A*-search Algorithm.}
-	\resumeItemTwo{Programmed saving functionalities through serialization.}
+	\resumeItemTwo{Created a smooth lighting system using BFS, alongside pathfinding enemies with A*-Search Algorithm.}
+	\resumeItemTwo{Features saving functionalities implemented through serialization.}
 	\resumeItemListEnd
 	
 	% --------Multiple Positions Heading------------
@@ -189,12 +190,25 @@
 	\resumeSubheadingTwo
 	{Optimizing Convolutions}{C, OpenMP, OpenMPI, SIMD}
 	\resumeItemListStart
-	\resumeItemTwo{Implemented a na\"ive 2D Convolution algorithm, then further optimized it. Achieved around a x50 speedup.}
-	\resumeItemTwo{Switched to working directly with pointers rather than with array accesses in order to speed up performance.}
-	\resumeItemTwo{Reordered order of instructions in order to optimize cache usage.}
-	\resumeItemTwo{Stored commonly-used variables in registers in order to better execution time.}
-	\resumeItemTwo{Used OpenMP to implement parallel programming to enhance runtime.}
-	\resumeItemTwo{Vectorized operations using SIMD instructions, and implemented extensive loop unrolling as well.}
+	\resumeItemTwo{Optimized na\"ive 2D Convolution algorithm through efficient cache usage, parallel programming, vectorizing operations, and working with pointers.}
+	\resumeItemTwo{Achieved around a 50x speedup.}
+%	\resumeItemTwo{Reordered order of instructions in order to optimize cache usage.}
+%	\resumeItemTwo{Stored commonly-used variables in registers in order to better execution time.}
+%	\resumeItemTwo{Used OpenMP to implement parallel programming to enhance runtime.}
+%	\resumeItemTwo{Vectorized operations using SIMD instructions, and implemented extensive loop unrolling as well.}
+	\resumeItemListEnd
+	
+	\resumeSubheadingTwo
+	{A Secure File Sharing System}{Golang}
+	\resumeItemListStart
+	\resumeItemTwo{Designed and implemented a secure file sharing system using cryptographic library functions.}
+	\resumeItemTwo{Implemented file creation, appending, sharing, and deletion among multiple users. Users could also sign on from multiple devices and edits would be reflected across all accounts.}
+	\resumeItemTwo{Utilized symmetric encryption, HMACs, and digital signatures to ensure security.}
+	\resumeItemTwo{Extensively tested implementation, writing over three thousand lines of testing. Included fuzzing to handle overlooked edge cases.}
+	%	\resumeItemTwo{Reordered order of instructions in order to optimize cache usage.}
+	%	\resumeItemTwo{Stored commonly-used variables in registers in order to better execution time.}
+	%	\resumeItemTwo{Used OpenMP to implement parallel programming to enhance runtime.}
+	%	\resumeItemTwo{Vectorized operations using SIMD instructions, and implemented extensive loop unrolling as well.}
 	\resumeItemListEnd
 	
 %	\resumeSubheadingTwo
@@ -212,9 +226,7 @@
 	{Spam Classifier}{Python, Matplotlib, NumPy, Pandas, RegEx, scikit-learn, Seaborn}
 	\resumeItemListStart
 	\resumeItemTwo{Created a spam email filter using a Logistic Regression model. Achieved an accuracy of 99.2\% on given test data.}
-	\resumeItemTwo{Visualized relationships between features, and distribution of certain phrases with Matplotlib and Seaborn.}
-	\resumeItemTwo{Cleaned and filtered data using Pandas.}
-	\resumeItemTwo{Extracted key terms, phrases, and character sequences with RegEx.}
+	\resumeItemTwo{Cleaned and visualized data using Pandas, RegEx, Matplotlib, and Seaborn.}
 	\resumeItemTwo{Fine-tuned hyperparameters by cross-validation with GridSearchCV.}
 	\resumeItemListEnd
 	
