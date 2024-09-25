@@ -1,9 +1,3 @@
-%-------------------------
-% Resume in LateX
-% Author : Sourabh Bajaj
-% License : MIT
-%------------------------
-
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
@@ -43,35 +37,32 @@
 	\vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate PDF is machine readable/ATS parsable
+% Ensure that generate PF is machine readable/ATS parsable
 \pdfgentounicode=1
 
-%-------------------------
-% Custom commands
+%%% CUSTOM COMMANDS %%%
+
+% Bolded Text: Text
 \newcommand{\resumeItem}[2]{
 	\item\small{
 		\textbf{#1}{: #2 \vspace{-2pt}}
 	}
 }
 
+% Text
 \newcommand{\resumeItemTwo}[1]{
 	\item\small{
 		#1 \vspace{-2pt}}
 }
 
+% Text: Text
 \newcommand{\resumeItemThree}[2]{
 	\item\small{
-		#1 : #2 \vspace{-2pt}}
+		#1: #2 \vspace{-2pt}}
 }
 
-% Just in case someone needs a heading that does not need to be in a list
-\newcommand{\resumeHeading}[4]{
-	\begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
-		\textbf{#1} & #2 \\
-		\textit{\small#3} & \textit{\small #4} \\
-	\end{tabular*}\vspace{-5pt}
-}
-
+% Bold Title 					Text
+% Itacliciszed Text				Italicized Text
 \newcommand{\resumeSubheading}[4]{
 	\vspace{-1pt}\item
 	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -80,24 +71,11 @@
 	\end{tabular*}\vspace{-5pt}
 }
 
-%\newcommand{\resumeSubheading}[4]{
-	%	\vspace{-1pt}\item
-	%	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-		%		\textbf{#1} & #2 \\
-		%		\textit{\small#3} & \textit{\small #4} \\
-		%	\end{tabular*}\vspace{-5pt}
-	%}
-
+%% Title | Text
 \newcommand{\resumeSubheadingTwo}[2]{
 	\vspace{-1pt}\item
 	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
 		\textbf{#1} \rule[-0.4ex]{0.1ex}{1.2em} #2 \\
-	\end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-		\textit{\small#1} & \textit{\small #2} \\
 	\end{tabular*}\vspace{-5pt}
 }
 
@@ -110,21 +88,16 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 	\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \begin{document}
 	
-	%----------HEADING-----------------
+	%%% Heading %%%
 	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 		\textbf{\href{https://ktm-p.github.io/}{\Large Michael Pham}} & Email: \href{mailto:ktmpham@berkeley.edu}{ktmpham@berkeley.edu}\\
 		\href{https://ktm-p.github.io/}{ktm-p.github.io} & 
 		Mobile: \href{tel:+19169680563}{(916)-968-0563} \\
 	\end{tabular*}
 	
-	
-	%-----------EDUCATION-----------------
+	%%% Education %%%
 	\section{Education}
 	\resumeSubHeadingListStart
 	\resumeSubheading
@@ -138,13 +111,13 @@
 	{University of California, Berkeley}{Berkeley, CA}
 	{B.A. in Computer Science, Data Science, and Mathematics}{Aug 2022 -- Present}
 	\resumeItemListStart
-	\resumeItemThree{\small GPA}{\small 3.86}
+	\resumeItemThree{\small GPA}{\small 3.87}
 	\resumeItemTwo{\small Member of Upsilon Pi Epsilon Honor Society}
 	\resumeItemListEnd
 	\resumeSubHeadingListEnd
 	
 	
-	%-----------PROJECTS-----------------
+	%%% Projects %%%
 	\section{Projects}
 	\resumeSubHeadingListStart
 	
@@ -177,16 +150,6 @@
 	\resumeItemTwo{Features saving functionalities implemented through serialization.}
 	\resumeItemListEnd
 	
-	% --------Multiple Positions Heading------------
-	%  \resumeSubSubheading
-	%   {Software Engineer I}{Oct 2014 -- Sep 2016}
-	%   \resumeItemListStart
-	%      \resumeItem{Apache Beam}
-	%        {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-	%   \resumeItemListEnd
-	
-	%-------------------------------------------
-	
 	\resumeSubheadingTwo
 	{Optimizing Convolutions}{C, OpenMP, OpenMPI, SIMD}
 	\resumeItemListStart
@@ -204,7 +167,7 @@
 	\resumeItemTwo{Designed and implemented a secure file sharing system using cryptographic library functions.}
 	\resumeItemTwo{Implemented file creation, appending, sharing, and deletion among multiple users. Users could also sign on from multiple devices and edits would be reflected across all accounts.}
 	\resumeItemTwo{Utilized symmetric encryption, HMACs, and digital signatures to ensure security.}
-	\resumeItemTwo{Extensively tested implementation, writing over three thousand lines of testing. Included fuzzing to handle overlooked edge cases.}
+	\resumeItemTwo{Extensively tested implementation, writing over three thousand lines of test code. Utilized fuzzing as well.}
 	%	\resumeItemTwo{Reordered order of instructions in order to optimize cache usage.}
 	%	\resumeItemTwo{Stored commonly-used variables in registers in order to better execution time.}
 	%	\resumeItemTwo{Used OpenMP to implement parallel programming to enhance runtime.}
@@ -232,27 +195,13 @@
 	
 	\resumeSubHeadingListEnd
 	
-	%-----------PROJECTS-----------------
+	%%% Skills %%%
 	\section{Technical Skills}
 	\resumeSubHeadingListStart
 	\resumeSubItem{Programming Languages}
 	{C, CSS, Golang, HTML, Java, Javascript, MATLAB, Python, R, RISC-V, Scheme, SQL}
 	\resumeSubItem{Frameworks/Libraries}{Matplotlib, Numpy, OpenMP, OpenMPI, Pandas, Plotly, Processing, PyTorch, scikit-learn, Seaborn, TensorFlow}
-	\resumeSubItem{Tools}{Docker, gdb, git, Logism, Valgrind}
+	\resumeSubItem{Tools}{Docker, gdb, git, Logism, LaTeX, Valgrind}
 	\resumeSubItem{Mathematics}{Abstract Algebra, Discrete Mathematics, Linear Algebra, Logic, Numerical Analysis, Real Analysis}
 	\resumeSubHeadingListEnd
-	
-	%
-	%--------SKILLS------------
-	%\section{Skills}
-	%  \resumeSubHeadingListStart
-	%    \item{
-		%      \textbf{Languages}{: Scala, Python, JavaScript, C++, SQL, Java}
-		%      \hfill
-		%      \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
-		%    }
-	%  \resumeSubHeadingListEnd
-	
-	
-	%-------------------------------------------
 \end{document}
