@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.22)  27 SEP 2024 11:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.22)  27 SEP 2024 07:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./resume.tex
-(resume.tex
+**./resume_ds.tex
+(resume_ds.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -301,8 +301,8 @@ dftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count278
 \l__pdf_internal_box=\box55
-) (resume.aux)
-\openout1 = `resume.aux'.
+) (resume_ds.aux)
+\openout1 = `resume_ds.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 103.
 LaTeX Font Info:    ... okay on input line 103.
@@ -339,9 +339,9 @@ mkii
 \everyMPtoPDFconversion=\toks26
 )
 Package hyperref Info: Link coloring OFF on input line 103.
- (resume.out) (resume.out)
+ (resume_ds.out) (resume_ds.out)
 \@outlinefile=\write3
-\openout3 = `resume.out'.
+\openout3 = `resume_ds.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 106.
@@ -368,22 +368,22 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 [1
 
 {C:/Users/Michael/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-(resume.aux)
+(resume_ds.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-Package rerunfilecheck Info: File `resume.out' has not changed.
+Package rerunfilecheck Info: File `resume_ds.out' has not changed.
 (rerunfilecheck)             Checksum: D690B66B8ACEA646B90610E1D1487C49;297.
  ) 
 Here is how much of TeX's memory you used:
  10599 strings out of 474541
- 168463 string characters out of 5743481
- 1955978 words of memory out of 5000000
+ 168523 string characters out of 5743481
+ 1952978 words of memory out of 5000000
  32705 multiletter control sequences out of 15000+600000
  564337 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,79p,255b,456s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,305b,456s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Michael\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tc
 rm1000.pk> <C:\Users\Michael\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
 pi600\tcrm1095.pk><C:/Users/Michael/AppData/Local/Programs/MiKTeX/fonts/type1/p
@@ -394,7 +394,7 @@ ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Michael
 /AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Us
 ers/Michael/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10
 .pfb>
-Output written on resume.pdf (1 page, 100494 bytes).
+Output written on resume_ds.pdf (1 page, 98601 bytes).
 PDF statistics:
  68 PDF objects out of 1000 (max. 8388607)
  5 named destinations out of 1000 (max. 500000)
