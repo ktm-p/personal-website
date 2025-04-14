@@ -1,16 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <!-- Setup -->
-        <title>Home | ktm-p</title>
-        <link rel="icon" type="image/x-icon" href="/img/ktmp-logo-white.ico">
-        <meta name="description" content="Welcome to my personal website!">
+        <!-- Meta Information -->
         <meta charset="utf-8">
-        <meta name="robots" content="index, follow">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!-- Linking CSS -->
-        <link rel="stylesheet" href="style.css">
+        <meta name="description" content="Welcome to my personal website!">
 
         <!-- Custom Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,229 +18,66 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
 
+        <!-- Tab Title -->
+        <title>Home | ktm-p</title>
+        <link rel="icon" type="image/x-icon" href="/img/ktmp-logo-white.ico">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css">
+
         <!-- JS Scripts -->
         <script src="/scripts.js" type="application/javascript" defer></script>
     </head>
 
     <body>
-        <!-- Navigation Bar -->
-        <nav id="navi">
-            <!-- Logo -->
-            <div id="logo">
-                <a href="#" class="current">
-                    <img src="img/ktmp-logo-white-centred-text-spaced.png" class="logo" id="logo-image" style="filter: invert(75%);">
-                </a>
-            </div>
-
-            <!-- Navigation Links -->
-            <div id="navigation">
-                <ul>
-                    <li><a href="#" class="current"> Home </a></li>
-                    <li><a href="projects"> Projects </a></li>
-                    <!-- <li><a href="#"> Contact Me </a></li> -->
-                    <li style="margin-left: 0;"><input type="checkbox" id="darkmode_toggle" onclick="darkMode(), invert()"/><label for="darkmode_toggle"></label></li>
-                </ul>
+        <nav>
+            <a href="#" class="current"><img src="img/ktmp-logo-white-centred-text-spaced.png" class="nav-logo"></a>
+            <div class="nav-links">
+                <a class="nav-link current" href="#">Home</a>
+                <a class="nav-link" href="courses">Courses</a>
+                <a class="nav-link" href="projects">Projects</a>
+                <a class="nav-link" href="blog">Blog</a>
             </div>
         </nav>
-        
-        <!-- Description -->
-        <div id="desc">
-            <img src="img/side_bw.jpg" style="object-fit: cover; border-radius: 50%; height: 30rem; width: 30rem;">
-            <h1> Michael Pham </h1>
-            <h2> Mathematics • Computer Science • Data Science </h2>
-            <h3> UC Berkeley </h3>
 
-            <div class="professional-links">
-                <a href="https://github.com/ktm-p" target="_blank">
-                    <i class="fa fa-brands fa-github"></i>                
-                </a>
-
-                <a href="https://www.linkedin.com/in/michael-pham-a88a17303/" target="_blank">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-
-                <a href="/resume/default/resume.pdf" target="_blank">
-                    <i class="fa-regular fa-file"></i>
-                </a>
-
-                <a href="mailto:ktmpham@berkeley.edu" target="_blank">
-                    <i class="fa-regular fa-envelope"></i>
-                </a>
-            </div>
-        </div>
-
-        <!-- About Me -->
-        <div id="about-me">
-            <h1> About Me </h1>
-            <p>
-                I'm Michael, a Junior at UC Berkeley. I am pursuing a double major in Pure Mathematics and Computer Science, along with a minor in Data Science. I am also part of Berkeley's Upsilon Pi Epsilon (UPE) chapter.
-
-                <br><br>
-
-                With respect to academic interests, I am mostly interested in Artificial Intelligence, Machine Learning, and Data Analysis for Computer Science. In mathematics, I am interested in studying Algebra, Logic, and Numerical Analysis.
-                
-                <br><br>
-
-                Outside of academics, I enjoy playing the piano in my free time. I am also passionate about teaching: I greatly enjoy helping my peers out, mostly in mathematics on topics such as calculus and linear algebra. I also heavily enjoy using LaTeX — I am constantly adding to my personal LaTeX setup, which includes a .sty file that is used for my course notes, and also macros that helps make TeXing faster.
-            </p>
-        </div>
-
-        <!-- Skill Set -->
-        <div id="experience">
-            <h1> Skill Set </h1>
-            <div id="computer-science">
-                <h2>Computer Science</h2>
-                <div id="programming-languages">
-                    <h3 style="margin-top: 0.5rem;"> Programming Languages </h3>
-                    <div class="skills-container">
-                        <div class="skills">C</div>
-                        <div class="skills">CSS</div>
-                        <div class="skills">Golang</div>
-                        <div class="skills">HTML</div>
-                        <div class="skills">Java</div>
-                        <div class="skills">Javascript</div>
-                        <div class="skills">MATLAB</div>
-                        <div class="skills">Python</div>
-                        <div class="skills">R</div>
-                        <div class="skills">RISC-V</div>
-                        <div class="skills">Scheme</div>
-                        <div class="skills">SQL</div>
-                    </div>
-                </div>
-
-                <div id="frameworks">
-                    <h3> Frameworks/Libraries </h3>
-                    <div class="skills-container">
-                        <div class="skills">Matplotlib</div>
-                        <div class="skills">NumPy</div>
-                        <div class="skills">OpenMP</div>
-                        <div class="skills">OpenMPI</div>
-                        <div class="skills">Pandas</div>
-                        <div class="skills">Plotly</div>
-                        <div class="skills">Processing</div>
-                        <div class="skills">pygame</div>
-                        <div class="skills">PyTorch</div>
-                        <div class="skills">scikit-learn</div>
-                        <div class="skills">Seaborn</div>
-                        <div class="skills">TensorFlow</div>
-                    </div>
-                </div>
-
-                <div id="other-skills">
-                    <h3> Other Skills </h3>
-                    <div class="skills-container">
-                        <div class="skills">duckDB</div>
-                        <div class="skills">gdb</div>
-                        <div class="skills">git</div>
-                        <div class="skills">LaTeX</div>
-                        <div class="skills">Logisim</div>
-                        <div class="skills">MySQL</div>
-                        <div class="skills">RegEx</div>
-                        <div class="skills">SIMD</div>
-                        <div class="skills">Valgrind</div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="mathematics" style="margin-top: 2.345rem;">
-                <h2>Mathematics</h2>
-                <h3 style="margin-top: 0.5rem;">Fields</h3>
-                <div class="skills-container">
-                    <div class="skills">Abstract Algebra</div>
-                    <div class="skills">Differential Equations</div>
-                    <div class="skills">Discrete Mathematics</div>
-                    <div class="skills">Linear Algebra</div>
-                    <div class="skills">Logic</div>
-                    <div class="skills">Numerical Analysis</div>
-                    <div class="skills">Probability Theory</div>
-                    <div class="skills">Real Analysis</div>
-                    <div class="skills">Set Theory</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Courses -->
-        <div id="courses">
-            <h1>Courses</h1>
-            <div class="course-container" id="fa24">
-                <h2>Fall 2024</h2>
-                <ul>
-                    <li><a class="class-name" href="https://cs162.org/" target="_blank"> COMPSCI 162</a>:  Operating Systems and System Programming</li>
-                    <li><a class="class-name" href="https://cdss.berkeley.edu/data-104-human-contexts-and-ethics-data" target="_blank"> DATA C104</a>: Human Contexts and Ethics of Data</li>
-                    <li><a class="class-name" href="https://www2.eecs.berkeley.edu/Courses/EECS127/" target="_blank"> EECS 127</a>: Optimization Models in Engineering</li>
-                    <li><a class="class-name" href="https://classes.berkeley.edu/content/math-113" target="_blank"> MATH 113</a>: Introduction to Abstract Algebra </li>
-                </ul>
-            </div>
-
-            <div class="course-container" id="su24">
-                <h2>Summer 2024</h2>
-                <ul>
-                    <li><a class="class-name" href="http://persson.berkeley.edu/math128a/" target="_blank"> MATH 128A</a>: Numerical Analysis </li>
-                    <li><a class="class-name" href="https://philosophy.berkeley.edu/courses/detail/1680" target="_blank"> PHILOS 12A</a>: Introduction to Logic</li>
-                </ul>
-            </div>
-
-            <div class="course-container" id="sp24">
-                <h2>Spring 2024</h2>
-                <ul>
-                    <li><a class="class-name" href="https://sp24.cs161.org/" target="_blank"> COMPSCI 161</a>: Computer Security</li>
-                    <li><a class="class-name" href="https://inst.eecs.berkeley.edu/~cs188/sp24/" target="_blank"> COMPSCI 188</a>: Introduction to Artificial Intelligence</li>
-                    <li><a class="class-name" href="https://ds100.org/sp24/" target="_blank"> DATA C100</a>: Principles and Techniques of Data Science</li>
-                    <li><a class="class-name" href="https://classes.berkeley.edu/content/math-135" target="_blank"> MATH 135</a>: Introduction to Set Theory</li>
-                </ul>
-            </div>
-
-            <div class="course-container" id="fa23">
-                <h2>Fall 2023</h2>
-                <ul>
-                    <li><a class="class-name" href="https://inst.eecs.berkeley.edu/~cs61c/fa23/" target="_blank"> COMPSCI 61C</a>: Great Ideas of Computer Architecture (Machine Structures)</li>
-                    <li><a class="class-name" href="https://classes.berkeley.edu/content/linguis-100" target="_blank"> LINGUIS 100</a>: Introduction to Linguistic Science </li>
-                    <li><a class="class-name" href="https://classes.berkeley.edu/content/math-110" target="_blank"> MATH 110</a>: Abstract Linear Algebra</li>
-                </ul>
-            </div>
-
-            <div class="course-container" id="sp23">
-                <h2>Spring 2023</h2>
-                <ul>
-                    <li><a class="class-name" href="https://sp23.datastructur.es/" target="_blank"> COMPSCI 61B</a>: Data Structures</li>
-                    <li><a class="class-name" href="https://sp23.eecs70.org/" target="_blank"> COMPSCI 70</a>: Discrete Mathematics and Probability Theory</li>
-                    <li><a class="class-name" href="https://www2.eecs.berkeley.edu/Courses/CS370/" target="_blank"> COMPSCI 370</a>: Adaptive Instruction Methods in Computer Science</li>
+        <main>
+            <section class="about-me">
+                <h1 class="section-head">About Me</h1>
+                <div class="about-me-flex">
+                    <div style="width: 60%; margin-right: 10%">
+                        <p>I'm Michael, a Junior at UC Berkeley. I am majoring in Pure Mathematics and Computer Science, and minoring in Data Science. I am part of Berkeley's UPE chapter. You can check out my resume <a href="/resume/default/resume.pdf" target="_blank">here</a>
     
-                </ul>
-            </div>
+                        <br><br>
+    
+                        My interests revolve mainly around Algorithms, Artificial Intelligence, and Cryptography for Computer Science. In Mathematics, I focus primarily on Algebra and Logic.
+                        
+                        <br><br>
+    
+                        In my free time, I <a href="https://musescore.com/user/32734170" target="_blank">transcribe songs</a> that are stuck in my head. I also have an (unhealthy) obsession with using LaTeX, constantly adding to <a href="https://github.com/ktm-p/LaTeX-Setup" target="_blank">setup.</a></p>
+                    </div>
+                    <div>
+                        <img src="img/dark_raven.png" id="profile-image" alt="Profile Picture">
+                    </div>
+                </div>
+            </section>
 
-            <div class="course-container" id="fa22">
-                <h2>Fall 2022</h2>
-                <ul>
-                    <li><a class="class-name" href="https://inst.eecs.berkeley.edu/~cs61a/fa22/" target="_blank"> COMPSCI 61A</a>: Structure and Interpretation of Computer Programs</li>
-                    <li><a class="class-name" href="http://www.data8.org/fa22/" target="_blank"> DATA C8</a>: Foundations of Data Science</li>
-                    <li><a class="class-name" href="https://classes.berkeley.edu/content/math-54" target="_blank"> MATH 54</a>: Linear Algebra and Differential Equations</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <footer>
-            <div class="professional-links">
+            <section class="professional-links">
                 <a href="https://github.com/ktm-p" target="_blank">
-                    <i class="fa fa-brands fa-github"></i>                
+                    <i class="fa fa-brands fa-github" id="github"></i>                
                 </a>
 
                 <a href="https://www.linkedin.com/in/michael-pham-a88a17303/" target="_blank">
-                    <i class="fa-brands fa-linkedin-in"></i>
+                    <i class="fa-brands fa-linkedin-in" id="linked-in"></i>
                 </a>
 
                 <a href="/resume/default/resume.pdf" target="_blank">
-                    <i class="fa-regular fa-file"></i>
+                    <i class="fa-regular fa-file" id="resume"></i>
                 </a>
 
                 <a href="mailto:ktmpham@berkeley.edu" target="_blank">
-                    <i class="fa-regular fa-envelope"></i>
+                    <i class="fa-regular fa-envelope" id="email"></i>
                 </a>
-            </div>
-            <div id="copyright">
-                &copy 2024 Michael Pham
-            </div>
-        </footer>
+            </section>
+        </main>
     </body>
 </html>
