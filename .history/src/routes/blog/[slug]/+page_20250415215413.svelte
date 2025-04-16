@@ -5,7 +5,8 @@
     import { page } from "$app/stores";
 
     const websiteName = "ktm-p"
-    $: title = [data.title, websiteName].join(" | ");
+    const tabTitle = ["Blog", data.title].join(" - ")
+    $: title = [tabTitle, websiteName].join(" | ");
 </script>
 
 <svelte:head>

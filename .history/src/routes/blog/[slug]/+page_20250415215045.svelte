@@ -2,10 +2,7 @@
 	export let data;
     import '$lib/styles/prism-darcula.css';
 
-    import { page } from "$app/stores";
-
-    const websiteName = "ktm-p"
-    $: title = [data.title, websiteName].join(" | ");
+    $: title = title, data.title].join(" - ");
 </script>
 
 <svelte:head>

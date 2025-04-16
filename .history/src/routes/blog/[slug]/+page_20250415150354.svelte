@@ -1,16 +1,7 @@
 <script>
 	export let data;
     import '$lib/styles/prism-darcula.css';
-
-    import { page } from "$app/stores";
-
-    const websiteName = "ktm-p"
-    $: title = [data.title, websiteName].join(" | ");
 </script>
-
-<svelte:head>
-    <title>{title}</title>
-</svelte:head>
 
 <article>
 	<div class="post-header">

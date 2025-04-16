@@ -30,6 +30,8 @@
     const directory = $page.url.pathname.split("/").slice(1, 2).filter(Boolean);
     const tabName = directory.length ? directory.map(str => str.charAt(0).toUpperCase() + str.slice(1))
     : ["Home"];
+
+    const blogName = $page.url.pathname.split("/").slice(2).filter(Boolean);
     $: title = [...tabName, websiteName].join(" | ");
     </script>
 

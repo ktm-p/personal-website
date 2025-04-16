@@ -12,8 +12,8 @@
         <div class="post-date">
             {post.meta.date}
         </div>
-        <div class="post-description">
-            {post.meta.description}
+        <div>
+            Description here.
         </div>
     </div>
     <hr class="divider">

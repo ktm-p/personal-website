@@ -249,8 +249,8 @@ h1 {
     padding: 3rem;
     margin-bottom: 5rem;
 
-    border: 0.3rem solid #888888;
-    /* box-shadow: -1rem 1rem 0rem #88888865; */
+    border: 0.2rem solid #888888;
+    box-shadow: -1rem 1rem 0rem #88888865;
 
     border-radius: 0.75rem;
 }
