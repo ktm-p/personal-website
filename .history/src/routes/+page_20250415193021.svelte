@@ -10,8 +10,7 @@
             
             <br><br>
 
-            In my free time, I <a href="https://musescore.com/user/32734170" target="_blank">transcribe songs</a> that are stuck in my head. I'm also an avid fan of Gunpla; on my breaks, I often find myself working on a kit or two with my girlfriend. Currently, we are working on the <a href="https://www.usagundamstore.com/products/mg-1-100-wing-gundam-zero-ew-ver" target="_blank">MG Wing Gundam Zero EW Ver</a>.
-        </p>
+            In my free time, I <a href="https://musescore.com/user/32734170" target="_blank">transcribe songs</a> that are stuck in my head. I am an avid fan of Gunpla as well; during my breaks, I often find myself working on a kit or two with my girlfriend. Also, I have an (unhealthy) obsession with using LaTeX, constantly adding to <a href="https://github.com/ktm-p/LaTeX-Setup" target="_blank">setup.</a></p>
         </div>
         <div>
             <enhanced:img src="$lib/assets/raven/dark_raven.png" id="profile-image" alt="Profile Picture"></enhanced:img>
