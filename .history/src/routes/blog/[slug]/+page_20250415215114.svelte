@@ -4,8 +4,12 @@
 
     import { page } from "$app/stores";
 
-    const websiteName = "ktm-p"
-    $: title = [data.title, websiteName].join(" | ");
+    const websiteName = "ktm-p";
+    const directory = $page.url.pathname.split("/").slice(1, 2).filter(Boolean);
+    const tabName = directory.length ? directory.map(str => str.charAt(0).toUpperCase() + str.slice(1))
+    : ["Home"];
+    $: title = [...tabName, websiteName].join(" | ");
+    title = [title, data.title].join(" - ");
 </script>
 
 <svelte:head>

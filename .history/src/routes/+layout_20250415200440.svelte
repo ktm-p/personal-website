@@ -26,12 +26,13 @@
     // Dynamic title changing
     import { page } from "$app/stores";
 
-    const websiteName = "ktm-p";
-    const directory = $page.url.pathname.split("/").slice(1, 2).filter(Boolean);
-    const tabName = directory.length ? directory.map(str => str.charAt(0).toUpperCase() + str.slice(1))
-    : ["Home"];
-    $: title = [...tabName, websiteName].join(" | ");
-    </script>
+    const appName = "ktm-p";
+    $: {
+        const segments = $page.url.pathname.split("/").slice(1).filter(Boolean);
+        const capitalizedSegments = segments.map(str => str.charAt(0).toUpperCase() + str.slice(1));
+    }
+    title = [appName, ...(capitalizedSegments.length ? capitalizedSegments : ["Home"])].join(" | ");
+</script>
 
 <Head />
 <svelte:head>
