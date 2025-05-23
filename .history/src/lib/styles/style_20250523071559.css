@@ -2,10 +2,10 @@
 - #1C1C1C (Background)
 - #232428 (Navbar/Container Background)
 - #3D3D3D
-- #5E5E5E
+- #5E5E5E (Emphasis)
 - #7F7F7F (Outlines/Hover)
 - #A0A0A0 (Text)
-- #FFFFFF (Links/Emphasis)
+- #FFFFFF (Links)
 */
 
 html {
@@ -38,7 +38,7 @@ main {
 }
 
 .emph {
-    color: #FFFFFF;
+    color: #D3D3D3;
 }
 
 a {
@@ -205,10 +205,6 @@ h1 {
     margin-right: 10%
 }
 
-.about-me-text a i {
-    font-size: 1rem;
-}
-
 #profile-image {
     width: 100%;
     /* height: auto; */
@@ -323,22 +319,6 @@ h1 {
 
 .personal-project {
     margin-bottom: 10rem;
-}
-
-@media screen and (max-width: 700px) {
-    .project-container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .project-desc {
-        margin-top: 1.5rem;
-        margin-left: 0;
-    }
-
-    .project-img {
-        width: 100%;
-    }
 }
 
 /* Courses */

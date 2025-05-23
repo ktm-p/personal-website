@@ -5,7 +5,7 @@
 - #5E5E5E
 - #7F7F7F (Outlines/Hover)
 - #A0A0A0 (Text)
-- #FFFFFF (Links/Emphasis)
+- #FFFFFF (Links)
 */
 
 html {
@@ -29,16 +29,6 @@ body {
 
 main {
     margin: 5rem 25% 5rem 25%;
-}
-
-@media screen and (max-width: 700px) {
-    main {
-        margin: 5rem 5% 5rem 5%;
-    }
-}
-
-.emph {
-    color: #FFFFFF;
 }
 
 a {
@@ -205,31 +195,9 @@ h1 {
     margin-right: 10%
 }
 
-.about-me-text a i {
-    font-size: 1rem;
-}
-
 #profile-image {
     width: 100%;
     /* height: auto; */
-}
-
-@media screen and (max-width: 700px) {
-    .about-me-flex {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    .about-me-text {
-        width: 100%;
-        margin: 0;
-    }
-
-    #profile-image {
-        width: 100%;
-        height: auto;
-        margin-bottom: 1rem;
-    }
 }
 
 /* Socials Link */
@@ -240,12 +208,12 @@ h1 {
     position: absolute;
 }
 
-.professional-links a {
-    /* width: 5.5rem;
-    height: 5.5rem; */
+/* .professional-links a {
+    width: 5.5rem;
+    height: 5.5rem;
 
     margin-right: 3rem;
-}
+} */
 
 .professional-links a i {
     font-size: 3.5rem;
@@ -323,22 +291,6 @@ h1 {
 
 .personal-project {
     margin-bottom: 10rem;
-}
-
-@media screen and (max-width: 700px) {
-    .project-container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .project-desc {
-        margin-top: 1.5rem;
-        margin-left: 0;
-    }
-
-    .project-img {
-        width: 100%;
-    }
 }
 
 /* Courses */

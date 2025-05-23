@@ -2,15 +2,15 @@
     <h1 class="section-head">About Me</h1>
     <div class="about-me-flex">
         <div class="about-me-text">
-            <p>I'm Michael, a Junior at UC Berkeley and a member of its UPE chapter. I am pursuing a double major in <span class="emph">Maths</span> and <span class="emph">Computer Science</span>, and minoring in <span class="emph">Data Science</span>.
+            <p>I'm Michael. Currently, I am a Junior at UC Berkeley who's double majoring in Maths and Computer Science, and minoring in Data Science.
             
             <br><br>
 
-            My interests revolve mainly around <span class="emph">Algebra</span>, <span class="emph">Cryptography</span>, and <span class="emph">Machine Learning</span>. My resume can be found <a href="/resume/default/resume.pdf" target="_blank">here <sup><i class='fas fa-external-link-alt arrow'></i></sup></a>.
+            My interests revolve mainly around Algebra, Algorithms, Complexity Theory, Cryptography, and Machine Learning.             You can check out my resume <a href="/resume/default/resume.pdf" target="_blank">here</a>.
             
             <br><br>
 
-            In my free time, I <a href="https://musescore.com/user/32734170" target="_blank">transcribe songs <sup><i class='fas fa-external-link-alt arrow'></i></sup></a> that are stuck in my head. I'm also an avid fan of Gunpla; on my breaks, I often find myself working on a kit or two with my girlfriend.
+            In my free time, I <a href="https://musescore.com/user/32734170" target="_blank">transcribe songs</a> that are stuck in my head. I'm also an avid fan of Gunpla; on my breaks, I often find myself working on a kit or two with my girlfriend. Currently, we are working on the <a href="https://www.usagundamstore.com/products/mg-1-100-wing-gundam-zero-ew-ver" target="_blank">MG Wing Gundam</a>.
         </p>
         </div>
         <div>
