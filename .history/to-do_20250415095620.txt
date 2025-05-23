@@ -1,3 +1,0 @@
-TO-DO:
-- Add some kind of boilerplate template for projects file; make it easier to just add in new projects.
-- Do the same for course schedule.
