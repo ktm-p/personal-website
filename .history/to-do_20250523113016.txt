@@ -1,0 +1,5 @@
+TO-DO:
+- Add some kind of boilerplate template for projects file; make it easier to just add in new projects.
+- Do the same for course schedule. Also need to automate loading them into +page.svelte.
+- Dark Mode toggle button.
+- Figure out how to align bullet points properly.
