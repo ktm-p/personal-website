@@ -1,0 +1,361 @@
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: 0.7s ease;
+}
+
+body {
+    color: #B0B0B0;
+    background: #121212;
+
+    font-family: "Rubik", sans-serif;
+    font-size: 2rem;
+}
+
+main {
+    margin: 5rem 20% 5rem 20%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #888888;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #232428;
+    position: sticky;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    top: 0;
+    z-index: 999;
+}
+
+nav, nav * {
+    font-family: "Cantarell", sans-serif;
+    font-style: normal;
+    font-weight: lighter;
+
+    height: 7.5rem;
+}
+
+.nav-logo {
+    margin-left: 1rem;
+    margin-right: auto;
+
+    width: auto;
+    height: 7.5rem;
+}
+
+.nav-links {
+    width: 450px;
+    /* padding-right: 25px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-link {
+    font-size: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #888888;
+}
+
+/* Highlight for Current Page */
+
+.current {
+    color: #888888;
+}
+
+/* Sticking Navigation */
+
+nav.sticking, nav.sticking * {
+    height: 5rem;
+}
+
+/* Resized Window */
+.nav-dropdown {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .nav-link {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        flex-direction: column;
+    }
+
+    .nav-dropdown {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding-top: 4rem;
+    }
+
+    .nav-dropdown i {
+        font-size: 3.5rem;
+    }
+
+    nav.sticking .nav-dropdown {
+        padding-top: 2rem;
+    }
+
+    nav.sticking .nav-dropdown i {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .nav-links.show .nav-link {
+        display: flex;
+    }
+}
+
+/* General Headings */
+h1 {
+    color: #E0E0E0;
+    font-size: 3.75rem;
+}
+
+.section-head {
+    margin-bottom: 1rem;
+}
+
+/* About Me */
+.about-me-flex {
+    display: flex;
+    align-items: space-between;
+}
+
+.about-me-text {
+    width: 60%;
+    margin-right: 10%
+}
+
+#profile-image {
+    width: 100%;
+    /* height: auto; */
+}
+
+/* Socials Link */
+.professional-links {
+    margin-top: 5rem;
+    
+    display: flex;
+    position: absolute;
+}
+
+.professional-links a {
+    width: 5.5rem;
+    height: 5.5rem;
+    padding: 0.8rem;
+
+    margin-right: 3rem;
+
+    border-radius: 30%;
+    border-style: solid;
+    border-width: 0.2rem;
+}
+
+.professional-links a i {
+    font-size: 3.5rem;
+    transform: translate(1.1rem, 0.7rem);
+}
+
+.professional-links a:hover {
+    color: #121212;
+    background-color: white;
+}
+
+#resume {
+    transform: translate(1.325rem, 0.7rem);
+}
+
+/* Projects Container */
+.project-container {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.project-img {
+    position: relative;
+    display: flex;
+
+    height: 30rem;
+    width: 30rem;
+
+    object-fit: cover;
+    border-radius: 2.5rem;
+    
+    border: 0.2rem solid #888888;
+    /* box-shadow: -1rem 1rem 0rem #88888865; */
+}
+
+.project-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.project-desc {
+    margin-left: 5rem;
+}
+
+.project-text {
+    margin-top: 2rem;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin-top: 2rem;
+}
+
+.skills {
+    display: inline-flex;
+
+    border: 0.2rem solid rgb(150, 150, 220);
+    border-color: #888888;
+    background: #8888883a;
+    border-style: none;
+    color: #B0B0B0;
+
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    min-width: 3.5rem;
+
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+
+    justify-content: center;
+
+    font-size: 2rem;
+}
+
+.personal-project {
+    margin-bottom: 10rem;
+}
+
+/* Courses */
+.course-container {
+    padding: 3rem;
+    margin-bottom: 5rem;
+
+    border: 0.3rem solid #888888;
+    /* box-shadow: -1rem 1rem 0rem #88888865; */
+
+    border-radius: 0.75rem;
+}
+
+.semester {
+    color: #888888;
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+}
+
+.courses {
+    list-style: none;
+    line-height: 3rem;
+}
+
+/* Blog Post */
+.blog-post h1, .blog-post h2, .blog-post h3, .blog-post h4, .blog-post h5, .blog-post h6 {
+    font-weight: 450;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.blog-post pre {
+    font-size: 1.75rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.blog-post p {
+    font-size: 1.75rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.blog-post ul {
+    margin-left: 1.85rem;
+    /* margin-top: 2rem;
+    margin-bottom: 2rem; */
+}
+
+.blog-post ul li {
+    font-size: 1.75rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.blog-post img {
+    display: block;
+    margin: auto;
+    width: 50%;
+
+    border: 0.25rem solid #888888;
+}
+
+.post-title {
+    font-size: 4.5rem;
+    font-weight: 450;
+    margin-bottom: 0.5rem;
+}
+
+.post-date {
+    font-size: 1.6rem;
+    font-weight: lighter;
+}
+
+.divider {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Blog Page */
+.blog-container {
+    margin-bottom: 4rem;
+}
+
+.blog-container .post-title {
+    font-size: 3rem;
+}
+
+.post-description {
+    margin-top: 2rem;
+    font-size: 1.75rem;
+    font-weight: lighter;
+    font-style: italic;
+}

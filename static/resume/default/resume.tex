@@ -1,7 +1,11 @@
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
-\usepackage[empty]{fullpage}
+\usepackage[
+	margin=1in,
+	includefoot,
+	footskip=30pt,
+]{geometry}
 \usepackage{titlesec}
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
@@ -137,7 +141,6 @@
 	{Audio Analyzer and Visualizer}{Java, Processing}
 	\resumeItemListStart
 	\resumeItemTwo{Displays different representations of audio, including waveform and polar graphs, alongside a responsive visualizer.}
-%	\resumeItemTwo{Includes audio waveform and polar graph representation of audio.}
 	\resumeItemTwo{Implemented a Discrete Fourier Transform algorithm, along with smoothing the RDFT.}
 	\resumeItemTwo{Includes a beat detection feature by observing the audio's level and seeing if there's a marginal difference.}
 	\resumeItemTwo{Created 3D objects that moved, rotated, and changed size and color based on audio frequency levels.}
