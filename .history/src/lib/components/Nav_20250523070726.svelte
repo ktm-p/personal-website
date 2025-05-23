@@ -12,7 +12,7 @@
         <a class={`nav-link ${currentPath === '/' ? 'current' : ''}`} href="/">Home</a>
         <a class={`nav-link ${currentPath === '/courses' ? 'current' : ''}`} href="/courses">Courses</a>
         <a class={`nav-link ${currentPath === '/projects' ? 'current' : ''}`} href="/projects">Projects</a>
-        <a class={`nav-link ${currentPath.startsWith('/blog') ? 'current' : ''}`} href="/blog">Blog</a>
+        <a class={`nav-link ${currentPath === '/blog' ? 'current' : ''}`} href="/blog">Blog</a>
     </div>
     <!-- svelte-ignore a11y_consider_explicit_label -->
     <!-- svelte-ignore a11y_invalid_attribute -->

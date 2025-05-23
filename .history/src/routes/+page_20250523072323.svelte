@@ -2,11 +2,11 @@
     <h1 class="section-head">About Me</h1>
     <div class="about-me-flex">
         <div class="about-me-text">
-            <p>I'm Michael, a Junior at UC Berkeley and a member of its UPE chapter. I am pursuing a double major in <span class="emph">Maths</span> and <span class="emph">Computer Science</span>, and minoring in <span class="emph">Data Science</span>.
+            <p>I'm Michael, a Junior at UC Berkeley and a member of its UPE chapter. I am pursuing a double major in <span class="emph">Maths</span> and <span class="emph">Computer Science</span>, along with a minor in <span class="emph">Data Science</span>.
             
             <br><br>
 
-            My interests revolve mainly around <span class="emph">Algebra</span>, <span class="emph">Cryptography</span>, and <span class="emph">Machine Learning</span>. My resume can be found <a href="/resume/default/resume.pdf" target="_blank">here <sup><i class='fas fa-external-link-alt arrow'></i></sup></a>.
+            My interests revolve mainly around <span class="emph">Algebra</span>, <span class="emph">Algorithm Theory</span>, <span class="emph">Complexity Theory</span>, <span class="emph">Cryptography</span>, and <span class="emph">Machine Learning</span>. You can check out my resume <a href="/resume/default/resume.pdf" target="_blank">here <sup><i class='fas fa-external-link-alt arrow'></i></sup></a>.
             
             <br><br>
 

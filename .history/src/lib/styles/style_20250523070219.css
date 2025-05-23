@@ -5,7 +5,7 @@
 - #5E5E5E
 - #7F7F7F (Outlines/Hover)
 - #A0A0A0 (Text)
-- #FFFFFF (Links/Emphasis)
+- #FFFFFF (Links)
 */
 
 html {
@@ -35,10 +35,6 @@ main {
     main {
         margin: 5rem 5% 5rem 5%;
     }
-}
-
-.emph {
-    color: #FFFFFF;
 }
 
 a {
@@ -205,10 +201,6 @@ h1 {
     margin-right: 10%
 }
 
-.about-me-text a i {
-    font-size: 1rem;
-}
-
 #profile-image {
     width: 100%;
     /* height: auto; */
@@ -217,7 +209,7 @@ h1 {
 @media screen and (max-width: 700px) {
     .about-me-flex {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .about-me-text {
@@ -228,7 +220,6 @@ h1 {
     #profile-image {
         width: 100%;
         height: auto;
-        margin-bottom: 1rem;
     }
 }
 
@@ -323,22 +314,6 @@ h1 {
 
 .personal-project {
     margin-bottom: 10rem;
-}
-
-@media screen and (max-width: 700px) {
-    .project-container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .project-desc {
-        margin-top: 1.5rem;
-        margin-left: 0;
-    }
-
-    .project-img {
-        width: 100%;
-    }
 }
 
 /* Courses */

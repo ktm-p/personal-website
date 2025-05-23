@@ -2,7 +2,7 @@
     <h1 class="section-head">About Me</h1>
     <div class="about-me-flex">
         <div class="about-me-text">
-            <p>I'm Michael, a Junior at UC Berkeley and a member of its UPE chapter. I am pursuing a double major in <span class="emph">Maths</span> and <span class="emph">Computer Science</span>, and minoring in <span class="emph">Data Science</span>.
+            <p>I'm Michael, a Junior at UC Berkeley and a member of its UPE chapter. I am pursuing a double major in <span class="emph">Maths</span> and <span class="emph">Computer Science</span>, along with a minor in <span class="emph">Data Science</span>.
             
             <br><br>
 
