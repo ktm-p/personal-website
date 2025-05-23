@@ -1,0 +1,16 @@
+---
+title: Making and Breaking GGH
+date: 'May 22nd, 2025'
+description: Discussion and implementation of the GGH Encryption Scheme and its attacks in Python.
+---
+
+# Introduction
+Recently, I had to research and write a paper on a topic of interest for my Cryptography course. Seeing how present cryptosystems rely on the hardness of problems such as factoring and discrete-logarithm, both of which cracked by Shor's algorithms, I decided to investigate (attempts at) Post-Quantum Cryptography. In particular, I explored an early lattice-based cryptosystem known as the Goldreich-Goldwasser-Halevi (GGH) Encryption Scheme. The paper can be read here.
+
+While my paper explored some relevant mathematical prerequisites for understanding the scheme, walked through the scheme, and also explained some of its vulnerabilities, it didn't get too much into the coding aspect of GGH. As such, in this blog post, I'll expand on my paper and implement both the cryptosystem itself, along with various attacks on it.
+
+# Background
+Ah
+
+# Implementing the Cryptosystem
+Ah
