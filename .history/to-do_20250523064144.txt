@@ -4,3 +4,4 @@ TO-DO:
 - Dark Mode toggle button.
 - Figure out how to align bullet points properly.
 - Make website work in different browser sizes (e.g. phone).
+-- Fixed sizing on About Me and Projects page!
