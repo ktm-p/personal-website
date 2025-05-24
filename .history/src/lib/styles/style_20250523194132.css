@@ -245,7 +245,7 @@ nav, nav * {
 
     .nav-links.show .nav-link:last-child {
         padding-bottom: 1rem;
-        border-bottom: 1px solid var(--color-outlines);
+        border-bottom: 5px solid var(--color-outlines);
     }
 
     .nav-dropdown.show a {

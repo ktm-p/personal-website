@@ -8,18 +8,17 @@
     onMount(() => {
         var body = window.document.body;
         var darkmode_toggle = window.document.getElementById("darkmode_toggle");
-        var darkmode_toggle_small = window.document.getElementById("darkmode_toggle_small");
 
         function enableDarkMode() {
             document.body.classList.add("darkMode");
             localStorage.setItem("theme", "dark");
-            darkmode_toggle.checked = darkmode_toggle_small.checked = true;
+            darkmode_toggle.checked = true;
         }
 
         function disableDarkMode() {
             document.body.classList.remove("darkMode");
             localStorage.setItem("theme", "light");
-            darkmode_toggle.checked = darkmode_toggle_small.checked = false;
+            darkmode_toggle.checked = false;
         }
 
         function detectTheme() {
@@ -42,10 +41,6 @@
         darkmode_toggle.addEventListener("click", () => {
             localStorage.getItem("theme") === "light" ? enableDarkMode() : disableDarkMode();
         });
-        
-        darkmode_toggle_small.addEventListener("click", () => {
-            localStorage.getItem("theme") === "light" ? enableDarkMode() : disableDarkMode();
-        });
     });
 </script>
 
@@ -57,12 +52,14 @@
         <a class={`nav-link ${currentPath === '/courses' ? 'current' : ''}`} href="/courses">Courses</a>
         <a class={`nav-link ${currentPath === '/projects' ? 'current' : ''}`} href="/projects">Projects</a>
         <a class={`nav-link ${currentPath.startsWith('/blog') ? 'current' : ''}`} href="/blog">Blog</a>
-        <input type="checkbox" id="darkmode_toggle" class="big_toggle" style="margin-right: -40px;"/><label for="darkmode_toggle"></label>
+        <input type="checkbox" id="darkmode_toggle" style="margin-right: -40px;"/><label for="darkmode_toggle" ></label>
     </div>
+    <!-- <div class="darkmode_toggle" style="margin-left: -80rem;">
+        <input type="checkbox" id="darkmode_toggle"/><label for="darkmode_toggle"></label>
+    </div> -->
     <!-- svelte-ignore a11y_consider_explicit_label -->
     <!-- svelte-ignore a11y_invalid_attribute -->
     <div class={`nav-dropdown ${showMenu ? 'show' : ''}`}>
-        <input type="checkbox" id="darkmode_toggle_small" class="small_toggle"/><label for="darkmode_toggle_small" style="margin-right: 45px;"></label>
         <a href="javascript:void(0);" on:click={() => showMenu = !showMenu}>
             <i class="fa fa-bars"></i>
         </a>
