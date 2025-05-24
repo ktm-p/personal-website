@@ -258,7 +258,7 @@ nav, nav * {
     visibility: hidden;
 }
 
-#darkmode_toggle + label {
+label {
     width: 6rem;
     height: 2.5rem;
 
@@ -274,7 +274,7 @@ nav, nav * {
     transition: 0.3s;
 }
 
-#darkmode_toggle + label:after {
+label:after {
     content: "";
 
     width: 2.2rem;
@@ -290,24 +290,12 @@ nav, nav * {
     transition: 0.3s;
 }
 
-#darkmode_toggle_small, #darkmode_toggle_small + label {
-    display: none;
-}
-
-.darkMode #darkmode_toggle + label:after {
-    transform: translateX(3.25rem);
-}
-
 @media screen and (max-width: 700px) {
-    #darkmode_toggle, #darkmode_toggle + label {
-        display: none;
+    #darkmode_toggle {
+        visibility: hidden;
     }
 
-    #darkmode_toggle_small {
-        visibility: none;
-    }
-
-    #darkmode_toggle_small + label {
+    label {
         width: 6rem;
         height: 2.5rem;
 
@@ -323,7 +311,7 @@ nav, nav * {
         transition: 0.3s;
     }
 
-    #darkmode_toggle_small + label:after {
+    label:after {
         content: "";
 
         width: 2.2rem;
@@ -338,10 +326,10 @@ nav, nav * {
 
         transition: 0.3s;
     }
+}
 
-    .darkMode #darkmode_toggle_small + label:after {
-        transform: translateX(3.25rem);
-    }
+.darkMode label:after {
+    transform: translateX(3.25rem);
 }
 
 

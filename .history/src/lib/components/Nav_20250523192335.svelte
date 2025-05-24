@@ -42,10 +42,6 @@
         darkmode_toggle.addEventListener("click", () => {
             localStorage.getItem("theme") === "light" ? enableDarkMode() : disableDarkMode();
         });
-        
-        darkmode_toggle_small.addEventListener("click", () => {
-            localStorage.getItem("theme") === "light" ? enableDarkMode() : disableDarkMode();
-        });
     });
 </script>
 
@@ -57,12 +53,12 @@
         <a class={`nav-link ${currentPath === '/courses' ? 'current' : ''}`} href="/courses">Courses</a>
         <a class={`nav-link ${currentPath === '/projects' ? 'current' : ''}`} href="/projects">Projects</a>
         <a class={`nav-link ${currentPath.startsWith('/blog') ? 'current' : ''}`} href="/blog">Blog</a>
-        <input type="checkbox" id="darkmode_toggle" class="big_toggle" style="margin-right: -40px;"/><label for="darkmode_toggle"></label>
+        <!-- <input type="checkbox" id="darkmode_toggle" style="margin-right: -40px;"/><label for="darkmode_toggle"></label> -->
     </div>
+    <input type="checkbox" id="darkmode_toggle_small"/><label for="darkmode_toggle_small"></label>
     <!-- svelte-ignore a11y_consider_explicit_label -->
     <!-- svelte-ignore a11y_invalid_attribute -->
     <div class={`nav-dropdown ${showMenu ? 'show' : ''}`}>
-        <input type="checkbox" id="darkmode_toggle_small" class="small_toggle"/><label for="darkmode_toggle_small" style="margin-right: 45px;"></label>
         <a href="javascript:void(0);" on:click={() => showMenu = !showMenu}>
             <i class="fa fa-bars"></i>
         </a>

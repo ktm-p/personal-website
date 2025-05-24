@@ -62,7 +62,7 @@
     <!-- svelte-ignore a11y_consider_explicit_label -->
     <!-- svelte-ignore a11y_invalid_attribute -->
     <div class={`nav-dropdown ${showMenu ? 'show' : ''}`}>
-        <input type="checkbox" id="darkmode_toggle_small" class="small_toggle"/><label for="darkmode_toggle_small" style="margin-right: 45px;"></label>
+        <input type="checkbox" id="darkmode_toggle_small" class="small_toggle"/><label for="darkmode_toggle_small" style="margin-right: 50px;"></label>
         <a href="javascript:void(0);" on:click={() => showMenu = !showMenu}>
             <i class="fa fa-bars"></i>
         </a>

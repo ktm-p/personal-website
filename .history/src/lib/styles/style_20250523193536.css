@@ -258,7 +258,7 @@ nav, nav * {
     visibility: hidden;
 }
 
-#darkmode_toggle + label {
+#darkmode_toggle label {
     width: 6rem;
     height: 2.5rem;
 
@@ -304,10 +304,10 @@ nav, nav * {
     }
 
     #darkmode_toggle_small {
-        visibility: none;
+        display: flex;
     }
 
-    #darkmode_toggle_small + label {
+    #darkmode_toggle_small label {
         width: 6rem;
         height: 2.5rem;
 
@@ -337,10 +337,6 @@ nav, nav * {
         background: var(--color-darkMode-icon);
 
         transition: 0.3s;
-    }
-
-    .darkMode #darkmode_toggle_small + label:after {
-        transform: translateX(3.25rem);
     }
 }
 
