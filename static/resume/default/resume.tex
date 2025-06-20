@@ -108,8 +108,8 @@
 	
 	%%% Heading %%%
 	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-		\textbf{\href{https://ktm-p.github.io/}{\Large Michael Pham}} & Email: \href{mailto:ktmpham@berkeley.edu}{ktmpham@berkeley.edu}\\
-		\href{https://ktm-p.github.io/}{ktm-p.github.io} & 
+		\textbf{\href{https://ktm-p.net}{\Large Michael Pham}} & Email: \href{mailto:ktmpham@berkeley.edu}{ktmpham@berkeley.edu}\\
+		\href{https://ktm-p.net}{ktm-p.net} & 
 		Mobile: \href{tel:+19169680563}{(916)-968-0563} \\
 	\end{tabular*}
 	
@@ -127,7 +127,8 @@
 	{University of California, Berkeley}{Berkeley, CA}
 	{B.A. in Computer Science and Mathematics}{Aug 2022 -- Present}{Minor in Data Science}
 	\resumeItemListStart
-	\resumeItemThree{\small GPA}{\small 3.87}
+	\resumeItemThree{GPA}{\small 3.85}
+	\resumeItemThree{Awards}{Dean's List, Honors to Date}
 	\resumeItemTwo{\small Member of Upsilon Pi Epsilon Honor Society}
 	\resumeItemListEnd
 	\resumeSubHeadingListEnd
@@ -141,19 +142,10 @@
 	{Audio Analyzer and Visualizer}{Java, Processing}
 	\resumeItemListStart
 	\resumeItemTwo{Displays different representations of audio, including waveform and polar graphs, alongside a responsive visualizer.}
-	\resumeItemTwo{Implemented a Discrete Fourier Transform algorithm, along with smoothing the RDFT.}
-	\resumeItemTwo{Includes a beat detection feature by observing the audio's level and seeing if there's a marginal difference.}
-	\resumeItemTwo{Created 3D objects that moved, rotated, and changed size and color based on audio frequency levels.}
-	\resumeItemTwo{Created moving 3D terrain using Perlin Noise mapped to audio frequencies, moving based on frequency values.}
-	\resumeItemListEnd
-	
-	\resumeSubheadingTwo
-	{Berkeley Admissions Visualization}{Python, Matplotlib, NumPy, Pandas, Plotly, RegEx, Seaborn}
-	\resumeItemListStart
-	\resumeItemTwo{Compiled data on Berkeley's Californian public school admissions, and created visualizations for it.}
-%	\resumeItemTwo{Worked with datasets from multiple different sources with different formatting.}
-	\resumeItemTwo{Filtered, regularized, and merged data from various sources with Pandas and RegEx.}
-	\resumeItemTwo{Visualized data using scattermaps, choropleth maps, and other charts using Matplotlib, Seaborn, and Plotly.}
+	\resumeItemTwo{Implemented (smoothed) DFT Algorithm. Utilized FFT to extract frequency information.}
+	\resumeItemTwo{Includes a beat detection feature by comparing the audio's level to previous in stack.}
+	\resumeItemTwo{Programmed 3D objects that generate, move, and change color based on frequency levels from FFT.}
+	\resumeItemTwo{Created audio-responsive 3D terrain using Perlin Noise.}
 	\resumeItemListEnd
 	
 	\resumeSubheadingTwo
@@ -168,12 +160,8 @@
 	\resumeSubheadingTwo
 	{Optimizing Convolutions}{C, OpenMP, OpenMPI, SIMD}
 	\resumeItemListStart
-	\resumeItemTwo{Optimized na\"ive 2D Convolution algorithm through efficient cache usage, parallel programming, vectorizing operations, and working with pointers.}
-	\resumeItemTwo{Achieved around a 50x speedup.}
-%	\resumeItemTwo{Reordered order of instructions in order to optimize cache usage.}
-%	\resumeItemTwo{Stored commonly-used variables in registers in order to better execution time.}
-%	\resumeItemTwo{Used OpenMP to implement parallel programming to enhance runtime.}
-%	\resumeItemTwo{Vectorized operations using SIMD instructions, and implemented extensive loop unrolling as well.}
+	\resumeItemTwo{Implemented a na\"ive 2D Convolution algorithm and optimized it.}
+	\resumeItemTwo{Optimizations include efficient cache usage, parallel programming, vectorizing operations, loop unrolling, and working with pointers. Achieved around a 50x speedup.}
 	\resumeItemListEnd
 	
 	\resumeSubheadingTwo
@@ -204,7 +192,7 @@
 	{Spam Classifier}{Python, Matplotlib, NumPy, Pandas, RegEx, scikit-learn, Seaborn}
 	\resumeItemListStart
 	\resumeItemTwo{Created a spam email filter using a Logistic Regression model. Achieved an accuracy of 99.2\% on given test data.}
-	\resumeItemTwo{Cleaned and visualized data using Pandas, RegEx, Matplotlib, and Seaborn.}
+	\resumeItemTwo{Cleaned, visualized, and analyzed data using Pandas, RegEx, Matplotlib, and Seaborn.}
 	\resumeItemTwo{Fine-tuned hyperparameters by cross-validation with GridSearchCV.}
 	\resumeItemListEnd
 	
@@ -214,9 +202,8 @@
 	\section{Technical Skills}
 	\resumeSubHeadingListStart
 	\resumeSubItem{Programming Languages}
-	{C, CSS, Golang, HTML, Java, Javascript, MATLAB, Python, R, RISC-V, Scheme, SQL}
-	\resumeSubItem{Frameworks/Libraries}{Matplotlib, Numpy, OpenMP, OpenMPI, Pandas, Plotly, Processing, PyTorch, scikit-learn, Seaborn, TensorFlow}
+	{C, Golang, Java, Julia, MATLAB, Python, R, RISC-V, Scheme, SQL}
+	\resumeSubItem{Frameworks/Libraries}{Matplotlib, Numpy, OpenMP, Pandas, PyTorch, scikit-learn, Seaborn, TensorFlow}
 	\resumeSubItem{Tools}{Docker, gdb, git, Logism, LaTeX, Valgrind}
-	\resumeSubItem{Mathematics}{Abstract Algebra, Discrete Mathematics, Linear Algebra, Logic, Numerical Analysis, Real Analysis}
 	\resumeSubHeadingListEnd
 \end{document}
