@@ -1,0 +1,212 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[
+margin=1in,
+includefoot,
+footskip=30pt,
+]{geometry}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+	\vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate PF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%%% CUSTOM COMMANDS %%%
+
+% Bolded Text: Text
+\newcommand{\resumeItem}[2]{
+	\item\small{
+		\textbf{#1}{: #2 \vspace{-2pt}}
+	}
+}
+
+% Text
+\newcommand{\resumeItemTwo}[1]{
+	\item\small{
+		#1 \vspace{-2pt}}
+}
+
+% Text: Text
+\newcommand{\resumeItemThree}[2]{
+	\item\small{
+		#1: #2 \vspace{-2pt}}
+}
+
+% Bold Title 					Text
+% Itacliciszed Text				Italicized Text
+\newcommand{\resumeSubheading}[4]{
+	\vspace{-1pt}\item
+	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-5pt}
+}
+
+% Title | Text
+\newcommand{\resumeSubheadingTwo}[2]{
+	\vspace{-1pt}\item
+	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} \rule[-0.4ex]{0.1ex}{1.2em} #2 \\
+	\end{tabular*}\vspace{-5pt}
+}
+
+% Bold Title 					Text
+% Italicized Text				Italicized Text
+% Italicized Text
+\newcommand{\resumeSubheadingThree}[5]{
+	\vspace{-1pt}\item
+	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{\small #4} \\
+		\textit{#5} & \\
+	\end{tabular*}\vspace{-5pt}
+}
+
+%% Title
+\newcommand{\resumeSubheadingFour}[1]{
+	\vspace{-1pt}\item
+	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} \\
+	\end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+	\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+	\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+	%%% Heading %%%
+	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+		\textbf{\href{https://www.ktm-p.net/}{\Large Michael Pham}} & Email: \href{mailto:ktmpham@berkeley.edu}{ktmpham@berkeley.edu}\\
+		\href{https://www.ktm-p.net/}{ktm-p.net} & 
+		Mobile: \href{tel:+19169680563}{(916)-968-0563} \\
+	\end{tabular*}
+	
+	%%% Education %%%
+	\section{Education}
+	\resumeSubHeadingListStart
+	\resumeSubheading
+	{River City High School}{West Sacramento, CA}
+	{High School Diploma}{Mar 2019 -- Jun 2022}
+	\resumeItemListStart
+	\resumeItemThree{\small GPA}{\small 4.00}
+	\resumeItemTwo{\small Graduated Salutatorian}
+	\resumeItemListEnd
+	\resumeSubheadingThree
+	{University of California, Berkeley}{Berkeley, CA}
+	{B.A. in Computer Science and Mathematics}{Aug 2022 -- Present}
+	{Minor in Data Science}
+	\resumeItemListStart
+	\resumeItemThree{\small GPA}{\small 3.85}
+	\resumeItemTwo{\small Member of Upsilon Pi Epsilon Honor Society}
+	\resumeItemTwo{Dean's List, Honors to Date}
+	\resumeItemListEnd
+	\resumeSubHeadingListEnd
+	
+	%%% Work Experience %%%
+	\section{Teaching Experience}
+	\resumeSubHeadingListStart
+	\resumeSubheading{River City High School}{West Sacramento, CA}{Teaching Assistant}{Aug 2021 -- May 2022}
+	\resumeItemListStart
+	\resumeItemTwo{Worked as a student teaching assistant for school's AP Calculus course.}
+	\resumeItemTwo{Taught some classes, presenting key concepts in a clear and concise manner to students, along with working through examples to help deepen their understanding of the material.}
+	\resumeItemTwo{Helped design assignments such as in-class work, homework, and exam problems to reinforce core ideas.}
+	\resumeItemTwo{Graded assignments from students and offered clear explanations on areas to improve upon.}
+	\resumeItemListEnd
+	
+	\resumeSubheading{River City High School}{West Sacramento, CA}{After-school Tutor}{Aug 2019 -- May 2022}
+	\resumeItemListStart
+	\resumeItemTwo{Volunteer tutor for mathematics, ranging from Algebra 1 to AP Calculus BC and AP Statistics.}
+	\resumeItemTwo{Worked with over a dozen students from a variety of backgrounds.}
+	\resumeItemTwo{Clearly explained core concepts covered in class and provided help on assignments.}
+	\resumeItemListEnd
+	\resumeSubHeadingListEnd
+	
+	%%% EC %%%
+	\section{Extracurricular Activities}
+	\resumeSubHeadingListStart
+	\resumeSubheading{River City High School}{West Sacramento, CA}{SkillsUSA}{Aug 2021 -- May 2022}
+	\resumeItemListStart
+	\resumeItemTwo{Participated in the SkillsUSA Competition and earned Silver in the county.}
+	\resumeItemTwo{Gave presentations on strategies for solving problems to team.}
+	\resumeItemListEnd
+	
+	\resumeSubheading{River City High School}{West Sacramento, CA}{Mathletes}{Aug 2019 -- May 2022}
+	\resumeItemListStart
+	\resumeItemTwo{Participated in local math competitions. Problems involved algebra, geometry, trigonometry, and precalculus.}
+	\resumeItemTwo{Hosted study sessions, provided walkthroughs for problems, and tutored other members.}
+	\resumeItemListEnd
+	\resumeSubHeadingListEnd
+	
+	%%% Projects %%%
+	\section{Relevant Coursework}
+	\resumeSubHeadingListStart
+	
+	\resumeSubheadingFour{CS 70: Discrete Mathematics and Probability}
+%	\resumeItemListStart
+%	\resumeItemTwo{Proof Techniques, Graph Theory, Number Theory, Combinatorics, and Probability Theory.}
+%	\resumeItemListEnd
+	
+	\resumeSubheadingFour{CS 370: Adaptive Instruction Methods in Computer Science}
+	\resumeItemListStart
+	\resumeItemTwo{Studied pedagogical techniques. Experienced hands-on tutoring with college students.}
+	\resumeItemListEnd
+	
+	\resumeSubheadingFour{Math 104: Introduction to Analysis}
+	
+	\resumeSubheadingFour{Math 110: Abstract Linear Algebra}
+%	\resumeItemListStart
+%	\resumeItemTwo{Matrices, Vector Spaces, Linear Transformations, Inner Products, Eigenvectors, and Jordan Canonical Forms.}
+%	\resumeItemListEnd
+	
+	\resumeSubheadingFour{Math 113: Abstract Algebra}
+%	\resumeItemListStart
+%	\resumeItemTwo{Groups, (Commutative) Rings, Ideals, Quotient Fields, Polynomials, Fields, and Field Extensions.}
+%	\resumeItemListEnd
+	\resumeSubHeadingListEnd
+	
+	%%% Skills %%%
+	\section{Skills}
+	\resumeSubHeadingListStart
+	\resumeItem{Languages}{English and Vietnamese.}
+	\resumeItem{Software}{Google/Microsoft Suite, LaTeX, and TikZ.}
+	\resumeSubHeadingListEnd
+\end{document}
