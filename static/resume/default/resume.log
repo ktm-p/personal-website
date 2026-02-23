@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.12.4)  24 MAY 2025 16:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.12.4)  2 SEP 2025 10:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -393,21 +393,21 @@ Package hyperref Info: Link coloring OFF on input line 107.
 \openout3 = `resume.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 110.
+(Font)              <10.95> on input line 109.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 110.
+(Font)              <8> on input line 109.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 110.
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 11
-0.
+(Font)              <6> on input line 109.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 10
+9.
 
 (C:\Users\devap\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 124.
+(Font)              <7> on input line 123.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 124.
+(Font)              <5> on input line 123.
 
 
 [1
@@ -418,14 +418,21 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
-Package rerunfilecheck Info: File `resume.out' has not changed.
-(rerunfilecheck)             Checksum: D690B66B8ACEA646B90610E1D1487C49;297.
+
+
+Package rerunfilecheck Warning: File `resume.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `resume.out':
+(rerunfilecheck)             Before: 2D3639F82BF81C9E6EFCA0C4157814CB;579
+(rerunfilecheck)             After:  DDB38C44AF726DE77AA5ADAA753E258F;599.
  ) 
 Here is how much of TeX's memory you used:
- 11184 strings out of 473682
- 177273 string characters out of 5719216
- 618584 words of memory out of 5000000
- 34138 multiletter control sequences out of 15000+600000
+ 11188 strings out of 473682
+ 177313 string characters out of 5719216
+ 620584 words of memory out of 5000000
+ 34140 multiletter control sequences out of 15000+600000
  564337 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,11n,79p,255b,456s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -438,9 +445,9 @@ onts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/devap/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/devap/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/devap/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on resume.pdf (1 page, 99775 bytes).
+Output written on resume.pdf (1 page, 101102 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
- 5 named destinations out of 1000 (max. 500000)
- 25 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 78 PDF objects out of 1000 (max. 8388607)
+ 7 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

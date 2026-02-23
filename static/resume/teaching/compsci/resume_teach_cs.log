@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.12.4)  24 MAY 2025 16:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.12.4)  2 AUG 2025 16:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -405,9 +405,9 @@ LaTeX Font Info:    Trying to load font information for U+lasy on input line 10
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 123.
+(Font)              <7> on input line 124.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 123.
+(Font)              <5> on input line 124.
 
 
 [1
@@ -422,11 +422,11 @@ Package rerunfilecheck Info: File `resume_teach_cs.out' has not changed.
 (rerunfilecheck)             Checksum: 9DB049349AC99D8163A4D7A970C820FC;385.
  ) 
 Here is how much of TeX's memory you used:
- 11186 strings out of 473682
- 177527 string characters out of 5719216
- 619629 words of memory out of 5000000
- 34139 multiletter control sequences out of 15000+600000
- 564337 words of font info for 60 fonts, out of 8000000 for 9000
+ 11185 strings out of 473682
+ 177512 string characters out of 5719216
+ 620627 words of memory out of 5000000
+ 34138 multiletter control sequences out of 15000+600000
+ 563991 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,11n,79p,264b,456s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\devap\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
@@ -438,7 +438,7 @@ onts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/devap/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/devap/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/devap/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on resume_teach_cs.pdf (1 page, 99603 bytes).
+Output written on resume_teach_cs.pdf (1 page, 99760 bytes).
 PDF statistics:
  72 PDF objects out of 1000 (max. 8388607)
  6 named destinations out of 1000 (max. 500000)
