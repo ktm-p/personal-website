@@ -105,7 +105,6 @@
 	\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 \begin{document}
-	
 	%%% Heading %%%
 	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 		\textbf{\href{https://ktm-p.net}{\Large Michael Pham}} & Email: \href{mailto:ktmpham@berkeley.edu}{ktmpham@berkeley.edu}\\
@@ -116,23 +115,26 @@
 	%%% Education %%%
 	\section{Education}
 	\resumeSubHeadingListStart
-	\resumeSubheading
-	{River City High School}{West Sacramento, CA}
-	{High School Diploma}{Mar 2019 -- Jun 2022}
-	\resumeItemListStart
-	\resumeItemThree{\small GPA}{\small 4.00}
-	\resumeItemTwo{\small Graduated Salutatorian}
-	\resumeItemListEnd
 	\resumeSubheadingThree
 	{University of California, Berkeley}{Berkeley, CA}
 	{B.A. in Computer Science and Mathematics}{Aug 2022 -- Present}{Minor in Data Science}
 	\resumeItemListStart
-	\resumeItemThree{GPA}{\small 3.85}
-	\resumeItemThree{Awards}{Dean's List, Honors to Date}
+	\resumeItemThree{GPA}{\small 3.865}
 	\resumeItemTwo{\small Member of Upsilon Pi Epsilon Honor Society}
+	\resumeItemTwo{\small Member of EECS Honors Program}	\resumeItemTwo{Dean's List, Honors to Date}
 	\resumeItemListEnd
 	\resumeSubHeadingListEnd
 	
+		%%% Work Experience %%%
+	\section{Professional Experience}
+	\resumeSubHeadingListStart
+	\resumeSubheading{Self-Employed}{West Sacramento, CA}{Calculus Tutor}{June 2025 -- Present}
+	\resumeItemListStart
+	\resumeItemTwo{Private tutor for Calculus I and II.}
+	\resumeItemTwo{Created lessons tailored to individual students' needs.}
+	\resumeItemTwo{Explained and reinforced key concepts through examples and practice problems for students.}
+	\resumeItemListEnd
+	\resumeSubHeadingListEnd
 	
 	%%% Projects %%%
 	\section{Projects}
@@ -142,10 +144,8 @@
 	{Audio Analyzer and Visualizer}{Java, Processing}
 	\resumeItemListStart
 	\resumeItemTwo{Displays different representations of audio, including waveform and polar graphs, alongside a responsive visualizer.}
-	\resumeItemTwo{Implemented (smoothed) DFT Algorithm. Utilized FFT to extract frequency information.}
-	\resumeItemTwo{Includes a beat detection feature by comparing the audio's level to previous in stack.}
-	\resumeItemTwo{Programmed 3D objects that generate, move, and change color based on frequency levels from FFT.}
-	\resumeItemTwo{Created audio-responsive 3D terrain using Perlin Noise.}
+	\resumeItemTwo{Implemented (smoothed) DFT and FFT to extract frequency information and create audio-responsive visuals.}
+	\resumeItemTwo{Implemented beat detection by comparing the audio's level to previous in stack.}
 	\resumeItemListEnd
 	
 	\resumeSubheadingTwo
@@ -168,9 +168,9 @@
 	{A Secure File Sharing System}{Golang}
 	\resumeItemListStart
 	\resumeItemTwo{Designed and implemented a secure file sharing system using cryptographic library functions.}
-	\resumeItemTwo{Implemented file creation, appending, sharing, and deletion among multiple users. Users could also sign on from multiple devices and edits would be reflected across all accounts.}
+	\resumeItemTwo{Implemented file creation, appending, sharing, and deletion among multiple users across multiple devices.}
 	\resumeItemTwo{Utilized symmetric encryption, HMACs, and digital signatures to ensure security.}
-	\resumeItemTwo{Extensively tested implementation, writing over three thousand lines of test code. Utilized fuzzing as well.}
+	\resumeItemTwo{Extensively tested implementation, writing over three thousand lines of test code.}
 	%	\resumeItemTwo{Reordered order of instructions in order to optimize cache usage.}
 	%	\resumeItemTwo{Stored commonly-used variables in registers in order to better execution time.}
 	%	\resumeItemTwo{Used OpenMP to implement parallel programming to enhance runtime.}
@@ -189,13 +189,20 @@
 %	\resumeItemListEnd
 	
 	\resumeSubheadingTwo
-	{Spam Classifier}{Python, Matplotlib, NumPy, Pandas, RegEx, scikit-learn, Seaborn}
+	{MapReduce}{Rust}
 	\resumeItemListStart
-	\resumeItemTwo{Created a spam email filter using a Logistic Regression model. Achieved an accuracy of 99.2\% on given test data.}
-	\resumeItemTwo{Cleaned, visualized, and analyzed data using Pandas, RegEx, Matplotlib, and Seaborn.}
-	\resumeItemTwo{Fine-tuned hyperparameters by cross-validation with GridSearchCV.}
+	\resumeItemTwo{Implemented a MapReduce coordinator in Rust which distributed map and reduce tasks to workers.}
+	\resumeItemTwo{Ensured memory and thread safety for effective parallelization.}
 	\resumeItemListEnd
 	
+	\resumeSubHeadingListEnd
+	
+	%%% Coursework %%%
+	\section{Relevant Coursework}
+	\resumeSubHeadingListStart
+	\resumeSubItem{Computer Science}
+	{Data Structures, Discrete Mathematics, Computer Security, Efficient Algorithms and Intractable Problems, Computability and Complexity}
+	\resumeSubItem{Mathematics}{Introduction to Analysis, Abstract Algebra, Abstract Linear Algebra, Cryptography, Numerical Analysis, Programming for Mathematical Applications}
 	\resumeSubHeadingListEnd
 	
 	%%% Skills %%%

@@ -71,11 +71,11 @@ footskip=30pt,
 	\vspace{-1pt}\item
 	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
 		\textbf{#1} & #2 \\
-		\textit{#3} & \textit{\small #4} \\
+		\textit{#3} & \textit{#4} \\
 	\end{tabular*}\vspace{-5pt}
 }
 
-% Title | Text
+%% Title | Text
 \newcommand{\resumeSubheadingTwo}[2]{
 	\vspace{-1pt}\item
 	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -90,16 +90,8 @@ footskip=30pt,
 	\vspace{-1pt}\item
 	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
 		\textbf{#1} & #2 \\
-		\textit{#3} & \textit{\small #4} \\
+		\textit{#3} & \textit{#4} \\
 		\textit{#5} & \\
-	\end{tabular*}\vspace{-5pt}
-}
-
-%% Title
-\newcommand{\resumeSubheadingFour}[1]{
-	\vspace{-1pt}\item
-	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-		\textbf{#1} \\
 	\end{tabular*}\vspace{-5pt}
 }
 
@@ -123,21 +115,15 @@ footskip=30pt,
 	%%% Education %%%
 	\section{Education}
 	\resumeSubHeadingListStart
-	\resumeSubheading
-	{River City High School}{West Sacramento, CA}
-	{High School Diploma}{Mar 2019 -- Jun 2022}
-	\resumeItemListStart
-	\resumeItemThree{\small GPA}{\small 4.00}
-	\resumeItemTwo{\small Graduated Salutatorian}
-	\resumeItemListEnd
 	\resumeSubheadingThree
 	{University of California, Berkeley}{Berkeley, CA}
 	{B.A. in Computer Science and Mathematics}{Aug 2022 -- Present}
 	{Minor in Data Science}
 	\resumeItemListStart
-	\resumeItemThree{\small GPA}{\small 3.85}
-	\resumeItemTwo{\small Member of Upsilon Pi Epsilon Honor Society}
-	\resumeItemTwo{Dean's List, Honors to Date}
+	\resumeItemThree{GPA}{3.86}
+	\resumeItemTwo{Member of Upsilon Pi Epsilon Honor Society}
+	\resumeItemTwo{EECS Honors Program}
+	\resumeItemTwo{Dean's List}
 	\resumeItemListEnd
 	\resumeSubHeadingListEnd
 	
@@ -154,9 +140,15 @@ footskip=30pt,
 	
 	\resumeSubheading{River City High School}{West Sacramento, CA}{After-school Tutor}{Aug 2019 -- May 2022}
 	\resumeItemListStart
-	\resumeItemTwo{Volunteer tutor for mathematics, ranging from Algebra 1 to AP Calculus BC and AP Statistics.}
-	\resumeItemTwo{Worked with over a dozen students from a variety of backgrounds.}
-	\resumeItemTwo{Clearly explained core concepts covered in class and provided help on assignments.}
+	\resumeItemTwo{Volunteer tutor for mathematics, ranging from Algebra I to AP Calculus BC and AP Statistics.}
+	\resumeItemTwo{Clearly explained core concepts to students and provided help on assignments.}
+	\resumeItemListEnd
+	
+	\resumeSubheading{Self-Employed}{West Sacramento, CA}{Calculus Tutor}{June 2025 -- Present}
+	\resumeItemListStart
+	\resumeItemTwo{Private tutor for Calculus I and II.}
+	\resumeItemTwo{Created lessons tailored to individual students' needs.}
+	\resumeItemTwo{Explained and reinforced key concepts through examples and practice problems for students.}
 	\resumeItemListEnd
 	\resumeSubHeadingListEnd
 	
@@ -176,37 +168,14 @@ footskip=30pt,
 	\resumeItemListEnd
 	\resumeSubHeadingListEnd
 	
-	%%% Projects %%%
-	\section{Relevant Coursework}
-	\resumeSubHeadingListStart
-	
-	\resumeSubheadingFour{CS 70: Discrete Mathematics and Probability}
-%	\resumeItemListStart
-%	\resumeItemTwo{Proof Techniques, Graph Theory, Number Theory, Combinatorics, and Probability Theory.}
-%	\resumeItemListEnd
-	
-	\resumeSubheadingFour{CS 370: Adaptive Instruction Methods in Computer Science}
-	\resumeItemListStart
-	\resumeItemTwo{Studied pedagogical techniques. Experienced hands-on tutoring with college students.}
-	\resumeItemListEnd
-	
-	\resumeSubheadingFour{Math 104: Introduction to Analysis}
-	
-	\resumeSubheadingFour{Math 110: Abstract Linear Algebra}
-%	\resumeItemListStart
-%	\resumeItemTwo{Matrices, Vector Spaces, Linear Transformations, Inner Products, Eigenvectors, and Jordan Canonical Forms.}
-%	\resumeItemListEnd
-	
-	\resumeSubheadingFour{Math 113: Abstract Algebra}
-%	\resumeItemListStart
-%	\resumeItemTwo{Groups, (Commutative) Rings, Ideals, Quotient Fields, Polynomials, Fields, and Field Extensions.}
-%	\resumeItemListEnd
-	\resumeSubHeadingListEnd
-	
 	%%% Skills %%%
 	\section{Skills}
 	\resumeSubHeadingListStart
-	\resumeItem{Languages}{English and Vietnamese.}
-	\resumeItem{Software}{Google/Microsoft Suite, LaTeX, and TikZ.}
+	\resumeSubItem{Programming Languages}
+	{C, Golang, Java, MATLAB, Python, R, RISC-V, Scheme, Snap, SQL}
+	\resumeSubItem{Frameworks/Libraries}{Matplotlib, Numpy, Pandas, Plotly, PyTorch, scikit-learn, Seaborn, TensorFlow}
+	\resumeSubItem{Tools}{Docker, gdb, git, Logism, Valgrind}
+	\resumeSubItem{Mathematics}{Abstract Algebra, Algorithms, Complexity Theory, Cryptography, Discrete Mathematics, Linear Algebra, Linear Programming, Logic, Numerical Analysis, Real Analysis}
+	\resumeItem{Other}{Bilingual (English/Vietnamese), Public Speaking, LaTeX, TikZ}
 	\resumeSubHeadingListEnd
 \end{document}
