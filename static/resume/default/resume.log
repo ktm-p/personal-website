@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.12.4)  2 SEP 2025 10:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.12.4)  8 APR 2026 11:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -418,15 +418,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
-
-
-Package rerunfilecheck Warning: File `resume.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `resume.out':
-(rerunfilecheck)             Before: 2D3639F82BF81C9E6EFCA0C4157814CB;579
-(rerunfilecheck)             After:  DDB38C44AF726DE77AA5ADAA753E258F;599.
+Package rerunfilecheck Info: File `resume.out' has not changed.
+(rerunfilecheck)             Checksum: DDB38C44AF726DE77AA5ADAA753E258F;599.
  ) 
 Here is how much of TeX's memory you used:
  11188 strings out of 473682
@@ -445,7 +438,7 @@ onts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/devap/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/devap/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/devap/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on resume.pdf (1 page, 101102 bytes).
+Output written on resume.pdf (1 page, 100799 bytes).
 PDF statistics:
  78 PDF objects out of 1000 (max. 8388607)
  7 named destinations out of 1000 (max. 500000)

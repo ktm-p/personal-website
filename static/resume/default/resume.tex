@@ -119,9 +119,9 @@
 	{University of California, Berkeley}{Berkeley, CA}
 	{B.A. in Computer Science and Mathematics}{Aug 2022 -- Present}{Minor in Data Science}
 	\resumeItemListStart
-	\resumeItemThree{GPA}{\small 3.865}
+	\resumeItemThree{GPA}{\small 3.85}
 	\resumeItemTwo{\small Member of Upsilon Pi Epsilon Honor Society}
-	\resumeItemTwo{\small Member of EECS Honors Program}	\resumeItemTwo{Dean's List, Honors to Date}
+	\resumeItemTwo{Dean's List, Honors to Date}
 	\resumeItemListEnd
 	\resumeSubHeadingListEnd
 	
@@ -148,21 +148,12 @@
 	\resumeItemTwo{Implemented beat detection by comparing the audio's level to previous in stack.}
 	\resumeItemListEnd
 	
-	\resumeSubheadingTwo
-	{Build Your Own World}{Java}
-	\resumeItemListStart
-	\resumeItemTwo{An interactive maze exploration survival game featuring enemies.}
-	\resumeItemTwo{Implemented a pseudo-random world generation system via Prim's Algorithm.}
-	\resumeItemTwo{Created a smooth lighting system using BFS, alongside pathfinding enemies with A*-Search Algorithm.}
-	\resumeItemTwo{Features saving functionalities implemented through serialization.}
-	\resumeItemListEnd
-	
-	\resumeSubheadingTwo
-	{Optimizing Convolutions}{C, OpenMP, OpenMPI, SIMD}
-	\resumeItemListStart
-	\resumeItemTwo{Implemented a na\"ive 2D Convolution algorithm and optimized it.}
-	\resumeItemTwo{Optimizations include efficient cache usage, parallel programming, vectorizing operations, loop unrolling, and working with pointers. Achieved around a 50x speedup.}
-	\resumeItemListEnd
+%	\resumeSubheadingTwo
+%	{Optimizing Convolutions}{C, OpenMP, OpenMPI, SIMD}
+%	\resumeItemListStart
+%	\resumeItemTwo{Implemented a na\"ive 2D Convolution algorithm and optimized it.}
+%	\resumeItemTwo{Optimizations include efficient cache usage, parallel programming, vectorizing operations, loop unrolling, and working with pointers. Achieved around a 50x speedup.}
+%	\resumeItemListEnd
 	
 	\resumeSubheadingTwo
 	{A Secure File Sharing System}{Golang}
@@ -171,28 +162,30 @@
 	\resumeItemTwo{Implemented file creation, appending, sharing, and deletion among multiple users across multiple devices.}
 	\resumeItemTwo{Utilized symmetric encryption, HMACs, and digital signatures to ensure security.}
 	\resumeItemTwo{Extensively tested implementation, writing over three thousand lines of test code.}
-	%	\resumeItemTwo{Reordered order of instructions in order to optimize cache usage.}
-	%	\resumeItemTwo{Stored commonly-used variables in registers in order to better execution time.}
-	%	\resumeItemTwo{Used OpenMP to implement parallel programming to enhance runtime.}
-	%	\resumeItemTwo{Vectorized operations using SIMD instructions, and implemented extensive loop unrolling as well.}
 	\resumeItemListEnd
-	
-%	\resumeSubheadingTwo
-%	{Secure File Sharing System}{Golang}
-%	\resumeItemListStart
-%	\resumeItemTwo{Designed and implemented a secure file sharing system using cryptographic library functions.}
-%	\resumeItemTwo{Created design document briefing on implementation plans, detailing possible vulnerabilities, and proposed solutions to them.}
-%	\resumeItemTwo{Implemented ability for concurrent access to file data.}
-%	\resumeItemTwo{Added functionalities of renaming files, appending to files, sharing files, and revoking access rights to files.}
-%	\resumeItemTwo{Utilized symmetric encryption, HMACs, and digital signature in order to ensure integrity, authenticity, and confidentiality of user data.}
-%	\resumeItemTwo{Extensive testing of implementation, with over three thousand lines of testing code, along with fuzz testing.}
-%	\resumeItemListEnd
 	
 	\resumeSubheadingTwo
 	{MapReduce}{Rust}
 	\resumeItemListStart
 	\resumeItemTwo{Implemented a MapReduce coordinator in Rust which distributed map and reduce tasks to workers.}
 	\resumeItemTwo{Ensured memory and thread safety for effective parallelization.}
+	\resumeItemListEnd
+	
+	\resumeSubheadingTwo
+	{Implementing the GGH Cryptosystem}{Python}
+	\resumeItemListStart
+	\resumeItemTwo{Wrote a paper discussing the mathematics behind the GGH Encryption Scheme and implemented it in Python.}
+	\resumeItemTwo{Implemented proper key generation, encryption, and decryption}
+	\resumeItemTwo{Minimize errors by switching to symPy. Optimized key generation to handle larger dimensions.}
+	\resumeItemListEnd
+	
+	\resumeSubheadingTwo
+	{Rasterizer}{C++}
+	\resumeItemListStart
+	\resumeItemTwo{Implemented a rasterizer with features like drawing triangles, supersampling, and texture mapping.}
+	\resumeItemTwo{Created a triangle rasterizer and optimized it by removing redundant operations and direct edge computations.}
+	\resumeItemTwo{Antialiasing via supersampling. Implemented jitter sampling as well to reduce issues such as the Moire effect.}
+	\resumeItemTwo{Introduced pixel sampling and also level sampling with mipmaps for texture mapping.}
 	\resumeItemListEnd
 	
 	\resumeSubHeadingListEnd
@@ -209,7 +202,7 @@
 	\section{Technical Skills}
 	\resumeSubHeadingListStart
 	\resumeSubItem{Programming Languages}
-	{C, Golang, Java, Julia, MATLAB, Python, R, RISC-V, Scheme, SQL}
+	{C, C++, Golang, Java, Julia, MATLAB, Python, R, RISC-V, Scheme, SQL}
 	\resumeSubItem{Frameworks/Libraries}{Matplotlib, Numpy, OpenMP, Pandas, PyTorch, scikit-learn, Seaborn, TensorFlow}
 	\resumeSubItem{Tools}{Docker, gdb, git, Logism, LaTeX, Valgrind}
 	\resumeSubHeadingListEnd

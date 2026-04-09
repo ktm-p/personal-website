@@ -1,11 +1,11 @@
 <section class="course-timeline">
     <h1 class="section-head">Courses</h1>
     <div class="course-container" id="sp26">
-        <h2 class="semester">Fall 2025</h2>
+        <h2 class="semester">Spring 2026</h2>
         <ul class="courses">
-            <li><a class="class-name" href="https://www.avishaytal.org/cs-172-computability-and-complexity" target="_blank"> COMPSCI 164</a>: Foundations of Computer Graphics</li>
-            <li><a class="class-name" href="https://eecs189.org/" target="_blank"> MATH 160</a>: History of Mathematics</li>
-            <li><a class="class-name" href="https://data140.org/" target="_blank"> MATH 185</a>: Introduction to Complex Analysis</li>
+            <li><a class="class-name" href="https://cs184.eecs.berkeley.edu/sp26/" target="_blank"> COMPSCI 184</a>: Foundations of Computer Graphics</li>
+            <li><a class="class-name" href="https://classes.berkeley.edu/content/2026-spring-math-160-001-lec-001" target="_blank"> MATH 160</a>: History of Mathematics</li>
+            <li><a class="class-name" href="https://classes.berkeley.edu/content/2026-spring-math-185-001-lec-001" target="_blank"> MATH 185</a>: Introduction to Complex Analysis</li>
         </ul>
     </div>
 
@@ -15,7 +15,7 @@
             <li><a class="class-name" href="https://www.avishaytal.org/cs-172-computability-and-complexity" target="_blank"> COMPSCI 172</a>:  Computability and Complexity</li>
             <li><a class="class-name" href="https://eecs189.org/" target="_blank"> COMPSCI 189</a>:  Introduction to Machine Learning</li>
             <li><a class="class-name" href="https://data140.org/" target="_blank"> DATA C140</a>: Probability for Data Science</li>
-            <li><a class="class-name" href="http://persson.berkeley.edu/math124/" target="_blank"> MATH 124</a>: Introduction to Analysis</li>
+            <li><a class="class-name" href="http://persson.berkeley.edu/math124/" target="_blank"> MATH 124</a>: Programming for Mathematical Applications</li>
         </ul>
     </div>
 
