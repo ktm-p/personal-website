@@ -107,7 +107,7 @@ footskip=30pt,
 \begin{document}
 	%%% Heading %%%
 	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-		\textbf{\href{https://www.ktm-p.net/}{\Large Michael Pham}} & Email: \href{mailto:ktmpham@berkeley.edu}{ktmpham@berkeley.edu}\\
+		\textbf{\href{https://www.ktm-p.net/}{\Large Michael Pham}} & Email: \href{mailto:ktmichael.pham@gmail.com}{ktmichael.pham@gmail.com}\\
 		\href{https://www.ktm-p.net/}{ktm-p.net} & 
 		Mobile: \href{tel:+19169680563}{(916)-968-0563} \\
 	\end{tabular*}
@@ -120,10 +120,9 @@ footskip=30pt,
 	{B.A. in Computer Science and Mathematics}{Aug 2022 -- Present}
 	{Minor in Data Science}
 	\resumeItemListStart
-	\resumeItemThree{GPA}{3.86}
+	\resumeItemThree{GPA}{3.85}
 	\resumeItemTwo{Member of Upsilon Pi Epsilon Honor Society}
-	\resumeItemTwo{EECS Honors Program}
-	\resumeItemTwo{Dean's List}
+	\resumeItemTwo{Dean's List, Honors to Date}
 	\resumeItemListEnd
 	\resumeSubHeadingListEnd
 	
@@ -133,7 +132,7 @@ footskip=30pt,
 	\resumeSubheading{River City High School}{West Sacramento, CA}{Teaching Assistant}{Aug 2021 -- May 2022}
 	\resumeItemListStart
 	\resumeItemTwo{Worked as a student teaching assistant for school's AP Calculus course.}
-	\resumeItemTwo{Taught some classes, presenting key concepts in a clear and concise manner to students, along with working through examples to help deepen their understanding of the material.}
+	\resumeItemTwo{Taught some classes, presenting key concepts and walking through examples to deepen understanding.}
 	\resumeItemTwo{Helped design assignments such as in-class work, homework, and exam problems to reinforce core ideas.}
 	\resumeItemTwo{Graded assignments from students and offered clear explanations on areas to improve upon.}
 	\resumeItemListEnd
@@ -152,20 +151,35 @@ footskip=30pt,
 	\resumeItemListEnd
 	\resumeSubHeadingListEnd
 	
-	%%% EC %%%
-	\section{Extracurricular Activities}
+	%%% Projects %%%
+	\section{Projects}
 	\resumeSubHeadingListStart
-	\resumeSubheading{River City High School}{West Sacramento, CA}{SkillsUSA}{Aug 2021 -- May 2022}
+	
+	\resumeSubheadingTwo
+	{Audio Analyzer and Visualizer}{Java, Processing}
 	\resumeItemListStart
-	\resumeItemTwo{Participated in the SkillsUSA Competition and earned Silver in the county.}
-	\resumeItemTwo{Gave presentations on strategies for solving problems to team.}
+	\resumeItemTwo{Displays different representations of audio, including waveform and polar graphs, alongside a responsive visualizer.}
+	\resumeItemTwo{Implemented (smoothed) DFT and FFT to extract frequency information and create audio-responsive visuals.}
+	\resumeItemTwo{Implemented beat detection by comparing the audio's level to previous in stack.}
 	\resumeItemListEnd
 	
-	\resumeSubheading{River City High School}{West Sacramento, CA}{Mathletes}{Aug 2019 -- May 2022}
+	\resumeSubheadingTwo
+	{Spam Classifier}{Python, Matplotlib, NumPy, Pandas, RegEx, scikit-learn, Seaborn}
 	\resumeItemListStart
-	\resumeItemTwo{Participated in local math competitions. Problems involved algebra, geometry, trigonometry, and precalculus.}
-	\resumeItemTwo{Hosted study sessions, provided walkthroughs for problems, and tutored other members.}
+	\resumeItemTwo{Created a spam email filter using a Logistic Regression model. Achieved an accuracy of 99.2\% on given test data.}
+	\resumeItemTwo{Cleaned and visualized data using Pandas, RegEx, Matplotlib, and Seaborn.}
+	\resumeItemTwo{Fine-tuned hyperparameters by cross-validation with GridSearchCV.}
 	\resumeItemListEnd
+	
+	\resumeSubHeadingListEnd
+	
+	%%% Coursework %%%
+	\section{Relevant Coursework}
+	\resumeSubHeadingListStart
+	\resumeSubItem{Computer Science}
+	{Data Structures, Discrete Mathematics, Efficient Algorithms and Intractable Problems, Introduction to Artificial Intelligence, Introduction to Machine Learning, Optimization Models in Engineering}
+	\resumeSubItem{Mathematics}{Introduction to Analysis, Introduction to Complex Analysis, Abstract Algebra, Abstract Linear Algebra, Numerical Analysis, Programming for Mathematical Applications}
+	\resumeSubItem{Data Science}{Principles and Techniques of Data Science, Probability for Data Science, Introduction to Ecological Data Analysis}
 	\resumeSubHeadingListEnd
 	
 	%%% Skills %%%
@@ -174,8 +188,5 @@ footskip=30pt,
 	\resumeSubItem{Programming Languages}
 	{C, Golang, Java, MATLAB, Python, R, RISC-V, Scheme, Snap, SQL}
 	\resumeSubItem{Frameworks/Libraries}{Matplotlib, Numpy, Pandas, Plotly, PyTorch, scikit-learn, Seaborn, TensorFlow}
-	\resumeSubItem{Tools}{Docker, gdb, git, Logism, Valgrind}
-	\resumeSubItem{Mathematics}{Abstract Algebra, Algorithms, Complexity Theory, Cryptography, Discrete Mathematics, Linear Algebra, Linear Programming, Logic, Numerical Analysis, Real Analysis}
-	\resumeItem{Other}{Bilingual (English/Vietnamese), Public Speaking, LaTeX, TikZ}
 	\resumeSubHeadingListEnd
 \end{document}

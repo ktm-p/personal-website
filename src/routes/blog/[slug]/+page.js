@@ -1,11 +1,26 @@
+import { extractHeadings } from '$lib/toc';
+
+const modules = import.meta.glob('../*.md');
+const rawModules = import.meta.glob('../*.md', { as: 'raw' });
+
 export async function load({ params }) {
-	const post = await import(`../${params.slug}.md`);
+	const match = Object.keys(modules).find((path) =>
+		path.endsWith(`${params.slug}.md`)
+	);
+
+	if (!match) {
+		throw new Error(`Post not found: ${params.slug}`);
+	}
+
+	const post = await modules[match]();
+	const raw = await rawModules[match]();
+
 	const { title, date } = post.metadata;
-	const content = post.default;
 
 	return {
-		content,
+		content: post.default,
 		title,
-		date
+		date,
+		toc: extractHeadings(raw)
 	};
 }

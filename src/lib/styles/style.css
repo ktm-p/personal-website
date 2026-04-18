@@ -104,6 +104,10 @@ a:hover {
     color: var(--color-hover);
 }
 
+p > code {
+    background-color: var(--color-container-bg-2);
+}
+
 /* Navigation Bar */
 nav {
     background-color: var(--color-container-bg);
@@ -519,11 +523,42 @@ h1 {
     line-height: 3rem;
 }
 
-/* Blog Post */
+/* Blog Page */
+.blog-container {
+    margin-bottom: 4rem;
+}
+
+.blog-container .post-title {
+    font-size: 3rem;
+}
+
+.post-description {
+    margin-top: 2rem;
+    font-size: 1.75rem;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+/* Blog Posts */
+.blog-post {
+    max-width: 50ch;
+    margin: 0 auto;
+}
+
+.post-header {
+    max-width: 50ch;
+    margin: 0 auto;
+}
+
+.blog-post p {
+    line-height: 1.4;
+}
+
 .blog-post h1, .blog-post h2, .blog-post h3, .blog-post h4, .blog-post h5, .blog-post h6 {
     font-weight: 450;
     margin-top: 3rem;
     margin-bottom: 3rem;
+    scroll-margin-top: 10rem;
 }
 
 .blog-post pre {
@@ -553,10 +588,17 @@ h1 {
 .blog-post img {
     display: block;
     margin: auto;
-    width: 50%;
+    width: 75%;
+    height: auto;
 
     border: 0.25rem solid var(--color-outlines);
     background-color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 770px) {
+  .blog-post img {
+    width: 100%;
+  }
 }
 
 .post-title {
@@ -575,33 +617,159 @@ h1 {
     margin-bottom: 2rem;
 }
 
-/* Blog Page */
-.blog-container {
-    margin-bottom: 4rem;
+/* Table for Blog Post */
+.blog-post table {
+    width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
 }
 
-.blog-container .post-title {
-    font-size: 3rem;
+/* Table cells */
+.blog-post th,
+.blog-post td {
+    border: 1px solid var(--color-outlines);
+    padding: 10px 20px;
+    text-align: left;
+    white-space: nowrap;
 }
 
-.post-description {
-    margin-top: 2rem;
+.blog-post th {
+    font-weight: 600;
+}
+
+.blog-post tr:nth-child(even) {
+    background-color: rgba(98, 98, 98, 0.16);
+}
+
+@media (max-width: 770px) {
+    .blog-post table {
+        display: block;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Image Rows in Blog */
+.blog-post .img-row {
+    display: flex;
+    gap: 10px;
+}
+
+.blog-post .img-row img {
+    width: 50%;
+}
+
+@media (max-width: 770px) {
+  .blog-post .img-row {
+    flex-direction: column;
+  }
+
+  .blog-post .img-row img {
+    width: 100%;
+  }
+}
+
+/* LaTeX */
+.blog-post mjx-container,
+.blog-post .katex-display {
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+    display: block;
+    padding: 0.5rem 0;
+}
+
+.blog-post .katex-display {
+    display: block;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+    padding: 0.5rem 0;
+}
+/* 
+.blog-post .katex {
+    font-size: 1em;
+} */
+
+/* Table of Content */
+.toc {
+    position: fixed;
+    top: 13rem;
+    left: 2.5%;
+    width: 190px;
     font-size: 1.75rem;
-    font-weight: lighter;
-    font-style: italic;
+    line-height: 1.6;
+    opacity: 0.75;
+    word-wrap: break-word;
 }
 
-/* Table */
-table {
-  border-collapse: collapse;
-  width: 100%;
+.toc:hover {
+    opacity: 1;
 }
 
-th, td {
-  border: 1px solid var(--color-outlines);
-  padding: 10px 20px;
+/* ToC Title */
+.toc h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--color-heading);
 }
 
-th {
-  font-weight: 600;
+.toc-item {
+    position: relative;
+    margin: 0.25rem 0;
 }
+
+.toc-item.active {
+    padding-left: 0.75rem;
+}
+
+.toc a:hover {
+    color: var(--color-hover);
+}
+
+.toc-item.active a {
+    color: var(--color-links);
+    font-weight: 500;
+}
+
+.toc-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 2px;
+    background: transparent;
+    transition: background 0.3s ease;
+}
+
+.toc-item.active::before {
+    background: var(--color-hover);
+}
+
+.toc a {
+    color: var(--color-text);
+    word-break: break-word;
+}
+
+/* .toc a {
+    color: var(--color-text);
+    text-decoration: none;
+    word-break: break-word;
+
+    padding: 0.2rem 0 0.2rem 0rem;
+} */
+
+@media (max-width: 1100px) {
+	.toc {
+		display: none;
+	}
+}
+
+/* .toc a.active {
+    color: var(--color-links);
+    font-weight: 500;
+    border-left: 2px solid var(--color-hover);
+    padding-left: 0.5rem;
+} */

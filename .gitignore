@@ -25,3 +25,12 @@ vite.config.ts.timestamp-*
 .vercel
 
 to-do.txt
+
+# WIP Blog Posts
+/src/routes/blog/wip
+
+# .history
+/.history
+
+# .vscode
+/.vscode

@@ -4,7 +4,7 @@ date: '2025-04-15'
 description: First blog post. Not much to say here.
 ---
 
-After a lot of procrastinating, I finally refactored my website code... and also added a blog section! Which is all in markdown!
+After a lot of procrastinating, I finally refactored my website code... and also added a blog section! Which is all in markdown! Massive thanks to my friend, <a href="https://albie.cat/" target="_blank">Albert <sup><i class='fas fa-external-link-alt arrow'></i></sup></a>, for inspiring me.
 
 Now featuring some cool features like:
 - Code blocks (with highlighting, too -- wow!)

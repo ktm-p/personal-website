@@ -22,7 +22,12 @@
 	},
 	"dependencies": {
 		"mathlifier": "^2.0.3",
+		"rehype-autolink-headings": "^7.1.0",
 		"rehype-katex": "^7.0.1",
-		"rehype-katex-svelte": "^1.2.0"
+		"rehype-katex-svelte": "^1.2.0",
+		"remark-parse": "^11.0.0",
+		"remark-slug": "^7.0.1",
+		"remark-toc": "^9.0.0",
+		"unified": "^11.0.5"
 	}
 }

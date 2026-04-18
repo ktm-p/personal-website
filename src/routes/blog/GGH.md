@@ -142,7 +142,7 @@ def hadamard_ratio(dimension:int, matrix:np.array) -> float:
     ratio = (determinant / norms)**(1 / dimension)
     return ratio
 ```
-        return unimodular @ private_key
+
 For checking if we have a valid basis, we can use the fact that it's a basis if and only if it's full rank (i.e. the rank of our matrix is equal to the dimension we are working in).
 
 When verifying the Hadamard Ratio, due to how large our numbers can get, `numpy` can't handle calculating the determinant without experiencing overflow. As a result, we instead use `np.lingalg.slogdet()` rather than just directly using `np.linalg.det()`. Unfortunately, there will be a recurring theme of running into integer overflows or rounding-errors later on... but for now, let's continue with our implementation!
@@ -274,21 +274,27 @@ And this gives us the following output:
 ```
 
 ## Issues
-However, while our implementation works right now, there are some glaring issues. To begin with, we start running into decryption errors with dimensions as low as $n \approx 80$. Keep in mind, this scheme is conjectured to need at least $n > 400$ for it to be secure against currently-known attacks! This stems from, as we've foreshadowed before, rounding errors due to how `numPy` does arithmetics. Namely, let us consider the following message:
+However, while our implementation works right now, there are some glaring issues. To begin with, we start running into decryption errors with dimensions as low as $n \approx 80$. Keep in mind, this scheme is conjectured to need at least $n > 400$ for it to be secure against currently-known attacks! This stems from, as we've foreshadowed before, rounding errors due to how `numPy` does arithmetics. Namely, let us consider the following message and its encryption:
 ```
 >Message: hello! how are you? i am honestly kind of tired today, but i hope you are well!
 >Encrypted: [-209819066574 -131587654269   ...  -90926829761   96783511052]
->Decrypted: hello! hovare yov? i am honestly lind of tired todaz+ but i hope yov are well!
 ```
 
 When encrypting/decrypting, we get:
+```
+>Decrypted: hello! hovare yov? i am honestly lind of tired todaz+ but i hope yov are well!
+```
 
-Another issue is it takes a *very* long time when working with higher dimensions; this problem can be resolved a lot easier. For this, it's mostly due to the fact that the algorithms we use for generating the private key and unimodular matrix could be improved upon. We will be referring to the algorithms outlined in the original GGH paper for constructing these two things.
+These errors occur due to the fact that `numPy` uses floating-point arithmetics. By default, it uses `float64`, offering us approximately 15 decimal digits of precision. However, this means that in higher dimensions, we begin to lose out on precision, leading to premature rounding errors which build up quickly; this is especially fatal when we are relying on accurate rounding to get the nearest vector.
+
+Thus, we would either have to figure out a way to avoid rounding errors in `numPy`, bypassing its limitations... or, we find a different library that offers significantly more precision. 
+
+Another issue is it takes a *very* long time when working with higher dimensions; when trying to encrypt an excerpt from works of literature, even after five minutes, we did not manage to encrypt it. Fortunately, this problem can be resolved a lot easier. For this, it's mostly due to the fact that the algorithms we use for generating the private key and unimodular matrix could be improved upon. We will be referring to the algorithms outlined in the original GGH paper for constructing these two things.
 
 # Improving the Implementation
-With all of that in mind, we first want to extend our implementation to accurately handle higher-dimension situations. Luckily, the `FLINT` and `symPy` libraries prove to be especially helpful for this endeavor. However, there is a small trade-off between accuracy and speed.
+With all of that in mind, we first want to extend our implementation to accurately handle higher-dimension situations. Luckily, the `FLINT` and `symPy` libraries prove to be especially helpful for this endeavor. While `numPy` works by using floating-point linear algebra, `FLINT` and `symPy` utilizes exact integer arithmetics; we no longer run into the issues seen previously of premature rounding errors compounding into wrong messages being recovered. Unfortuantely, there is a small trade-off between accuracy and speed (albeit not major).
 
-First, we will be needing a helper function to convert between `numPy` (or `symPy`) arrays and the `fmpz` matrices from `FLINT`. We will also rewrite the `check_basis()` function to instead simply check whether or not the determinant is non-zero:
+First, we will be needing a helper function to convert between `numPy` (or `symPy`) arrays and the `fmpz` matrices from `FLINT`. This will be called `conv_to_fmpz()`. We will also rewrite the `check_basis()` function to accomodate the switch to `fmpz` matrices, using the `det()` function and checking if a matrix's determinant is non-zero:
 ```python
 class Utils:
     # ...
@@ -303,7 +309,7 @@ class Utils:
         return matrix.det() != 0
 ```
 
-We will also re-write our functions for generating the private key $K_\mathrm{priv}$ and unimodular matrix $U$:
+Next, in order to tackle the issue of speed, we will also re-write our functions for generating the private key $K_\mathrm{priv}$ and unimodular matrix $U$. In order to improve the runtime, we now transition to the method described in the <a href="https://www.wisdom.weizmann.ac.il/~/oded/PSX/pkcs.pdf" target="_blank">original GGH paper <sup><i class='fas fa-external-link-alt arrow'></i></sup></a>:
 ```python
 class GGH:
     # ...
@@ -344,6 +350,8 @@ class GGH:
     
     # ...
 ```
+
+Here, the main way we shaved off time is by changing the way the private key is generated. Initially, in our na&iumlve implementation, the way our private key was generated was by randomly constructing a basis $B$ and checking whether or not it fit our critera: if not, we would generate a new basis, and keep on repeating it. Evidently, this method would not scale well at all in higher dimensions. On the otherhand, our new `generate_private_key()` first begins with the identity matrix `I` and keep adding some noise to it until we fit the criteria desired; this shaves the number of iterations needed to construct a basis -- especially in higher dimensions -- down dramatically.
 
 Then, with some small tweaks to our previous functions to accomodate the switch to `FLINT`, we have successfully transformed our implementation so that it can handle larger dimensions! For example, let us try encrypting the start of my favorite poem, <a href="https://www.poetryfoundation.org/poems/48860/the-raven" target="_blank">The Raven <sup><i class='fas fa-external-link-alt arrow'></i></sup></a>:
 ```
