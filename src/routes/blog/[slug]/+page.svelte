@@ -9,38 +9,28 @@
 	onMount(() => {
 		const headings = Array.from(document.querySelectorAll('.blog-post h1'));
 
-		let positions = [];
+		let lastScrollY = window.scrollY;
 
 		const NAV_OFFSET = 120;
-        const getUpThreshold = () => window.innerHeight / 2;
-
-		function computePositions() {
-			positions = headings.map(h => ({
-				id: h.id,
-				top: h.offsetTop
-			}));
-		}
-
-		computePositions();
-
-		let lastScrollY = window.scrollY;
-		let ticking = false;
+		const UP_THRESHOLD = window.innerHeight / 2;
 
 		function updateActive() {
 			const currentScrollY = window.scrollY;
 			const scrollingDown = currentScrollY > lastScrollY;
 
-			const threshold = scrollingDown
-				? currentScrollY + NAV_OFFSET
-				: currentScrollY + getUpThreshold();
+			let current = headings[0];
 
-			let current = positions[0];
+			for (const h of headings) {
+				const rect = h.getBoundingClientRect();
 
-			for (const p of positions) {
-				if (p.top <= threshold) {
-					current = p;
+				if (scrollingDown) {
+					if (rect.top - NAV_OFFSET <= 0) {
+						current = h;
+					}
 				} else {
-					break;
+					if (rect.top - UP_THRESHOLD <= 0) {
+						current = h;
+					}
 				}
 			}
 
@@ -51,30 +41,10 @@
 			lastScrollY = currentScrollY;
 		}
 
-		function onScroll() {
-			if (!ticking) {
-				requestAnimationFrame(() => {
-					updateActive();
-					ticking = false;
-				});
-				ticking = true;
-			}
-		}
-
-		function onResize() {
-			computePositions();
-			updateActive();
-		}
-
-		window.addEventListener('scroll', onScroll);
-		window.addEventListener('resize', onResize);
-
+		window.addEventListener('scroll', updateActive);
 		updateActive();
 
-		return () => {
-			window.removeEventListener('scroll', onScroll);
-			window.removeEventListener('resize', onResize);
-		};
+		return () => window.removeEventListener('scroll', updateActive);
 	});
 </script>
 
