@@ -3,15 +3,22 @@
     import '$lib/styles/prism-darcula.css';
     import { page } from "$app/stores";
 	import { onMount } from 'svelte';
+	import { slugify } from '$lib/utils/slugify';
 
 	let activeId = '';
 
 	onMount(() => {
+		const hs = document.querySelectorAll('.blog-post h1');
+
+		hs.forEach(h => {
+			h.id = slugify(h.textContent);
+		});
+		
 		const headings = Array.from(document.querySelectorAll('.blog-post h1'));
 
 		let lastScrollY = window.scrollY;
 
-		const NAV_OFFSET = 120;
+		const NAV_OFFSET = window.innerHeight / 3;
 		const UP_THRESHOLD = window.innerHeight / 2;
 
 		function updateActive() {
@@ -57,7 +64,7 @@
         <aside class="toc">
             <h3>Contents</h3>
             {#each data.toc.filter(h => h.depth < 2) as item}
-                {@const slug = item.text.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-')}
+                {@const slug = slugify(item.text)}
 
                 <div class="toc-item" class:active={activeId === slug}>
                     <a href={`#${slug}`}>
