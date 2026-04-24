@@ -4,6 +4,7 @@
         <h2 class="semester">Spring 2026</h2>
         <ul class="courses">
             <li><a class="class-name" href="https://cs184.eecs.berkeley.edu/sp26/" target="_blank"> COMPSCI 184</a>: Foundations of Computer Graphics</li>
+            <li><a class="class-name" href="https://classes.berkeley.edu/content/2026-spring-espm-173-001-lec-001" target="_blank"> ESPM 173</a>: Introduction to Ecological Data Analysis</li>
             <li><a class="class-name" href="https://classes.berkeley.edu/content/2026-spring-math-160-001-lec-001" target="_blank"> MATH 160</a>: History of Mathematics</li>
             <li><a class="class-name" href="https://classes.berkeley.edu/content/2026-spring-math-185-001-lec-001" target="_blank"> MATH 185</a>: Introduction to Complex Analysis</li>
         </ul>
