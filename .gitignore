@@ -30,7 +30,7 @@ to-do.txt
 /src/routes/blog/wip
 
 # .history
-/.history
+.history/
 
 # .vscode
-/.vscode
+.vscode/
