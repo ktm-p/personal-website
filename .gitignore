@@ -28,6 +28,7 @@ to-do.txt
 
 # WIP Blog Posts
 /src/routes/blog/wip
+/src/.history
 
 # .history
 .history/
