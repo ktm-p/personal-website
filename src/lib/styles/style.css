@@ -104,7 +104,7 @@ a:hover {
     color: var(--color-hover);
 }
 
-p > code {
+code:not(pre code) {
     background-color: var(--color-container-bg-2);
 }
 
@@ -597,6 +597,22 @@ h1 {
 
 @media (max-width: 770px) {
   .blog-post img {
+    width: 100%;
+  }
+}
+
+.blog-post video {
+    display: block;
+    margin: auto;
+    width: 75%;
+    height: auto;
+
+    border: 0.25rem solid var(--color-outlines);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 770px) {
+  .blog-post video {
     width: 100%;
   }
 }
