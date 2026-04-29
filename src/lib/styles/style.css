@@ -638,6 +638,7 @@ h1 {
     width: 100%;
     overflow-x: auto;
     border-collapse: collapse;
+    margin-bottom: 2rem;
 }
 
 /* Table cells */

@@ -130,9 +130,8 @@
 	\resumeSubHeadingListStart
 	\resumeSubheading{Self-Employed}{West Sacramento, CA}{Calculus Tutor}{June 2025 -- Present}
 	\resumeItemListStart
-	\resumeItemTwo{Private tutor for Calculus I and II.}
-	\resumeItemTwo{Created lessons tailored to individual students' needs.}
-	\resumeItemTwo{Explained and reinforced key concepts through examples and practice problems for students.}
+	\resumeItemTwo{Tutored Calculus I and II students through personalized lessons.}
+	\resumeItemTwo{Developed practice materials and examples to reinforce core concepts.}
 	\resumeItemListEnd
 	\resumeSubHeadingListEnd
 	
@@ -140,70 +139,78 @@
 	\section{Projects}
 	\resumeSubHeadingListStart
 	
-	\resumeSubheadingTwo
-	{Audio Analyzer and Visualizer}{Java, Processing}
-	\resumeItemListStart
-	\resumeItemTwo{Displays different representations of audio, including waveform and polar graphs, alongside a responsive visualizer.}
-	\resumeItemTwo{Implemented (smoothed) DFT and FFT to extract frequency information and create audio-responsive visuals.}
-	\resumeItemTwo{Implemented beat detection by comparing the audio's level to previous in stack.}
-	\resumeItemListEnd
-	
 %	\resumeSubheadingTwo
-%	{Optimizing Convolutions}{C, OpenMP, OpenMPI, SIMD}
+%	{Audio Analyzer and Visualizer}{Java, Processing}
 %	\resumeItemListStart
-%	\resumeItemTwo{Implemented a na\"ive 2D Convolution algorithm and optimized it.}
-%	\resumeItemTwo{Optimizations include efficient cache usage, parallel programming, vectorizing operations, loop unrolling, and working with pointers. Achieved around a 50x speedup.}
+%	\resumeItemTwo{Displays different representations of audio, including waveform and polar graphs, alongside a responsive visualizer.}
+%	\resumeItemTwo{Implemented (smoothed) DFT and FFT to extract frequency information and create audio-responsive visuals.}
+%	\resumeItemTwo{Implemented beat detection by comparing the audio's level to previous in stack.}
 %	\resumeItemListEnd
+	\resumeSubheadingTwo
+	{Paladins Tracker}{Python, MongoDB}
+	\resumeItemListStart
+	\resumeItemTwo{Built Discord bot to track and report player statistics in real time via external APIs.}
+	\resumeItemTwo{Designed MongoDB schema to store historical and live player data, enabling efficient querying across users.}
+	\resumeItemTwo{Utilized asynchronous requests to handle concurrent user queries at scale.}
+	\resumeItemTwo{Optimized API usage, caching strategies, and database queries, achieving up to 4x speedup across endpoints.}
+	\resumeItemListEnd
+
+	\resumeSubheadingTwo
+	{Optimizing Convolutions}{C, OpenMP, OpenMPI, SIMD}
+	\resumeItemListStart
+	\resumeItemTwo{Implemented and optimized 2D convolution using parallelism and vectorization, achieving a 15x speedup.}
+	\resumeItemTwo{Improved cache locality through loop tiling and memory access optimization, reducing runtime bottlenecks.}
+	\resumeItemTwo{Applied low-level optimizations including loop unrolling and pointer arithmetic for efficient execution.}
+	\resumeItemListEnd
 	
 	\resumeSubheadingTwo
 	{A Secure File Sharing System}{Golang}
 	\resumeItemListStart
-	\resumeItemTwo{Designed and implemented a secure file sharing system using cryptographic library functions.}
-	\resumeItemTwo{Implemented file creation, appending, sharing, and deletion among multiple users across multiple devices.}
-	\resumeItemTwo{Utilized symmetric encryption, HMACs, and digital signatures to ensure security.}
-	\resumeItemTwo{Extensively tested implementation, writing over three thousand lines of test code.}
+	\resumeItemTwo{Designed secure file-sharing system supporting multi-user access with encryption and integrity checks.}
+	\resumeItemTwo{Implemented symmetric encryption, MACs, and digital signatures to ensure confidentiality and authenticity.}
+	\resumeItemTwo{Built functionality for sharing, revocation, and integrity verification across distributed users.}
 	\resumeItemListEnd
 	
 	\resumeSubheadingTwo
-	{MapReduce}{Rust}
+	{Real-time Cloth Simulator}{C++}
 	\resumeItemListStart
-	\resumeItemTwo{Implemented a MapReduce coordinator in Rust which distributed map and reduce tasks to workers.}
-	\resumeItemTwo{Ensured memory and thread safety for effective parallelization.}
+	\resumeItemTwo{Built a real-time cloth simulator using mass and spring based system.}
+	\resumeItemTwo{Implemented collision detection and response for self-collisions and external objects.}
+	\resumeItemTwo{Introduced shaders alongside accurate physics interaction with time-varying winds and under high stress.}
 	\resumeItemListEnd
 	
 	\resumeSubheadingTwo
 	{Implementing the GGH Cryptosystem}{Python}
 	\resumeItemListStart
-	\resumeItemTwo{Wrote a paper discussing the mathematics behind the GGH Encryption Scheme and implemented it in Python.}
-	\resumeItemTwo{Implemented proper key generation, encryption, and decryption}
-	\resumeItemTwo{Minimize errors by switching to symPy. Optimized key generation to handle larger dimensions.}
+	\resumeItemTwo{Implemented GGH lattice-based cryptosystem with key generation, encryption, and decryption.}
+	\resumeItemTwo{Optimized algorithm to support higher-dimensional lattices.}
+	\resumeItemTwo{Improved numerical stability by utilizing symPy, reducing encryption errors.}
 	\resumeItemListEnd
-	
-	\resumeSubheadingTwo
-	{Rasterizer}{C++}
-	\resumeItemListStart
-	\resumeItemTwo{Implemented a rasterizer with features like drawing triangles, supersampling, and texture mapping.}
-	\resumeItemTwo{Created a triangle rasterizer and optimized it by removing redundant operations and direct edge computations.}
-	\resumeItemTwo{Antialiasing via supersampling. Implemented jitter sampling as well to reduce issues such as the Moire effect.}
-	\resumeItemTwo{Introduced pixel sampling and also level sampling with mipmaps for texture mapping.}
-	\resumeItemListEnd
+%	\resumeSubheadingTwo
+%	{Rasterizer}{C++}
+%	\resumeItemListStart
+%	\resumeItemTwo{Developed software rasterizer supporting triangle meshes, shading, and texture ping.}
+%	\resumeItemTwo{Optimized pipeline by eliminating redundant computations and improving raster efficiency.}
+%	\resumeItemTwo{Implemented mipmapping and supersampling for anti-aliasing and texture quality.}
+%	\resumeItemListEnd
 	
 	\resumeSubHeadingListEnd
 	
-	%%% Coursework %%%
+	%% Coursework %%%
 	\section{Relevant Coursework}
 	\resumeSubHeadingListStart
 	\resumeSubItem{Computer Science}
-	{Data Structures, Discrete Mathematics, Computer Security, Efficient Algorithms and Intractable Problems, Computability and Complexity}
-	\resumeSubItem{Mathematics}{Introduction to Analysis, Abstract Algebra, Abstract Linear Algebra, Cryptography, Numerical Analysis, Programming for Mathematical Applications}
+	{Data Structures, Efficient Algorithms and Intractable Problems, Machine Learning, Operating Systems, Computer Graphics, Computer Security}
+	\resumeSubItem{Mathematics}{Analysis, Abstract Algebra, Linear Algebra, Discrete Mathematics, Cryptography, Numerical Analysis}
+	\resumeSubItem{Data Science}{Principles and Techniques of Data Science, Probability for Data Science, Ecological Data Analysis}
 	\resumeSubHeadingListEnd
 	
 	%%% Skills %%%
 	\section{Technical Skills}
 	\resumeSubHeadingListStart
 	\resumeSubItem{Programming Languages}
-	{C, C++, Golang, Java, Julia, MATLAB, Python, R, RISC-V, Scheme, SQL}
-	\resumeSubItem{Frameworks/Libraries}{Matplotlib, Numpy, OpenMP, Pandas, PyTorch, scikit-learn, Seaborn, TensorFlow}
-	\resumeSubItem{Tools}{Docker, gdb, git, Logism, LaTeX, Valgrind}
+	{C, C++, Golang, Java, MATLAB, Python, R, SQL}
+	\resumeSubItem{Frameworks/Libraries}{Numpy, Pandas, PyTorch, scikit-learn}
+	\resumeSubItem{Tools}{Docker, git, Linux}
 	\resumeSubHeadingListEnd
 \end{document}
