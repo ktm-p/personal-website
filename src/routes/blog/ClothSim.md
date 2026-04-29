@@ -1,7 +1,7 @@
 ---
 title: Simulating a Cloth
 date: '2026-04-24'
-description: How to simulate a cloth in C++.
+description: How to create a real-time cloth simulator in C++.
 ---
 
 # Introduction

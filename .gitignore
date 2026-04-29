@@ -27,7 +27,7 @@ vite.config.ts.timestamp-*
 to-do.txt
 
 # WIP Blog Posts
-/src/routes/blog/wip
+wip/
 /src/.history
 
 # .history

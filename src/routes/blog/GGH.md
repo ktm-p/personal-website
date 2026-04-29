@@ -359,7 +359,9 @@ class GGH:
     # ...
 ```
 
-Here, the main way we shaved off time is by changing the way the private key is generated. Initially, in our na&iumlve implementation, the way our private key was generated was by randomly constructing a basis $B$ and checking whether or not it fit our critera: if not, we would generate a new basis, and keep on repeating it. Evidently, this method would not scale well at all in higher dimensions. On the otherhand, our new `generate_private_key()` first begins with the identity matrix `I` and keep adding some noise to it until we fit the criteria desired; this shaves the number of iterations needed to construct a basis -- especially in higher dimensions -- down dramatically.
+Here, the main way we shaved off time is by changing the way the private key is generated. Initially, in our na&iumlve implementation, the way our private key was generated was by randomly constructing a basis $B$ and checking whether or not it fit our critera: if not, we would generate a new basis, and keep on repeating it. Evidently, this method would not scale well at all in higher dimensions.
+
+On the otherhand, our new `generate_private_key()` first begins with the identity matrix `I` and keep adding some noise to it until we fit the criteria desired; this shaves the number of iterations needed to construct a basis -- especially in higher dimensions -- down dramatically.
 
 Then, with some small tweaks to our previous functions to accomodate the switch to `FLINT`, we have successfully transformed our implementation so that it can handle larger dimensions! For example, let us try encrypting the start of my favorite poem, <a href="https://www.poetryfoundation.org/poems/48860/the-raven" target="_blank">The Raven <sup><i class='fas fa-external-link-alt arrow'></i></sup></a>:
 ```
