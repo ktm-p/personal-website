@@ -29,6 +29,10 @@ Now, we call the set of linearly independent vectors which spans our lattice the
 
 ![Lattice in the Euclidean Plane](/blog/ggh/fig_1.svg "Figure 1: Lattice in the Euclidean Plane")
 
+<center>
+Figure 1.1: Lattice in the Euclidean Plane
+</center>
+
 With this idea of bases, a natural question to ask is how we can differentiate between them. This is where the Hadamard Ratio comes in, which gives us a way to quantify the orthogonality of a chosen basis of $\mathcal L$:
 
 $$
@@ -45,6 +49,10 @@ The last key idea related to different lattice bases is that of **unimodular mat
 With all of the mathematical prerequisites laid out, we can now discuss the crux of GGH's security: the **Closest Vector Problem** (CVP). Loosely speaking, the idea is that, given a lattice $\mathcal L$ and some arbitrary vector $v \in V$ (not necessarily part of our lattice), we want to find the closest lattice point to said vector.
 
 ![Example of CVP Instance](/blog/ggh/fig_2.png "Figure 2: Example of CVP Instance")
+
+<center>
+Figure 1.2: Lattice in the Euclidean Plane
+</center>
 
 As it turns out, without knowing extra information like the basis of $\mathcal L$, it is very difficult to find this closest vector point! However, there exists algorithms that approximate CVP (such as **Babai's Rounding Technique**) if the basis we work with is orthogonal enough (i.e. it has a high Hadamard Ratio). As such, it is clear how this could serve as the starting point for an encryption scheme.
 

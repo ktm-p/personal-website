@@ -351,7 +351,7 @@ Another feature we wanted out of this bot is to keep track of a player's previou
 
 ![stats](/blog/paladins/6/fig_1.png "Tracker stats()")
 <center>
-Figure 5.1: Screenshot of a Player's Statistic.
+Figure 4.1: Screenshot of a Player's Statistic.
 </center>
 
 ## socials()
@@ -366,7 +366,7 @@ From here, we implement a `View` class that contains a dropdown menu, allowing u
 
 ![stats](/blog/paladins/6/fig_2.png "Tracker stats()")
 <center>
-Figure 5.2: Player's Socials List.
+Figure 4.2: Player's Socials List.
 </center>
 
 ### Discord Limitations
@@ -376,7 +376,7 @@ Our workaround for this was to add in an extra set of buttons that allows us to 
 
 ![stats](/blog/paladins/6/fig_3.png "Tracker stats()")
 <center>
-Figure 5.3: Player's Socials List (Long).
+Figure 4.3: Player's Socials List (Long).
 </center>
 
 ## changes()
@@ -388,7 +388,7 @@ Then, to actually figure out what changes have been made, we recall our database
 
 ![changes](/blog/paladins/6/fig_4.png "changes()")
 <center>
-Figure 5.4: Displaying Changes.
+Figure 4.4: Displaying Changes.
 </center>
 
 ## current()
@@ -441,7 +441,7 @@ Now, for example, one of our commands that uses this handler is `cheaters()`, wh
 
 ![Bulk Statuses](/blog/paladins/6/fig_5.png "Bulk Statuses")
 <center>
-Figure 5.5: Bulk Statuses.
+Figure 4.5: Bulk Statuses.
 </center>
 
 ## Console Players
@@ -451,7 +451,7 @@ What this means then is that `getPlayer()` can fail sometimes when searching by 
 
 ![Console Players](/blog/paladins/6/fig_6.png "Searching Console Players")
 <center>
-Figure 5.6: Searching Console Players.
+Figure 4.6: Searching Console Players.
 </center>
 
 Another feature in Paladins is that console players can eventually "merge" their console and Steam accounts. However, during this merging process, the game creates a "dummy account" with no username. When na&iumlvely returning someone's friends list, it will include these dummy accounts for merged players; we have to filter out players with `len(username) < 1`.
@@ -528,7 +528,7 @@ Custom aRez Function | 2.38
 Cache II | 1.82
 
 <center>
-Figure 6.1: Summary of stats() Optimizations.
+Figure 5.1: Summary of stats() Optimizations.
 </center>
 
 For `socials()` with a list of around 1000 players, we see that we have:
@@ -541,7 +541,7 @@ Cache I | 2.93
 aRez II | 1.84
 
 <center>
-Figure 6.2: Summary of socials() Optimizations.
+Figure 5.2: Summary of socials() Optimizations.
 </center>
 
 Finally, for `current()` with the `-d` flag and two live matches, we summarize the performance below:
@@ -554,5 +554,5 @@ aRez II | 14.84
 Cache II | 6.19
 
 <center>
-Figure 6.3: Summary of current() Optimizations.
+Figure 5.3: Summary of current() Optimizations.
 </center>
