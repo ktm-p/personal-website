@@ -1,6 +1,10 @@
 <!-- A Secure File Sharing System -->
+<script>
+    import { r2 } from '$lib/r2';
+</script>
+
 <div class="project-container" id="secureshare">
-    <enhanced:img src="$lib/assets/projects/coursework/secureshare_preview.png" class="project-img"></enhanced:img>
+    <img src={r2('assets/projects/coursework/secureshare_preview.png')} class="project-img" alt="" />
     <div class="project-desc">
         <a href="https://sp24.cs161.org/proj2/" target="_blank" class="project-title">Secure File Sharing System <sup><i class='fas fa-external-link-alt arrow'></i></sup></a>
         <div class="project-text">

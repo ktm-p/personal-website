@@ -1,3 +1,7 @@
+<script>
+    import { r2 } from '$lib/r2';
+</script>
+
 <section class="about-me">
     <h1 class="section-head">About Me</h1>
     <div class="about-me-flex">
@@ -18,7 +22,7 @@
         </p>
         </div>
         <div>
-            <enhanced:img src="$lib/assets/raven/dark_raven.png" id="profile-image" alt="Profile Picture"></enhanced:img>
+            <img src={r2('assets/raven/dark_raven.png')} id="profile-image" alt="Profile Picture" />
         </div>
     </div>
 </section>

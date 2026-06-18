@@ -1,6 +1,10 @@
 <!-- Spam Classifier -->
+<script>
+    import { r2 } from '$lib/r2';
+</script>
+
 <div class="project-container" id="spamclass">
-    <enhanced:img src="$lib/assets/projects/coursework/spamclass_preview.png" class="project-img"></enhanced:img>
+    <img src={r2('assets/projects/coursework/spamclass_preview.png')} class="project-img" alt="" />
     <div class="project-desc">
         <a class="project-title" style="cursor: pointer;">Spam Classifier <sup><i class='fas fa-external-link-alt arrow'></i></sup></a>
         <div class="project-text">

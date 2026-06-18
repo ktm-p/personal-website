@@ -1,8 +1,9 @@
 <script>
     import { slide } from 'svelte/transition';
-    let showMenu = false;    
+    let showMenu = false;
     import { page } from '$app/stores';
     import { onMount } from 'svelte';
+    import { r2 } from '$lib/r2';
 	$: currentPath = $page.url.pathname;
 
     onMount(() => {
@@ -51,7 +52,7 @@
 
 <nav style="position: sticky; top: 0px;" id="nav-bar">
     <!-- svelte-ignore a11y_consider_explicit_label -->
-    <a href="/"><enhanced:img src="$lib/assets/raven/ktmp-logo-white-centred-text-spaced.png" class="nav-logo"></enhanced:img></a>
+    <a href="/"><img src={r2('assets/raven/ktmp-logo-white-centred-text-spaced.png')} class="nav-logo" alt="ktm-p logo" /></a>
     <div class={`nav-links ${showMenu ? 'show' : ''}`}>
         <a class={`nav-link ${currentPath === '/' ? 'current' : ''}`} href="/">Home</a>
         <a class={`nav-link ${currentPath === '/courses' ? 'current' : ''}`} href="/courses">Courses</a>

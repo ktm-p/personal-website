@@ -1,6 +1,10 @@
 <!-- LaTeX Setup -->
+<script>
+    import { r2 } from '$lib/r2';
+</script>
+
 <div class="project-container" id="texsetup">
-    <enhanced:img src="$lib/assets/projects/personal/texsetup_preview.png" class="project-img"></enhanced:img>
+    <img src={r2('assets/projects/personal/texsetup_preview.png')} class="project-img" alt="" />
     <div class="project-desc">
         <a href="https://github.com/ktm-p/LaTeX-Setup" target="_blank" class="project-title">LaTeX Setup <sup><i class='fas fa-external-link-alt arrow'></i></sup></a>
         <div class="project-text">

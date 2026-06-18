@@ -5,6 +5,10 @@ import rehypeKatexSvelte from "rehype-katex-svelte";
 import remarkMath from 'remark-math'
 import remarkSlug from 'remark-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import { loadEnv } from 'vite';
+import { rehypeR2Images } from './src/lib/remark/rehype-r2-images.js';
+
+const { PUBLIC_R2_BASE_URL } = loadEnv(process.env.NODE_ENV ?? 'development', process.cwd(), 'PUBLIC_');
 
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -28,6 +32,7 @@ const config = {
 			rehypePlugins: [
 				rehypeKatexSvelte,
 				rehypeAutolinkHeadings,
+				[rehypeR2Images, PUBLIC_R2_BASE_URL],
 			],
 		})
 	],

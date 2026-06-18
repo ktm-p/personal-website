@@ -1,6 +1,10 @@
 <!-- Audio Visualizer -->
+<script>
+    import { r2 } from '$lib/r2';
+</script>
+
 <div class="project-container" id="audio_visualizer">
-    <enhanced:img src="$lib/assets/projects/personal/audio_visualizer.png" class="project-img"></enhanced:img>
+    <img src={r2('assets/projects/personal/audio_visualizer.png')} class="project-img" alt="" />
     <div class="project-desc">
         <a href="https://github.com/ktm-p/audio_visualizer" target="_blank" class="project-title">Audio Visualizer <sup><i class='fas fa-external-link-alt arrow'></i></sup></a>
         <div class="project-text">

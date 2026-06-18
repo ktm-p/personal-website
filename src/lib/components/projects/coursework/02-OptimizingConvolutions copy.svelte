@@ -1,6 +1,10 @@
 <!-- Optimizing Convolutions -->
+<script>
+    import { r2 } from '$lib/r2';
+</script>
+
 <div class="project-container" id="convolutions">
-    <enhanced:img src="$lib/assets/projects/coursework/convolutions_preview.png" class="project-img"></enhanced:img>
+    <img src={r2('assets/projects/coursework/convolutions_preview.png')} class="project-img" alt="" />
     <div class="project-desc">
         <a href="https://inst.eecs.berkeley.edu/~cs61c/fa23/projects/proj4/" target="_blank" class="project-title">Optimizing Convolutions <sup><i class='fas fa-external-link-alt arrow'></i></sup></a>
         <div class="project-text">
