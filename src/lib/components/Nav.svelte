@@ -55,8 +55,8 @@
     <a href="/"><img src={r2('assets/raven/ktmp-logo-white-centred-text-spaced.png')} class="nav-logo" alt="ktm-p logo" /></a>
     <div class={`nav-links ${showMenu ? 'show' : ''}`}>
         <a class={`nav-link ${currentPath === '/' ? 'current' : ''}`} href="/">Home</a>
-        <a class={`nav-link ${currentPath === '/courses' ? 'current' : ''}`} href="/courses">Courses</a>
         <a class={`nav-link ${currentPath === '/projects' ? 'current' : ''}`} href="/projects">Projects</a>
+        <!-- <a class={`nav-link ${currentPath === '/gallery' ? 'current' : ''}`} href="/gallery">Gallery</a> -->
         <a class={`nav-link ${currentPath.startsWith('/blog') ? 'current' : ''}`} href="/blog">Blog</a>
         <input type="checkbox" id="darkmode_toggle" class="big_toggle" style="margin-right: -40px;"/><label for="darkmode_toggle"></label>
     </div>

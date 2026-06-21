@@ -22,7 +22,7 @@
         </p>
         </div>
         <div>
-            <img src={r2('assets/raven/dark_raven.png')} id="profile-image" alt="Profile Picture" />
+            <img src={r2('assets/raven/pfp.jpeg')} id="profile-image" alt="Profile Picture" />
         </div>
     </div>
 </section>
@@ -48,3 +48,5 @@
         <i class="fa-regular fa-envelope" id="email"></i>
     </a>
 </section>
+
+<br><br>

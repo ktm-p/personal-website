@@ -4,6 +4,11 @@
     import "$lib/styles/style.css";
     import { onMount } from "svelte";
     import { page } from "$app/stores";
+    import { dev } from '$app/environment';
+    import { injectAnalytics } from '@vercel/analytics/sveltekit';
+
+    // Vercel Analytics
+    injectAnalytics({ mode: dev ? 'development' : 'production' });
 
     // Dynamic title changing
     const websiteName = "ktm-p";

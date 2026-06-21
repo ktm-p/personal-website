@@ -1,5 +1,5 @@
 <section class="course-timeline">
-    <h1 class="section-head">Courses</h1>
+    <h1 class="section-head">Gallery</h1>
     <div class="course-container" id="sp26">
         <h2 class="semester">Spring 2026</h2>
         <ul class="courses">
