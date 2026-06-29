@@ -1,11 +1,76 @@
-main {
-    margin: 5rem 10% 5rem 10%;
+.landing {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 17%;
+    padding: 7rem 10% 0rem 10%;
 }
 
-h1 {
-    font-size: 3.75rem;
+.landing-left {
+    position: sticky;
+    top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    flex: 0 0 auto;
+    width: 33%;
 }
 
-h2 {
+.landing-photo {
+    width: 90%;
+    /* height: auto; */
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+
+.landing-left h1 {
+    font-size: 3.5rem;
+    color: var(--color-heading);
+    line-height: 1.1;
+}
+
+.landing-left h2 {
     font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-subheading);
+}
+
+.landing-socials {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.social-link {
+    color: var(--color-hover);
+    font-size: 2.5rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.social-link:hover {
+    color: var(--color-links);
+}
+
+.landing-right {
+    flex: 1;
+    padding-top: 0.25rem;
+}
+
+.landing-right p {
+    font-size: 1.25rem;
+    /* line-height: 1.75rem; */
+    color: var(--color-text);
+}
+
+.inline-link {
+    color: var(--color-links);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.inline-link:hover {
+    color: var(--color-hover);
 }
