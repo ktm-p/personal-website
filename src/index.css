@@ -1,5 +1,5 @@
 :root {
-    --color-text: #dfdfdf;
+    --color-text: #b3b3b3;
     --color-heading: #E0E0E0;
     --color-subheading: var(--color-hover);
 
@@ -13,7 +13,7 @@
     --color-nav-hover: var(--color-hover);
     --color-darkMode-icon: var(--color-hover);
 
-    --color-bg: #1C1C1C;
+    --color-bg: #040404;
     --color-container-bg: #232428;
     --color-container-bg-2: #7F7F7F3a;
 
