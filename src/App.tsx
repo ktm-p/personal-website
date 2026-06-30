@@ -4,31 +4,17 @@
 // import heroImg from './assets/hero.png'
 // import './App.css'
 
-import { useEffect, useRef } from 'react'
 import Landing from './pages/Landing'
+import DotGrid from './components/DotGrid'
+import GlowEffect from './components/GlowEffect'
+
 
 export default function App() {
-  const glowRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const el = glowRef.current
-    if (!el) return
-    const onMove = (e: MouseEvent) => {
-      el.style.background = `radial-gradient(35rem at ${e.clientX}px ${e.clientY}px, rgba(124, 124, 124, 0.1), transparent 80%)`
-    }
-    window.addEventListener('mousemove', onMove)
-    return () => window.removeEventListener('mousemove', onMove)
-  }, [])
-
   return (
     <>
-      <div ref={glowRef} style={{
-        position: 'fixed', inset: 0,
-        pointerEvents: 'none',
-        zIndex: 0,
-        transition: 'background 0.1s ease',
-      }} />
-      <div style={{ position: 'relative', zIndex: 1 }}>
+      {/* <DotGrid />
+      <GlowEffect /> */}
+      <div style={{ position: 'relative', zIndex: 2 }}>
         <Landing />
       </div>
     </>
