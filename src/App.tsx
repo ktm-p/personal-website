@@ -4,12 +4,14 @@ import Navbar from './components/Navbar'
 
 import Landing from './pages/Landing'
 import About from './pages/About'
+import PerspectiveGrid from "./components/PerspectiveGrid"
 
 export default function App() {
   return (
     <>
       <BrowserRouter>
         <Navbar />
+        <PerspectiveGrid />
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/about" element={<About />} />
