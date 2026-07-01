@@ -1,22 +1,20 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from './assets/vite.svg'
-// import heroImg from './assets/hero.png'
-// import './App.css'
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+
+import Navbar from './components/Navbar'
 
 import Landing from './pages/Landing'
-import DotGrid from './components/DotGrid'
-import GlowEffect from './components/GlowEffect'
-
+import About from './pages/About'
 
 export default function App() {
   return (
     <>
-      {/* <DotGrid />
-      <GlowEffect /> */}
-      <div style={{ position: 'relative', zIndex: 2 }}>
-        <Landing />
-      </div>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

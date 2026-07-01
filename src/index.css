@@ -1,3 +1,4 @@
+/* Dark Mode */
 :root {
     --color-text: #b3b3b3;
     --color-heading: #E0E0E0;
@@ -13,16 +14,43 @@
     --color-nav-hover: var(--color-hover);
     --color-darkMode-icon: var(--color-hover);
 
-    --color-bg: #040404;
+    --color-bg: #141414;
     --color-container-bg: #232428;
     --color-container-bg-2: #7F7F7F3a;
 
     color: var(--color-text);
     background: var(--color-bg);
+
+    font-family: 'Libertinus Serif', serif;
 }
+
+/* Light Mode */
+/* :root {
+    --color-text: #0c0c0c;
+    --color-heading: #3a3a3a;
+    --color-subheading: var(--color-hover);
+
+    --color-hover: #5a5a5a;
+    --color-outlines: var(--color-hover);
+
+    --color-links: #3640ff;
+    --color-emph: var(--color-links);
+
+    --color-nav-links: var(--color-links);
+    --color-nav-hover: var(--color-hover);
+    --color-darkMode-icon: var(--color-hover);
+
+    --color-bg: #ffffff;
+    --color-container-bg: #232428;
+    --color-container-bg-2: #7F7F7F3a;
+
+    color: var(--color-text);
+    background: var(--color-bg);
+
+    font-family: 'Libertinus Serif', serif;
+} */
 
 * {
     margin: 0;
     padding: 0;
-    transition: 0.7s ease;
 }

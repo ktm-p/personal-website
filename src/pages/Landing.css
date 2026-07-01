@@ -3,7 +3,7 @@
     flex-direction: row;
     align-items: flex-start;
     gap: 5%;
-    padding: 7rem 10% 0rem 10%;
+    padding: 5rem 10% 0rem 10%;
 }
 
 /* Information */
@@ -62,7 +62,7 @@ a:hover {
 
 .social-link {
     color: var(--color-subheading);
-    font-size: 2.5rem;
+    font-size: 2.25rem;
 }
 
 .social-link:hover {

@@ -12,7 +12,7 @@ export default function Landing() {
     return (
         <main className="landing">
             <div className="landing-left">
-                <img src="https://assets.ktm-p.net/assets/raven/pfp.jpeg" alt="Michael Pham" className="landing-photo" />
+                <img src="https://assets.ktm-p.net/assets/raven/pfp3.jpg" alt="Michael Pham" className="landing-photo" />
                 <h1>Michael Pham</h1>
                 <h2>Software Engineer @ Epic</h2>
                 <div className="landing-socials">

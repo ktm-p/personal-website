@@ -1,0 +1,12 @@
+.navbar__links {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0.5rem 5% 0 5%;
+}
+
+.navbar__link {
+    font-size: 1.25rem;
+}
