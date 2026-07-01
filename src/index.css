@@ -84,6 +84,10 @@
     animation: page-exit  0.9s ease-in forwards;
 }
 
+.page-between {
+    opacity: 0;
+}
+
 .page-enter {
     animation: page-enter 0.9s ease-out forwards;
 }

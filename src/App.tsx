@@ -12,7 +12,7 @@ function AnimatedRoutes() {
 
   return (
     <div
-      className={phase === 'exit' ? 'page-exit' : phase === 'enter' ? 'page-enter' : ''}
+      className={phase === 'exit' ? 'page-exit' : phase === 'between' ? 'page-between' : phase === 'enter' ? 'page-enter' : ''}
       style={{position: 'relative', zIndex: 1}}
     >
       <Routes location={location}>

@@ -1,7 +1,7 @@
 import { createContext, useCallback, useContext, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-export type Phase = 'idle' | 'exit' | 'enter'
+export type Phase = 'idle' | 'exit' | 'between' | 'enter'
 
 interface TransitionCtx {
     phase: Phase
@@ -32,12 +32,17 @@ export function TransitionProvider({children}: {children: React.ReactNode}) {
         setPhase('exit')
 
         setTimeout(() => {
-            navigate(pending.current!)
-            setPhase('enter')
-            setTimeout(() => {
-                setPhase('idle')
-                busy.current = false
-            }, DURATION)
+            setPhase('between')
+            requestAnimationFrame(() => {
+                navigate(pending.current!)
+                requestAnimationFrame(() => {
+                    setPhase('enter')
+                    setTimeout(() => {
+                        setPhase('idle')
+                        busy.current = false
+                    }, DURATION)
+                })
+            })
         }, DURATION)
     }, [navigate])
 
