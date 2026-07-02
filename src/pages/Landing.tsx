@@ -31,7 +31,7 @@ export default function Landing() {
                     Prior to starting my <ruby>jay-oh-bee<rt>(job)</rt></ruby>, I was a student at Berkeley, double majoring in Mathematics and Computer Science, and minoring in Data Science. I was also a member of the university's Upsilon Pi Epsilon chapter.
                     <br /><br />
                     My primary interests lie in Software Engineering, with an emphasis on backend development and
-                    performance optimization. Aside from Software Engineering, I also enjoy dabbling in cryptography in my free time.
+                    performance optimization. I also enjoy dabbling in cryptography here and there in my free time.
                     <br /><br />
                     Outside of programming, I'm passionate about teaching, having tutored extensively
                     in mathematics and computer science. For more details about my professional career, you can refer to my

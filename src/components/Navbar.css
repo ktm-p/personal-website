@@ -1,10 +1,25 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: color-mix(in srgb, var(--color-bg) 50%, transparent);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid color-mix(in srgb, var(--color-heading) 6%, transparent);
+}
+
+.navbar__inner {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 5%;
+}
+
 .navbar__links {
-    width: 600px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 5rem;
     list-style-type: none;
-    padding: 0.5rem 5% 0 5%;
 }
 
 .navbar__link {

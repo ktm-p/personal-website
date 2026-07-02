@@ -55,6 +55,28 @@
     padding: 0;
 }
 
+main {
+    padding: 5rem 10% 0rem 10%;
+}
+
+/* Links */
+a {
+    color: var(--color-links);
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+a:hover {
+    color: var(--color-hover);
+}
+
+/* Paragraph Text */
+p {
+    font-size: 1.25rem;
+    /* line-height: 1.75rem; */
+    color: var(--color-text);
+}
+
 /* Page transition animations */
 @keyframes page-exit {
     from {
@@ -81,7 +103,7 @@
 }
 
 .page-exit {
-    animation: page-exit  0.9s ease-in forwards;
+    animation: page-exit 0.9s ease-in forwards;
 }
 
 .page-between {

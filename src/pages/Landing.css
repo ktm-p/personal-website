@@ -3,12 +3,11 @@
     flex-direction: row;
     align-items: flex-start;
     gap: 5%;
-    padding: 5rem 10% 0rem 10%;
 }
 
 /* Information */
 .landing-left {
-    position: sticky;
+    /* position: sticky; */
     top: 5rem;
     display: flex;
     flex-direction: column;
@@ -16,6 +15,18 @@
     gap: 0.75rem;
     flex: 0 0 auto;
     width: 33%;
+}
+
+.landing-left h1 {
+    font-size: 3.5rem;
+    color: var(--color-heading);
+    line-height: 1.1;
+}
+
+.landing-left h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-subheading);
 }
 
 /* To-Do: Responsiveness to width of viewport */
@@ -28,36 +39,11 @@
     margin-bottom: 0.5rem;
 }
 
-/* Name */
-.landing-left h1 {
-    font-size: 3.5rem;
-    color: var(--color-heading);
-    line-height: 1.1;
-}
-
-/* Job */
-.landing-left h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--color-subheading);
-}
-
 /* Socials Icons */
 .landing-socials {
     display: flex;
     gap: 1.5rem;
     margin-top: 0.5rem;
-}
-
-/* Links */
-a {
-    color: var(--color-links);
-    text-decoration: none;
-    transition: color 0.5s ease;
-}
-
-a:hover {
-    color: var(--color-hover);
 }
 
 .social-link {
@@ -73,10 +59,4 @@ a:hover {
 .landing-right {
     flex: 1;
     padding-top: 0.25rem;
-}
-
-.landing-right p {
-    font-size: 1.25rem;
-    /* line-height: 1.75rem; */
-    color: var(--color-text);
 }
