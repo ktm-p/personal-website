@@ -47,7 +47,7 @@
 .globe-card {
     display: inline-flex;
     padding: 1.25rem;
-    border-radius: 16px;
+    border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     background: color-mix(in srgb, var(--color-bg) 80%, transparent);
     position: sticky;

@@ -12,6 +12,43 @@ const VISITED = new Set([
 
 const WORLD_URL = 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json'
 
+// Cache downloaded data
+let countriesPromise: Promise<{
+    visited: GeoJSON.Feature[]
+    unvisited: GeoJSON.Feature[]
+}> | null = null
+
+function loadCountries() {
+    if (!countriesPromise) {
+        countriesPromise = fetch(WORLD_URL)
+                            .then(r => r.json())
+                            .then((world: Topology) => {
+                                const collection = feature(
+                                    world,
+                                    (world.objects as any).countries
+                                ) as unknown as GeoJSON.FeatureCollection
+
+                                const visited: GeoJSON.Feature[] = []
+                                const unvisited: GeoJSON.Feature[] = []
+
+                                for (const f of collection.features) {
+                                    if (VISITED.has(Number(f.id))) {
+                                        visited.push(f)
+                                    }
+                                    else {
+                                        unvisited.push(f)
+                                    }
+                                }
+
+                                return {
+                                    visited, unvisited
+                                }
+                            })
+    }
+
+    return countriesPromise
+}
+
 export default function Globe({size = 420}: {size?: number}) {
     const canvasRef = useRef<HTMLCanvasElement>(null)
     const rotationRef = useRef<[number, number, number]>([0, -20, 0])
@@ -24,14 +61,19 @@ export default function Globe({size = 420}: {size?: number}) {
     useEffect(() => {
         const canvas = canvasRef.current
         if (!canvas) return
+
         const baseScale = size / 2 - 16
+
+        // Zoom using wheel
         const onWheel = (e: WheelEvent) => {
             e.preventDefault()
+
             scaleRef.current = Math.max(
                 baseScale * 0.5,
                 Math.min(baseScale * 3, scaleRef.current - e.deltaY * 0.4)
             )
         }
+
         canvas.addEventListener('wheel', onWheel, {passive: false})
         return () => canvas.removeEventListener('wheel', onWheel)
     }, [size])
@@ -40,61 +82,90 @@ export default function Globe({size = 420}: {size?: number}) {
     useEffect(() => {
         const canvas = canvasRef.current
         if (!canvas) return
+
         const ctx = canvas.getContext('2d')
         if (!ctx) return
 
         const projection = geoOrthographic()
             .translate([size / 2, size / 2])
             .clipAngle(90)
+            .precision(5)
 
         const pathGen  = geoPath(projection, ctx)
-        const graticule = geoGraticule()
-        let countries: GeoJSON.FeatureCollection | null = null
 
-        fetch(WORLD_URL)
-            .then(r => r.json())
-            .then((world: Topology) => {
-                countries = feature(world, (world.objects as any).countries) as GeoJSON.FeatureCollection
-            })
+        // Cache once
+        const graticule = geoGraticule()()
+
+
+        let visitedCountries: GeoJSON.Feature[] = []
+        let unvisitedCountries: GeoJSON.Feature[] = []
+
+        loadCountries().then(({visited, unvisited}) => {
+            visitedCountries = visited
+            unvisitedCountries = unvisited
+        })
 
         const draw = () => {
+            // const t0 = performance.now();
+            
             projection
                 .rotate(rotationRef.current)
                 .scale(scaleRef.current)
+            
+            const t1 = performance.now();
 
             ctx.clearRect(0, 0, size, size)
 
             // Longitude/Latitude lines
             ctx.beginPath()
-            pathGen(graticule())
+            pathGen(graticule)
             ctx.strokeStyle = 'rgba(255,255,255,0.07)'
             ctx.lineWidth = 0.5
             ctx.stroke()
 
-            // Countries
-            if (countries) {
-                for (const f of countries.features) {
-                    const visited = VISITED.has(Number(f.id))
-                    ctx.beginPath()
-                    pathGen(f)
-                    if (visited) {
-                        ctx.fillStyle = 'rgba(255,255,255,0.45)'
-                        ctx.fill()
-                        ctx.strokeStyle = 'rgba(255,255,255,0.85)'
-                    } else {
-                        ctx.strokeStyle = 'rgba(255,255,255,0.15)'
-                    }
-                    ctx.lineWidth = 0.5
-                    ctx.stroke()
-                }
+            // const t2 = performance.now();
+            
+            // Draws unvisited countries first
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)'
+            ctx.lineWidth = 0.5
+            for (const country of unvisitedCountries) {
+                ctx.beginPath()
+                pathGen(country)
+                ctx.stroke()
             }
+
+            // const t3 = performance.now();
+
+            // Next, draw visited countries
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.45)'
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.85)'
+            ctx.lineWidth = 0.5
+            for (const country of visitedCountries) {
+                ctx.beginPath()
+                pathGen(country)
+                ctx.fill()
+                ctx.stroke()
+            }
+
+            // const t4 = performance.now();
 
             // Globe outline
             ctx.beginPath()
             pathGen({type: 'Sphere'})
+            
             ctx.strokeStyle = 'rgba(255,255,255,0.7)'
             ctx.lineWidth = 1.5
             ctx.stroke()
+
+            // const t5 = performance.now();
+
+            // console.log(
+            //     "projection:", (t1 - t0).toFixed(2),
+            //     "draw graticule:", (t2 - t1).toFixed(2),
+            //     "draw unvisited:", (t3 - t2).toFixed(2),
+            //     "draw visited:", (t4 - t3).toFixed(2),
+            //     "draw globe:", (t5 - t4).toFixed(2)
+            // );
         }
 
         const frame = () => {

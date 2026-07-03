@@ -13,7 +13,7 @@ export default function About() {
 
                         <br /><br />
 
-                        I was born in Vietnam, living in Ho Chi Minh City for the first fifteen years of my life. Having attended an international school, I grew up learning both Vietnamese and English (with bits of Britishness slipping in here and there).
+                        I was born in Vietnam, living in Ho Chi Minh City for the first fifteen years of my life. I am bilingual, being fluent in both English and Vietnamese. I also studied French, though my fluency in it has degraded dramatically.
 
                         <br /><br />
                         In 2019, I immigrated to the United States, ultimately settling down in West Sacramento with my family and attending high school there. While in high school, I met my now-girlfriend of seven years.
@@ -24,7 +24,7 @@ export default function About() {
 
                         <br /><br />
 
-                        Now, with my job as a Software Engineer at Epic Systems, I find myself moving all the way to Wisconsin. Definitely a massive change in weather from the hellish humidity of Vietnam and the searing heat of Sacramento.
+                        Now, with my job as a Software Engineer at Epic Systems, I find myself moving all the way to Madison, Wisconsin. Definitely a massive change in both location and weather, but I'm looking forward to whatever the city's got in store for me!
 
                         <br /><br />
 
