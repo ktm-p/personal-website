@@ -10,7 +10,8 @@ const VISITED = new Set([
     344, // Hong Kong
 ])
 
-const WORLD_URL = 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json'
+// const WORLD_URL = 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json'
+const WORLD_URL = 'https://assets.ktm-p.net/assets/components/countries-hybrid.json'
 
 // Cache downloaded data
 let countriesPromise: Promise<{
@@ -25,7 +26,7 @@ function loadCountries() {
                             .then((world: Topology) => {
                                 const collection = feature(
                                     world,
-                                    (world.objects as any).countries
+                                    (world.objects as any)["countries-hybrid"]
                                 ) as unknown as GeoJSON.FeatureCollection
 
                                 const visited: GeoJSON.Feature[] = []
@@ -112,7 +113,7 @@ export default function Globe({size = 420}: {size?: number}) {
                 .rotate(rotationRef.current)
                 .scale(scaleRef.current)
             
-            const t1 = performance.now();
+            // const t1 = performance.now();
 
             ctx.clearRect(0, 0, size, size)
 
