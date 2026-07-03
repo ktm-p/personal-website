@@ -10,8 +10,18 @@ const VISITED = new Set([
     344, // Hong Kong
 ])
 
+// States' FIPS Code
+const VISITED_STATES = new Set([
+    6, // California
+    17, // Illinois
+    48, // Texas
+    55, // Wisconsin
+])
+
 // const WORLD_URL = 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json'
 const WORLD_URL = 'https://assets.ktm-p.net/assets/components/countries-hybrid.json'
+
+const US_URL = 'https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json'
 
 // Cache downloaded data
 let countriesPromise: Promise<{
@@ -19,35 +29,71 @@ let countriesPromise: Promise<{
     unvisited: GeoJSON.Feature[]
 }> | null = null
 
+let statesPromise: Promise<{
+    visited: GeoJSON.Feature[]
+    unvisited: GeoJSON.Feature[]
+}> | null = null
+
 function loadCountries() {
     if (!countriesPromise) {
         countriesPromise = fetch(WORLD_URL)
-                            .then(r => r.json())
-                            .then((world: Topology) => {
-                                const collection = feature(
-                                    world,
-                                    (world.objects as any)["countries-hybrid"]
-                                ) as unknown as GeoJSON.FeatureCollection
+            .then(r => r.json())
+            .then((world: Topology) => {
+                const collection = feature(
+                    world,
+                    (world.objects as any)["countries-hybrid"]
+                ) as unknown as GeoJSON.FeatureCollection
 
-                                const visited: GeoJSON.Feature[] = []
-                                const unvisited: GeoJSON.Feature[] = []
+                const visited: GeoJSON.Feature[] = []
+                const unvisited: GeoJSON.Feature[] = []
 
-                                for (const f of collection.features) {
-                                    if (VISITED.has(Number(f.id))) {
-                                        visited.push(f)
-                                    }
-                                    else {
-                                        unvisited.push(f)
-                                    }
-                                }
+                for (const f of collection.features) {
+                    if (VISITED.has(Number(f.id))) {
+                        visited.push(f)
+                    }
+                    else {
+                        unvisited.push(f)
+                    }
+                }
 
-                                return {
-                                    visited, unvisited
-                                }
-                            })
+                return {
+                    visited, unvisited
+                }
+            })
     }
 
     return countriesPromise
+}
+
+function loadStates() {
+    if (!statesPromise) {
+        statesPromise = fetch(US_URL)
+            .then(r => r.json())
+            .then((us: Topology) => {
+                const collection = feature(
+                    us,
+                    (us.objects as any).states
+                ) as unknown as GeoJSON.FeatureCollection
+
+                const visited: GeoJSON.Feature[] = []
+                const unvisited: GeoJSON.Feature[] = []
+
+                for (const f of collection.features) {
+                    if (VISITED_STATES.has(Number(f.id))) {
+                        visited.push(f)
+                    }
+                    else {
+                        unvisited.push(f)
+                    }
+                }
+
+                return {
+                    visited, unvisited
+                }
+            })
+    }
+
+    return statesPromise
 }
 
 export default function Globe({size = 420}: {size?: number}) {
@@ -101,20 +147,25 @@ export default function Globe({size = 420}: {size?: number}) {
         let visitedCountries: GeoJSON.Feature[] = []
         let unvisitedCountries: GeoJSON.Feature[] = []
 
+        let visitedStates: GeoJSON.Feature[] = []
+        let unvisitedStates: GeoJSON.Feature[] = []
+
         loadCountries().then(({visited, unvisited}) => {
             visitedCountries = visited
             unvisitedCountries = unvisited
         })
 
-        const draw = () => {
-            // const t0 = performance.now();
-            
+        loadStates().then(({visited, unvisited}) => {
+            visitedStates = visited
+            unvisitedStates = unvisited
+        })
+
+
+        const draw = () => {            
             projection
                 .rotate(rotationRef.current)
                 .scale(scaleRef.current)
             
-            // const t1 = performance.now();
-
             ctx.clearRect(0, 0, size, size)
 
             // Longitude/Latitude lines
@@ -123,8 +174,6 @@ export default function Globe({size = 420}: {size?: number}) {
             ctx.strokeStyle = 'rgba(255,255,255,0.07)'
             ctx.lineWidth = 0.5
             ctx.stroke()
-
-            // const t2 = performance.now();
             
             // Draws unvisited countries first
             ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)'
@@ -134,8 +183,6 @@ export default function Globe({size = 420}: {size?: number}) {
                 pathGen(country)
                 ctx.stroke()
             }
-
-            // const t3 = performance.now();
 
             // Next, draw visited countries
             ctx.fillStyle = 'rgba(255, 255, 255, 0.45)'
@@ -148,7 +195,25 @@ export default function Globe({size = 420}: {size?: number}) {
                 ctx.stroke()
             }
 
-            // const t4 = performance.now();
+            // Draws unvisited states first
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)'
+            ctx.lineWidth = 0.5
+            for (const state of unvisitedStates) {
+                ctx.beginPath()
+                pathGen(state)
+                ctx.stroke()
+            }
+
+            // Now, draw visited states
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.45)'
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.85)'
+            ctx.lineWidth = 0.5
+            for (const state of visitedStates) {
+                ctx.beginPath()
+                pathGen(state)
+                ctx.fill()
+                ctx.stroke()
+            }
 
             // Globe outline
             ctx.beginPath()
@@ -157,16 +222,6 @@ export default function Globe({size = 420}: {size?: number}) {
             ctx.strokeStyle = 'rgba(255,255,255,0.7)'
             ctx.lineWidth = 1.5
             ctx.stroke()
-
-            // const t5 = performance.now();
-
-            // console.log(
-            //     "projection:", (t1 - t0).toFixed(2),
-            //     "draw graticule:", (t2 - t1).toFixed(2),
-            //     "draw unvisited:", (t3 - t2).toFixed(2),
-            //     "draw visited:", (t4 - t3).toFixed(2),
-            //     "draw globe:", (t5 - t4).toFixed(2)
-            // );
         }
 
         const frame = () => {
