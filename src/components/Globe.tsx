@@ -105,25 +105,25 @@ export default function Globe({size = 420}: {size?: number}) {
     const animIdRef = useRef<number>(0)
 
     // Lets users zoom in on the globe
-    useEffect(() => {
-        const canvas = canvasRef.current
-        if (!canvas) return
+    // useEffect(() => {
+    //     const canvas = canvasRef.current
+    //     if (!canvas) return
 
-        const baseScale = size / 2 - 16
+    //     const baseScale = size / 2 - 16
 
-        // Zoom using wheel
-        const onWheel = (e: WheelEvent) => {
-            e.preventDefault()
+    //     // Zoom using wheel
+    //     const onWheel = (e: WheelEvent) => {
+    //         e.preventDefault()
 
-            scaleRef.current = Math.max(
-                baseScale * 0.5,
-                Math.min(baseScale * 3, scaleRef.current - e.deltaY * 0.4)
-            )
-        }
+    //         scaleRef.current = Math.max(
+    //             baseScale * 0.5,
+    //             Math.min(baseScale * 3, scaleRef.current - e.deltaY * 0.4)
+    //         )
+    //     }
 
-        canvas.addEventListener('wheel', onWheel, {passive: false})
-        return () => canvas.removeEventListener('wheel', onWheel)
-    }, [size])
+    //     canvas.addEventListener('wheel', onWheel, {passive: false})
+    //     return () => canvas.removeEventListener('wheel', onWheel)
+    // }, [size])
 
     // Draws the actual globe itself
     useEffect(() => {
@@ -141,7 +141,7 @@ export default function Globe({size = 420}: {size?: number}) {
         const pathGen  = geoPath(projection, ctx)
 
         // Cache once
-        const graticule = geoGraticule()()
+        const graticule = geoGraticule().step([10, 10])()
 
 
         let visitedCountries: GeoJSON.Feature[] = []

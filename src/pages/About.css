@@ -46,10 +46,12 @@
 
 .globe-card {
     display: inline-flex;
-    padding: 1.25rem;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50%;
     background: color-mix(in srgb, var(--color-bg) 80%, transparent);
     position: sticky;
     top: 6rem;
+}
+
+.about section {
+    margin-top: 1rem;
 }
