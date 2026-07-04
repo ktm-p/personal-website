@@ -6,14 +6,11 @@ main.about {
 .about-scroll {
     height: 100vh;
     overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
 }
 
 /* Section fills the entire page */
 .about-section {
-    height: 100vh;
-    scroll-snap-align: start;
+    min-height: 100vh;
     padding: 5rem 10% 2rem;
     box-sizing: border-box;
     display: flex;

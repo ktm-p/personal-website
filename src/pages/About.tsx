@@ -9,31 +9,30 @@ export default function About() {
     const [current, setCurrent] = useState(0)
     const containerRef = useRef<HTMLDivElement>(null)
     const sectionRefs = useRef<HTMLElement[]>([])
+    const headingRefs = useRef<HTMLElement[]>([])
 
     useEffect(() => {
         const container = containerRef.current
         if (!container) return
 
-        const observer = new IntersectionObserver(
-            (entries) => {
-                for (const entry of entries) {
-                    if (entry.isIntersecting) {
-                        const idx = sectionRefs.current.indexOf(entry.target as HTMLElement)
-                        if (idx !== -1) setCurrent(idx)
-                    }
-                }
-            },
-            { root: container, threshold: 0.5 }
-        )
+        const onScroll = () => {
+            const mid = window.innerHeight / 2
+            let idx = 0
+            headingRefs.current.forEach((heading, i) => {
+                if (heading && heading.getBoundingClientRect().top <= mid) idx = i
+            })
+            setCurrent(idx)
+        }
 
-        sectionRefs.current.forEach(s => { if (s) observer.observe(s) })
-        return () => observer.disconnect()
+        container.addEventListener('scroll', onScroll, { passive: true })
+        return () => container.removeEventListener('scroll', onScroll)
     }, [])
 
     const goTo = useCallback((idx: number) => {
         const container = containerRef.current
-        if (!container) return
-        container.scrollTo({ top: idx * window.innerHeight, behavior: 'smooth' })
+        const section = sectionRefs.current[idx]
+        if (!container || !section) return
+        container.scrollTo({ top: section.offsetTop, behavior: 'smooth' })
     }, [])
 
     return (
@@ -43,7 +42,7 @@ export default function About() {
                 {/* Background */}
                 <section ref={el => { if (el) sectionRefs.current[0] = el }} className="about-section">
                     <h1>About Me</h1>
-                    <h2>Background</h2>
+                    <h2 ref={el => { if (el) headingRefs.current[0] = el }}>Background</h2>
                     <div className="background">
                         <div className="background-left">
                             <p>
@@ -80,19 +79,21 @@ export default function About() {
 
                 {/* Why CS */}
                 <section ref={el => { if (el) sectionRefs.current[1] = el }} className="about-section">
-                    <h2>Why?</h2>
-                    <p>Placeholder.</p>
+                    <h2 ref={el => { if (el) headingRefs.current[1] = el }}>Why?</h2>
+                        <p>
+                            Placeholder.
+                        </p>
                 </section>
 
                 {/* Experience */}
                 <section ref={el => { if (el) sectionRefs.current[2] = el }} className="about-section">
-                    <h2>Experience</h2>
+                    <h2 ref={el => { if (el) headingRefs.current[2] = el }}>Experience</h2>
                     <p>Placeholder.</p>
                 </section>
 
                 {/* Hobbies */}
                 <section ref={el => { if (el) sectionRefs.current[3] = el }} className="about-section">
-                    <h2>Hobbies</h2>
+                    <h2 ref={el => { if (el) headingRefs.current[3] = el }}>Hobbies</h2>
                     <p>Placeholder.</p>
                 </section>
 
