@@ -14,7 +14,7 @@ export default function Navbar() {
     const location = useLocation()
 
     return (
-        <nav>
+        <nav className="navbar">
             <div className="navbar__inner">
                 <ul className="navbar__links">
                     {links.map(l => (

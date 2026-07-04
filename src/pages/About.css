@@ -1,15 +1,32 @@
-/* h2 {
-    font-size: 2.5rem;
-    padding: 1rem 0 0.25rem 0;
-} */
+main.about {
+    padding: 0;
+}
 
-.about h1 {
+/* Full-Page Scroll Container */
+.about-scroll {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+/* Section fills the entire page */
+.about-section {
+    height: 100vh;
+    scroll-snap-align: start;
+    padding: 5rem 10% 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-section h1 {
     font-size: 3.5rem;
     color: var(--color-heading);
     line-height: 1.1;
 }
 
-.about h2 {
+.about-section h2 {
     font-size: 2.25rem;
     font-weight: 600;
     color: var(--color-subheading);
@@ -22,15 +39,13 @@
     flex-direction: row;
     align-items: flex-start;
     gap: 5%;
+    flex: 1;
 }
 
 /* Background Text */
 .background-left {
-    /* position: sticky; */
-    top: 5rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: 0.75rem;
     flex: 0 0 auto;
     width: 55%;
@@ -44,14 +59,12 @@
     justify-content: center;
 }
 
+/* Globe card */
 .globe-card {
     display: inline-flex;
     border-radius: 50%;
     background: color-mix(in srgb, var(--color-bg) 80%, transparent);
     position: sticky;
     top: 6rem;
-}
-
-.about section {
-    margin-top: 1rem;
+    overflow: hidden;
 }
