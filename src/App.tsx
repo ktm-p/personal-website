@@ -4,7 +4,7 @@ import { TransitionProvider, usePageTransition } from './context/TransitionConte
 import Navbar from './components/Navbar'
 import PerspectiveGrid from './components/PerspectiveGrid'
 import Landing from './pages/Landing'
-import About from './pages/About'
+import About from './pages/about'
 
 function AnimatedRoutes() {
   const {phase} = usePageTransition()

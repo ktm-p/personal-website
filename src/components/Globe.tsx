@@ -2,6 +2,7 @@ import { useEffect, useRef, useCallback } from 'react'
 import { geoOrthographic, geoPath, geoGraticule } from 'd3-geo'
 import { feature } from 'topojson-client'
 import type { Topology } from 'topojson-specification'
+import './Globe.css'
 
 // Countries' ISO Code
 const VISITED = new Set([
@@ -269,6 +270,7 @@ export default function Globe({size = 420}: {size?: number}) {
             onMouseMove={onMouseMove}
             onMouseUp={onMouseUp}
             onMouseLeave={onMouseUp}
+            className='globe-card'
         />
     )
 }

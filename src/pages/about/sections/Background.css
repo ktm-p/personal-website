@@ -1,0 +1,25 @@
+/* Background Section */
+.background {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 5%;
+    flex: 1;
+}
+
+/* Background Text */
+.background-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 0 0 auto;
+    width: 55%;
+}
+
+/* Background Map */
+.background-right {
+    flex: 1;
+    padding-top: 0.25rem;
+    display: flex;
+    justify-content: center;
+}

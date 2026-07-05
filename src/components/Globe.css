@@ -1,0 +1,9 @@
+/* Globe card */
+.globe-card {
+    display: inline-flex;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--color-bg) 80%, transparent);
+    position: sticky;
+    top: 6rem;
+    overflow: hidden;
+}
