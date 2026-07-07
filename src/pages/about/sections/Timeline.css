@@ -1,0 +1,135 @@
+.timeline {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+    margin-top: 3rem;
+}
+
+/* Left/Right Navigation Arrows to navigate Timeline */
+.timeline-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    flex-shrink: 0;
+    margin-top: 9rem;
+}
+
+.timeline-arrow {
+    background: none;
+    border: 1px solid var(--color-hover);
+    color: var(--color-hover);
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.timeline-arrow:hover:not(:disabled) {
+    color: var(--color-links);
+    border-color: var(--color-links);
+}
+
+.timeline-arrow:disabled {
+    opacity: 0.2;
+    cursor: default;
+}
+
+/* Fade-out effect on content */
+.timeline-viewport {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.timeline-viewport.fade-right {
+    mask-image: linear-gradient(to right, black 100%, transparent 100%);
+}
+
+/* Timeline transition */
+.timeline-track {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+/* Timeline Event */
+.timeline-event {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+/* Top of Timeline */
+.timeline-event-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 9rem;
+    padding-bottom: 0.75rem;
+    gap: 0.5rem;
+}
+
+/* Event Year */
+.timeline-year {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-heading);
+    line-height: 1;
+}
+
+/* Timeline look */
+.timeline-marker-row {
+    display: flex;
+    align-items: center;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    margin-left: -2rem;
+    margin-right: -4rem;
+}
+
+/* Line */
+.timeline-line {
+    flex: 1;
+    height: 1px;
+    background: var(--color-hover);
+}
+
+/* Square marker */
+.timeline-marker {
+    width: 7px;
+    height: 7px;
+    background: var(--color-hover);
+    flex-shrink: 0;
+    margin-left: 2rem;
+}
+
+
+/* Bottom: Title and Description */
+.timeline-event-bottom {
+    padding-top: 0.75rem;
+}
+
+.timeline-title {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-heading);
+    margin-bottom: 0.4rem;
+    line-height: 1.3;
+}
+
+.timeline-description {
+    font-size: 1rem;
+    color: var(--color-text);
+    line-height: 1.5;
+    margin: 0;
+}

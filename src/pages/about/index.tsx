@@ -1,11 +1,8 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import SectionNav from '../../components/SectionNav'
 import BackgroundContent from './sections/Background'
+import TimelineContent from './sections/Timeline'
 import './index.css'
-
-function TimelineContent() {
-    return <p>Placeholder.</p>
-}
 
 function HobbiesContent() {
     return <p>Placeholder.</p>
