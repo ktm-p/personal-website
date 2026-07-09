@@ -9,12 +9,15 @@ export default function HobbiesContent() {
 
                     <br />
 
-                    <ul>
+                    <ul className='hobbies-list'>
                         <li>Cards</li>
                         <li>CDs</li>
                         <li>Gunpla</li>
                         <li>Gaming</li>
                         <li>Piano</li>
+                        <li>Photography</li>
+                        <li>Programming</li>
+                        <li style={{color: "color-mix(in srgb, var(--color-text) 50%, transparent)", textDecoration: "line-through", textDecorationColor: "var(--color-text"}}>Doomscrolling</li>
                     </ul>
 
                     <br />

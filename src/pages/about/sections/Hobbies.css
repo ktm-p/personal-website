@@ -26,6 +26,10 @@
     justify-content: center;
 }
 
+.hobbies-list {
+    column-count: 2;
+}
+
 .hobbies-image {
     width: 100%;
 }
