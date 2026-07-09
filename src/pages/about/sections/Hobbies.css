@@ -1,0 +1,43 @@
+/* Background Section */
+.hobbies {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 5%;
+    flex: 1;
+}
+
+/* Background Text */
+.hobbies-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 0 0 auto;
+    width: 50%;
+}
+
+/* Background Map */
+.hobbies-right {
+    flex: 1;
+    padding-top: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: center;
+}
+
+.hobbies-image {
+    width: 100%;
+}
+
+.rectangles {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    gap: 2.5%;
+}
+
+.rectangle {
+    height: 3rem;
+    background-color: var(--color-text);
+}

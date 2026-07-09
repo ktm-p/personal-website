@@ -2,22 +2,20 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import SectionNav from '../../components/SectionNav'
 import BackgroundContent from './sections/Background'
 import TimelineContent from './sections/Timeline'
+import HobbiesContent from './sections/Hobbies'
 import './index.css'
 
-function InterestsContent() {
-    return <p>Placeholder.</p>
+function SocialsContent() {
+    return (
+        <p>Placeholder.</p>
+    )
 }
-
-function HobbiesContent() {
-    return <p>Placeholder.</p>
-}
-
 
 const SECTIONS: {title: string; Content: () => React.ReactNode}[] = [
     {title: 'Background', Content: BackgroundContent},
     {title: 'Timeline', Content: TimelineContent},
-    {title: 'Interests', Content: InterestsContent},
     {title: 'Hobbies', Content: HobbiesContent},
+    {title: 'Socials', Content: SocialsContent},
 ]
 
 

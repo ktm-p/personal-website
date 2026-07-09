@@ -39,7 +39,7 @@ export default function Landing() {
                     <br /><br />
                     All of the work stuff aside, I'm an avid Gunpla lover, always finding myself working on a kit or two with my girlfriend over our breaks. Since starting work, I've also started picking up a few new hobbies such as cardistry and collecting CDs!
                     <br /><br />
-                    If you want to learn more about me and what I like to do outside of work, feel free to check out my {' '}<a href="#" className="inline-link">about page</a>. Otherwise, you can browse some of my {' '}<a href="#" className="inline-link">past projects</a>, or you can also read my musings and ramblings over at my {' '}<a href="#" className="inline-link">blog</a>.
+                    If you want to learn more about me and what I like to do outside of work, feel free to check out my {' '}<a href="#" className="inline-link">about page</a>. Otherwise, you can browse some of my {' '}<a href="#" className="inline-link">past projects</a>, or read my musings and ramblings over at my {' '}<a href="#" className="inline-link">blog</a>.
                 </p>
             </div>
         </main>
