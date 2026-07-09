@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import PerspectiveGrid from './components/PerspectiveGrid'
 import Landing from './pages/Landing'
 import About from './pages/about'
+import CDs from './pages/about/hobbies/cds'
 
 function AnimatedRoutes() {
   const {phase} = usePageTransition()
@@ -18,6 +19,7 @@ function AnimatedRoutes() {
       <Routes location={location}>
         <Route path="/" element={<Landing />} />
         <Route path="/about" element={<About />} />
+        <Route path="/hobbies/cds" element={<CDs />} />
       </Routes>
     </div>
   )

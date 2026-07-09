@@ -1,4 +1,5 @@
 import './Hobbies.css'
+import TransitionLink from '../../../components/TransitionLink'
 
 export default function HobbiesContent() {
     return (
@@ -11,7 +12,7 @@ export default function HobbiesContent() {
 
                     <ul className='hobbies-list'>
                         <li>Cards</li>
-                        <li>CDs</li>
+                        <li><TransitionLink to="/hobbies/cds" className='inline-link'>CDs</TransitionLink></li>
                         <li>Gunpla</li>
                         <li>Gaming</li>
                         <li>Piano</li>
