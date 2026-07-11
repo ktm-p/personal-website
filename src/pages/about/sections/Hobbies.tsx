@@ -36,7 +36,7 @@ export default function HobbiesContent() {
             </div>
             <div className='hobbies-right'>
                 <img src="https://assets.ktm-p.net/assets/about/cards.jpg" alt='Card Collection (7/5/2026)' className='hobbies-image'/>
-                <img src="https://assets.ktm-p.net/assets/about/cds.jpg" alt='Card Collection (7/5/2026)' className='hobbies-image'/>
+                <img src="https://assets.ktm-p.net/assets/about/cds.jpg" alt='CD Collection (6/12/2026)' className='hobbies-image'/>
                 {/* <div className='rectangles'>
                     <div className='rectangle' style={{width: "60%"}} />
                     <div className='rectangle' style={{width: "30%"}} />

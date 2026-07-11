@@ -74,6 +74,10 @@ a:hover {
     color: var(--color-hover);
 }
 
+.inline-link {
+    text-decoration: underline;
+}
+
 /* Paragraph Text */
 p {
     font-size: 1.25rem;

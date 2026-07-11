@@ -1,0 +1,371 @@
+.cds h1 {
+    font-size: 3.5rem;
+    color: var(--color-heading);
+    line-height: 1.1;
+    align-self: flex-start;
+}
+
+/* CD Visual + Interactive Player */
+.cd-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* CD Carousel Display */
+.cd-carousel-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.cd-carousel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+/* "Slot" for each CD to keep layout stable */
+.cd-slot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Side CDs */
+.cd-slot.side {
+    opacity: 0.28;
+    flex: 0 0 200px;
+    height: 200px;
+}
+
+/* Main CD */
+.cd-slot.center {
+    opacity: 1;
+    flex: 0 0 280px;
+    height: 280px;
+}
+
+/* Navigation arrows for CDs */
+.cd-nav-arrow {
+    background: none;
+    border: none;
+    color: var(--color-hover);
+    font-size: 3rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 0.25rem;
+    flex-shrink: 0;
+    transition: color 0.2s ease;
+}
+
+.cd-nav-arrow:hover:not(:disabled) {
+    color: var(--color-links);
+}
+.cd-nav-arrow:disabled {
+    opacity: 0.2;
+    cursor: default;
+}
+
+
+/* Rendering actual CD */
+.cd-disc {
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    background: #111;
+    flex-shrink: 0;
+    /* border: 0.1rem solid rgba(242, 242, 242, 0.339); */
+}
+
+
+/* Carousel swipe animations */
+@keyframes slide-exit-left  { 
+    from { 
+        opacity:1; 
+        transform:translateX(0);     
+    } to { 
+        opacity:0; 
+        transform:translateX(-80px); 
+    } 
+}
+
+@keyframes slide-exit-right {
+    from { 
+        opacity:1;
+        transform:translateX(0);
+    } to {
+        opacity:0;
+        transform:translateX( 80px);
+    }
+}
+
+@keyframes slide-enter-right{ 
+    from { 
+        opacity:0; 
+        transform:translateX( 80px); 
+    } to { 
+        opacity:1; 
+        transform:translateX(0);     
+    } 
+}
+
+@keyframes slide-enter-left { 
+    from { 
+        opacity:0; 
+        transform:translateX(-80px); 
+    } to { 
+        opacity:1; 
+        transform:translateX(0);     
+    } 
+}
+
+.cd-carousel.slide-exit-left  { 
+    animation: slide-exit-left
+    0.35s ease forwards;
+}
+
+.cd-carousel.slide-exit-right {
+    animation: slide-exit-right
+    0.35s ease forwards;
+}
+
+.cd-carousel.slide-enter-right{
+    animation: slide-enter-right
+    0.35s ease forwards;
+}
+
+.cd-carousel.slide-enter-left {
+    animation: slide-enter-left
+    0.35s ease forwards;
+}
+
+
+/* Album Cover over the CD */
+.cd-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* If no Cover */
+.cd-cover-empty {
+    background: radial-gradient(circle at 35% 35%, #2a2a2a, #0e0e0e);
+}
+
+
+/* Middle hole for the CD */
+.cd-hole {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 11%;
+    height: 11%;
+    border-radius: 50%;
+    background: var(--color-bg, #0d0d0d);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    pointer-events: none;
+}
+
+
+/* Interactive Player section */
+.cd-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 560px;
+}
+
+
+/* Information: Album/Artist/Song */
+.cd-info {
+    display: flex;
+    align-items: baseline;
+    gap: 0.45rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cd-album-name {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-heading);
+}
+
+
+/* Dot separating Album and Artist */
+.cd-dot {
+    color: var(--color-hover);
+}
+
+.cd-artist {
+    font-size: 1rem;
+    color: var(--color-subheading);
+}
+
+.cd-track-name {
+    width: 100%;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--color-text);
+    opacity: 0.75;
+}
+
+
+/* Progress Bar */
+.cd-progress-area {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.cd-time {
+    font-size: 0.72rem;
+    color: var(--color-hover);
+    font-variant-numeric: tabular-nums;
+    width: 2.5rem;
+    flex-shrink: 0;
+}
+
+.cd-time-right { text-align: right; }
+
+.cd-progress-bar {
+    flex: 1;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer;
+    transition: height 0.15s ease;
+}
+
+.cd-progress-bar:hover { height: 5px; }
+
+.cd-progress-fill {
+    height: 100%;
+    background: var(--color-links);
+    border-radius: 2px;
+    pointer-events: none;
+    transition: width 0.1s linear;
+}
+
+.cd-progress-thumb {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-heading);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+.cd-progress-bar:hover .cd-progress-thumb, .cd-progress-bar.seeking .cd-progress-thumb { 
+    opacity: 1; 
+}
+
+.cd-progress-bar.seeking { 
+    height: 5px;
+    cursor: grabbing;
+}
+
+
+/* Controls Area */
+.cd-controls {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Skip Buttons */
+.cd-btn {
+    background: none;
+    border: none;
+    color: var(--color-hover);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+
+.cd-btn:hover:not(:disabled) { 
+    color: var(--color-heading); 
+}
+
+.cd-btn:disabled { 
+    opacity: 0.25; 
+    cursor: default; 
+}
+
+/* Play Button */
+.cd-btn-play {
+    width: 2.5rem;
+    height: 2.5rem;
+    /* border-radius: 50%; */
+    /* border: 1px solid var(--color-hover) !important; */
+    font-size: 0.85rem;
+}
+
+.cd-btn-play:hover:not(:disabled) {
+    border-color: var(--color-heading) !important;
+    color: var(--color-heading);
+}
+
+/* Volume Bar */
+.cd-volume-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 0.25rem;
+}
+
+.cd-volume-icon {
+    color: var(--color-hover);
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.cd-volume-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 80px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.12);
+    /* background: color-mix(in srgb, var(--color-text) 50%, transparent); */
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+}
+
+.cd-volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-heading);
+    cursor: pointer;
+}
+
+.cd-volume-slider::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-heading);
+    cursor: pointer;
+    border: none;
+}
