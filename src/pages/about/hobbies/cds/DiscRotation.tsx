@@ -19,8 +19,7 @@ export function useDiscRotation(playing: boolean) {
 
         const tick = (ts: number) => {
             if (lastTsRef.current !== null) {
-                rotationRef.current +=
-                    (ts - lastTsRef.current) * ROTATION_SPEED
+                rotationRef.current += (ts - lastTsRef.current) * ROTATION_SPEED
             }
 
             lastTsRef.current = ts

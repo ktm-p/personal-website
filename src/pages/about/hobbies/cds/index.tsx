@@ -150,6 +150,7 @@ export default function CDs() {
             } else {
                 pause()
                 setCurrentTime(0)
+                setTrackIdx(0) // Returns to first track
             }
         }
 
@@ -301,7 +302,7 @@ export default function CDs() {
                 <section className="cd-player">
                     <div className="cd-info">
                         <span className="cd-album-name">{track.title}</span>
-                        <span className="cd-track-name">{album.artist}</span>
+                        <span className="cd-track-name">{track.artist}</span>
                     </div>
 
                     <div className="cd-progress-area">

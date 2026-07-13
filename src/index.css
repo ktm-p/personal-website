@@ -76,6 +76,7 @@ a:hover {
 
 .inline-link {
     text-decoration: underline;
+    text-underline-offset: 0.25rem;
 }
 
 /* Paragraph Text */
