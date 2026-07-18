@@ -1,0 +1,13 @@
+# Cloudflare Worker that resolves fresh Deezer preview URLs for the CD player.
+# Deploy using: npm run deploy-worker
+
+name = "cds-preview"
+main = "preview-worker.js"
+compatibility_date = "2025-01-01"
+
+[vars]
+ALLOWED_ORIGINS = "https://ktm-p.net/hobbies/cds, http://localhost:5173/hobbies/cds"
+
+# [[routes]]
+# pattern = "cds-preview.ktm-p.net"
+# custom_domain = true

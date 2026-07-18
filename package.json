@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "add-album": "node scripts/add-album.mjs",
+    "deploy-worker": "cd worker && npx wrangler deploy"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1085.0",
